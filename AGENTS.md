@@ -89,3 +89,20 @@ CI enforcement: `.github/workflows/enforce-promotion-path.yml`
 ## Credentials
 
 `/Users/raybayly/Development/.credentials/<service>/.env` — never hardcode or print secrets.
+
+
+## CR-HATH0R-INIT-001: Hath0r repo initialization entry gate (CRITICAL — org-wide)
+
+Before initializing (or re-initializing) any repository with Hath0r, agents MUST:
+
+1. **Setup playbook** — Follow the canonical playbook:
+   - `/Users/raybayly/Development/OpenSource/hath0r/docs/developers/hathor-playbook-001-repo-init-setup-20260919.md`
+   - Mirror: `/Users/raybayly/Development/OpenSource/hathor-cli/docs/hathor-playbook-001-repo-init-setup-20260919.md`
+2. **Same-technology runbook** — Use this repo's `docs/runbook.md` (or a same-stack peer runbook).
+3. Only then apply fileset/layout, `.hath0r/`, `cfg/`, contracts pin, `AGENTS.md` identity, and `./bin/hath0r-bootstrap.sh`.
+
+Do not skip the playbook/runbook gate. Layout scaffolding without a documented ops path is incomplete initialization.
+
+Operator CLI: `hath0r` (pin 0.2.0). Hidden root: **only** `.hath0r/` (never `.ai/`, `.aegis/`, `.infraOS/`).
+Runbook: [`docs/runbook.md`](docs/runbook.md)
+
