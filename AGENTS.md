@@ -106,3 +106,9 @@ Do not skip the playbook/runbook gate. Layout scaffolding without a documented o
 Operator CLI: `hath0r` (pin 0.2.0). Hidden root: **only** `.hath0r/` (never `.ai/`, `.aegis/`, `.infraOS/`).
 Runbook: [`docs/runbook.md`](docs/runbook.md)
 
+## SonarCloud Quality Gate (CRITICAL)
+
+- Canonical thresholds: SonarCloud Quality Gate only — do not modify gate thresholds ad hoc.
+- PR check **SonarCloud Quality Gate** is a hard stop on failure.
+- See `docs/governance/sonarcloud-quality-gates.md`
+- Secret required: `SONAR_TOKEN`
