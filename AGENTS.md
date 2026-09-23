@@ -106,3 +106,7 @@ Do not skip the playbook/runbook gate. Layout scaffolding without a documented o
 Operator CLI: `hath0r` (pin 0.2.0). Hidden root: **only** `.hath0r/` (never `.ai/`, `.aegis/`, `.infraOS/`).
 Runbook: [`docs/runbook.md`](docs/runbook.md)
 
+
+## PR workflow hardening
+
+See `docs/governance/pr-workflow.md`. Work PRs → `development` (agents + CODEOWNERS). **Human gate** before staging/master.
