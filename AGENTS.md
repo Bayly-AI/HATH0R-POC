@@ -106,3 +106,8 @@ Do not skip the playbook/runbook gate. Layout scaffolding without a documented o
 Operator CLI: `hath0r` (pin 0.2.0). Hidden root: **only** `.hath0r/` (never `.ai/`, `.aegis/`, `.infraOS/`).
 Runbook: [`docs/runbook.md`](docs/runbook.md)
 
+## Documentation → MCP
+
+Docs are published to the **proper group MCP** via control-tower
+`python3 scripts/publish-docs-to-mcp.py` (`cfg/mcp-doc-publish.json`).
+See HATH0R-CLI `docs/governance/mcp-doc-publish.md`.
