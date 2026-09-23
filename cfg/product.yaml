@@ -1,0 +1,14 @@
+# Product identity — non-secret
+product_id: hath0r-poc
+product_name: HATHOR-POC
+description: >
+  Integration test bed for the HATHOR system within the OpenSource Project.
+role: integration-testbed
+canonical: true
+is_control_tower: false
+github: Bayly-AI/HATH0R-Agentic-POC
+local_path_hint: OpenSource/hath0r-poc
+layout: hathor-upl
+fileset_version: "0.2.0"
+cli_version: "0.2.0"
+updated_at: "2026-09-23T20:00:17Z"
