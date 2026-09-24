@@ -1,0 +1,26 @@
+{
+  "apiVersion": "hath0r.observability.openobservation/v1",
+  "kind": "OpenObservationConfig",
+  "metadata": {
+    "name": "poc-openobservation",
+    "control_tower": "Bayly-AI/HATH0R-CLI",
+    "product": "HATH0R-Agentic-POC",
+    "updated": "2026-09-24",
+    "issue": 41
+  },
+  "golden_signals": ["latency", "traffic", "errors", "saturation"],
+  "slis": [
+    {"id": "ui.health.success_rate", "target": 0.99, "window": "24h"},
+    {"id": "ui.api.error_rate", "target_max": 0.05, "window": "1h"},
+    {"id": "ui.render.latency_p95_ms", "target_max": 200, "window": "1h"}
+  ],
+  "event_classes": ["security", "governance", "ops", "product"],
+  "spool": {
+    "path": ".hath0r/spool",
+    "never_block": true,
+    "never_secrets": true
+  },
+  "alert_hooks": {
+    "webhook_url_env": "HATH0R_OBSERVATION_WEBHOOK_URL"
+  }
+}
