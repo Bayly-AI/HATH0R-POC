@@ -5,15 +5,7 @@
   "description": "Top-level structured JSON response envelope for hath0r CLI machine output (HATHOR-TS-005 §4).",
   "type": "object",
   "additionalProperties": true,
-  "required": [
-    "schema",
-    "command",
-    "generated_at",
-    "state",
-    "data",
-    "diagnostics",
-    "meta"
-  ],
+  "required": ["schema", "command", "generated_at", "state", "data", "diagnostics", "meta"],
   "properties": {
     "schema": {
       "type": "string",
@@ -38,10 +30,7 @@
     },
     "data": {
       "description": "Command-specific payload object, or null when no payload applies.",
-      "oneOf": [
-        { "type": "object", "additionalProperties": true },
-        { "type": "null" }
-      ]
+      "oneOf": [{ "type": "object", "additionalProperties": true }, { "type": "null" }]
     },
     "diagnostics": {
       "type": "array",

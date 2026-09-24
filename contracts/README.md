@@ -1,8 +1,8 @@
 # HATH0R CLI response JSON Schemas
 
 Canonical machine-readable contracts for the `hath0r` CLI structured JSON
-interface defined by **HATHOR-TS-005** (*HATH0R CLI Machine Interface for the
-POC*).
+interface defined by **HATHOR-TS-005** (_HATH0R CLI Machine Interface for the
+POC_).
 
 This directory is owned by the **HATH0R Agentic Framework** repository
 (`Bayly-AI/HATH0R-Agentic-Framework`). Downstream CLI and POC repos consume
@@ -10,14 +10,14 @@ these schemas; they do not redefine them.
 
 ## Schemas
 
-| File | Identity | Spec section | Purpose |
-|------|----------|--------------|---------|
-| `hath0r-cli-response-v1.schema.json` | `hath0r.cli.response/1` | §4 | Top-level response envelope |
-| `hath0r-cli-diagnostic-v1.schema.json` | `hath0r.cli.diagnostic/1` | §5 | Diagnostic entry shape |
-| `hath0r-cli-version-v1.schema.json` | version `data` | §9 | `command: version` payload |
-| `hath0r-cli-doctor-v1.schema.json` | doctor `data` | §10 | `command: doctor` payload |
-| `hath0r-cli-kb-path-v1.schema.json` | kb.path `data` | §11 | `command: kb.path` payload |
-| `hath0r-cli-kb-products-v1.schema.json` | kb.products `data` | §12 | `command: kb.products` payload |
+| File                                    | Identity                  | Spec section | Purpose                        |
+| --------------------------------------- | ------------------------- | ------------ | ------------------------------ |
+| `hath0r-cli-response-v1.schema.json`    | `hath0r.cli.response/1`   | §4           | Top-level response envelope    |
+| `hath0r-cli-diagnostic-v1.schema.json`  | `hath0r.cli.diagnostic/1` | §5           | Diagnostic entry shape         |
+| `hath0r-cli-version-v1.schema.json`     | version `data`            | §9           | `command: version` payload     |
+| `hath0r-cli-doctor-v1.schema.json`      | doctor `data`             | §10          | `command: doctor` payload      |
+| `hath0r-cli-kb-path-v1.schema.json`     | kb.path `data`            | §11          | `command: kb.path` payload     |
+| `hath0r-cli-kb-products-v1.schema.json` | kb.products `data`        | §12          | `command: kb.products` payload |
 
 All schemas use **JSON Schema draft-07**.
 
