@@ -1,0 +1,30 @@
+services:
+  hath0r-poc-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: hath0r-poc-ui
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1:8080/healthz"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    networks:
+      - hath0r-net
+    labels:
+      - "org.opencontainers.image.title=hath0r-poc-ui"
+      - "org.opencontainers.image.vendor=Bayly-AI"
+      - "com.hath0r.service.group=hath0r-opensource"
+      - "com.hath0r.service.tier=uxp"
+
+networks:
+  hath0r-net:
+    name: hath0r-net
+    external: true
