@@ -31,8 +31,8 @@ Group policy: `/Users/raybayly/Development/OpenSource/WARP.md`
 
 1. **CLI-First**: For any request involving a connection, MCP, workflow, factory, Docker workflow, KB path, or suite orientation, invoke **`hath0r`** (control-tower operator CLI) rather than inventing ad-hoc scripts.
 2. **Missing Capability Offer**: If the required connection, MCP, workflow, or factory does not exist, do not silently improvise. Offer to switch the task to create the missing connection / MCP / workflow / factory and use the original request as the acceptance test of that new capability.
-3. **Docs before code**: Require procedure/strategy/playbook/runbook before scaffolding implementation.
-4. **Session start checklist**: Follow `docs/governance/checklists/agent-session-start.md` (or control tower checklist) before executing tasks.
+3. **Docs before code**: Require procedure/strategy/playbook/runbook (see [`docs/governance/workflow-documentation-standard.md`](docs/governance/workflow-documentation-standard.md)) before scaffolding implementation.
+4. **Session start checklist**: Follow [`docs/governance/checklists/agent-session-start.md`](docs/governance/checklists/agent-session-start.md) before executing tasks.
 
 ## Framework hidden root (CRITICAL — cr-hath0r-root-001)
 
