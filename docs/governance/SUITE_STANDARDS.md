@@ -27,6 +27,7 @@ This repository **adopts** suite governance from the control tower. Canonical pr
 | OpenObservation | `cfg/observability/openobservation.json` | POC UI SLIs; spool under `.hath0r/spool` |
 | OpenFeature | `cfg/feature-flags/openfeature.json` | In-memory default provider |
 | Feature catalog example | `cfg/feature-flags/catalog.example.json` | Non-secret examples only |
+| Docker group pointer | `cfg/docker/groups/hath0r/README.md` | Compose lives on tower |
 | Docker workflows | `cfg/docker/workflows/*.json` | Hath0r validate → factory execute |
 | MCP servers | `cfg/mcp.servers.json` | Project MCP priority `1` |
 | Suite / product | `cfg/suite.yaml`, `cfg/product.yaml` | Orientation stubs |
