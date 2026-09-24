@@ -113,3 +113,9 @@ See `docs/governance/branch-rules.md` (cr-branch-gov-001 / CR-BAI-001). Work PRs
 ## PR workflow hardening
 
 See `docs/governance/pr-workflow.md`. Work PRs → `development` (agents + CODEOWNERS). **Human gate** before staging/master.
+## SonarCloud Quality Gate (CRITICAL)
+
+- Canonical thresholds: SonarCloud Quality Gate only — do not modify gate thresholds ad hoc.
+- PR check **SonarCloud Quality Gate** is a hard stop on failure.
+- See `docs/governance/sonarcloud-quality-gates.md`
+- Secret required: `SONAR_TOKEN`
