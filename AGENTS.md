@@ -34,6 +34,12 @@ Group policy: `/Users/raybayly/Development/OpenSource/WARP.md`
 3. **Docs before code**: Require procedure/strategy/playbook/runbook (see [`docs/governance/workflow-documentation-standard.md`](docs/governance/workflow-documentation-standard.md)) before scaffolding implementation.
 4. **Session start checklist**: Follow [`docs/governance/checklists/agent-session-start.md`](docs/governance/checklists/agent-session-start.md) before executing tasks.
 
+## Suite standards (member pointers)
+
+Index: [`docs/governance/SUITE_STANDARDS.md`](docs/governance/SUITE_STANDARDS.md)  
+Local cfg: `cfg/observability/`, `cfg/feature-flags/`, `cfg/docker/`  
+Control tower epic: HATH0R-CLI #58–#63 / PR #111
+
 ## Framework hidden root (CRITICAL — cr-hath0r-root-001)
 
 Use **only** `.hath0r/` for framework-created / modified / saved project metadata (including this repo’s KB stub).
