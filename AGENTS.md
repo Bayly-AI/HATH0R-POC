@@ -124,3 +124,9 @@ See `docs/governance/pr-workflow.md`. Work PRs → `development` (agents + CODEO
 Docs are published to the **proper group MCP** via control-tower
 `python3 scripts/publish-docs-to-mcp.py` (`cfg/mcp-doc-publish.json`).
 See HATH0R-CLI `docs/governance/mcp-doc-publish.md`.
+
+## Semantic Versioning (SemVer)
+
+- Canonical source of truth: `VERSION` in repo root.
+- PRs must declare version impact (`major`, `minor`, `patch`, or `none`).
+- See `docs/governance/semantic-versioning.md` and `docs/governance/playbooks/release-runbook.md`.
