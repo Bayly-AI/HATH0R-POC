@@ -106,3 +106,7 @@ Do not skip the playbook/runbook gate. Layout scaffolding without a documented o
 Operator CLI: `hath0r` (pin 0.2.0). Hidden root: **only** `.hath0r/` (never `.ai/`, `.aegis/`, `.infraOS/`).
 Runbook: [`docs/runbook.md`](docs/runbook.md)
 
+
+## Branch rules (pointer)
+
+See `docs/governance/branch-rules.md` (cr-branch-gov-001 / CR-BAI-001). Work PRs → `development` only; release trains use `release/x.x.x`.
