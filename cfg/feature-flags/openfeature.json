@@ -1,0 +1,25 @@
+{
+  "apiVersion": "hath0r.feature-flags.openfeature/v1",
+  "kind": "OpenFeatureConfig",
+  "metadata": {
+    "name": "poc-openfeature",
+    "control_tower": "Bayly-AI/HATH0R-CLI",
+    "product": "HATH0R-Agentic-POC",
+    "updated": "2026-09-24",
+    "issue": 42
+  },
+  "provider": {
+    "kind": "in-memory",
+    "options_env": "OPENFEATURE_PROVIDER_OPTIONS"
+  },
+  "evaluation_context_defaults": {
+    "environment": "local",
+    "product": "HATH0R-POC",
+    "service.name": "hath0r-poc-ui"
+  },
+  "catalog_ref": "cfg/feature-flags/catalog.example.json",
+  "policy": {
+    "fail_safe_defaults": true,
+    "never_commit_secrets": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "apiVersion": "hath0r.feature-flags.catalog/v1",
+  "flags": [
+    {
+      "key": "poc.fixture_mode.default",
+      "type": "boolean",
+      "default": false,
+      "owner": "uxp",
+      "description": "Default to fixture status source when live API is unavailable"
+    },
+    {
+      "key": "poc.telemetry.console_debug",
+      "type": "boolean",
+      "default": false,
+      "owner": "observability",
+      "description": "Log client telemetry and health checks to browser developer console"
+    },
+    {
+      "key": "poc.dark_mode.preview",
+      "type": "boolean",
+      "default": true,
+      "owner": "uxp",
+      "description": "Enable dark mode styling preview in the integration console"
+    }
+  ]
+}
