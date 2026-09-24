@@ -1,0 +1,169 @@
+{
+  "schema": "hathor-doc-index@1",
+  "generated_at": "2026-09-16",
+  "canon": "HATHOR-CANON-001",
+  "namespace": "HATHOR-*",
+  "count": 8,
+  "documents": [
+    {
+      "path": "docs/INDEX.md",
+      "id": "HATHOR-CANON-013",
+      "title": "HATHOR React/TypeScript POC Documentation Index",
+      "summary": "Reading order and source-of-truth map for the HATHOR Integration Console POC.",
+      "doc_type": "CANON",
+      "diataxis": "reference",
+      "audience": ["developer", "operator", "architect", "agent"],
+      "version": "0.1.0",
+      "status": "draft",
+      "updated": "2026-09-16",
+      "review": {
+        "trust": "unverified",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "interval": "365d",
+        "next_review": null
+      },
+      "stale": false
+    },
+    {
+      "path": "docs/hathor-req-001-integration-console-requirements-20260916.md",
+      "id": "HATHOR-REQ-001",
+      "title": "HATHOR Integration Console POC Requirements",
+      "summary": "Requirements and acceptance criteria for a read-only React/TypeScript POC over the OpenSource HATHOR CLI.",
+      "doc_type": "REQ",
+      "diataxis": "reference",
+      "audience": ["developer", "operator", "architect", "agent"],
+      "version": "0.1.0",
+      "status": "draft",
+      "updated": "2026-09-16",
+      "review": {
+        "trust": "unverified",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "interval": "180d",
+        "next_review": null
+      },
+      "stale": false
+    },
+    {
+      "path": "docs/hathor-guide-037-getting-started-20260916.md",
+      "id": "HATHOR-GUIDE-037",
+      "title": "Getting Started with the HATHOR React/TypeScript POC",
+      "summary": "Orient the current POC repository and verify the implemented OpenSource HATHOR CLI before application scaffolding.",
+      "doc_type": "GUIDE",
+      "diataxis": "tutorial",
+      "audience": ["developer", "operator", "agent"],
+      "version": "0.1.0",
+      "status": "draft",
+      "updated": "2026-09-16",
+      "review": {
+        "trust": "unverified",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "interval": "180d",
+        "next_review": null
+      },
+      "stale": false
+    },
+    {
+      "path": "docs/hathor-arch-003-integration-console-architecture-20260916.md",
+      "id": "HATHOR-ARCH-003",
+      "title": "HATHOR Integration Console POC Architecture",
+      "summary": "Logical and trust-boundary architecture for a React client using a narrow TypeScript adapter and the OpenSource HATHOR CLI.",
+      "doc_type": "ARCH",
+      "diataxis": "explanation",
+      "audience": ["developer", "architect", "operator", "agent"],
+      "version": "0.1.0",
+      "status": "draft",
+      "updated": "2026-09-16",
+      "review": {
+        "trust": "unverified",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "interval": "180d",
+        "next_review": null
+      },
+      "stale": false
+    },
+    {
+      "path": "docs/hathor-guide-038-cli-framework-integration-20260916.md",
+      "id": "HATHOR-GUIDE-038",
+      "title": "OpenSource CLI and HATHOR Framework Integration",
+      "summary": "Implemented HATHOR CLI commands, product boundaries, and the safe adapter contract for the React/TypeScript POC.",
+      "doc_type": "GUIDE",
+      "diataxis": "reference",
+      "audience": ["developer", "operator", "architect", "agent"],
+      "version": "0.1.0",
+      "status": "draft",
+      "updated": "2026-09-16",
+      "review": {
+        "trust": "unverified",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "interval": "180d",
+        "next_review": null
+      },
+      "stale": false
+    },
+    {
+      "path": "docs/hathor-guide-039-development-testing-20260916.md",
+      "id": "HATHOR-GUIDE-039",
+      "title": "React/TypeScript POC Development and Testing Guide",
+      "summary": "Proposed application baseline, source layout, scripts, tests, and definition of done for the HATHOR POC.",
+      "doc_type": "GUIDE",
+      "diataxis": "how-to",
+      "audience": ["developer", "agent"],
+      "version": "0.1.0",
+      "status": "draft",
+      "updated": "2026-09-16",
+      "review": {
+        "trust": "unverified",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "interval": "180d",
+        "next_review": null
+      },
+      "stale": false
+    },
+    {
+      "path": "docs/hathor-guide-040-security-governance-delivery-20260916.md",
+      "id": "HATHOR-GUIDE-040",
+      "title": "POC Security, Governance, and Delivery Guide",
+      "summary": "Secure CLI mediation, secret handling, issue-backed delivery, and environment promotion for the HATHOR React/TypeScript POC.",
+      "doc_type": "GUIDE",
+      "diataxis": "how-to",
+      "audience": ["developer", "operator", "agent"],
+      "version": "0.1.0",
+      "status": "draft",
+      "updated": "2026-09-16",
+      "review": {
+        "trust": "unverified",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "interval": "180d",
+        "next_review": null
+      },
+      "stale": false
+    },
+    {
+      "path": "docs/hathor-guide-041-troubleshooting-20260916.md",
+      "id": "HATHOR-GUIDE-041",
+      "title": "HATHOR React/TypeScript POC Troubleshooting",
+      "summary": "Diagnostic steps for OpenSource CLI, control-tower pointers, knowledgebase, frontend scaffold, and framework capability failures.",
+      "doc_type": "GUIDE",
+      "diataxis": "how-to",
+      "audience": ["developer", "operator", "agent"],
+      "version": "0.1.0",
+      "status": "draft",
+      "updated": "2026-09-16",
+      "review": {
+        "trust": "unverified",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "interval": "180d",
+        "next_review": null
+      },
+      "stale": false
+    }
+  ]
+}

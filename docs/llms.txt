@@ -1,0 +1,26 @@
+# HATHOR React/TypeScript POC Documentation
+
+> Product-local documentation for a read-only React/TypeScript integration with the OpenSource HATHOR CLI and Framework.
+
+## Start here
+
+- [Documentation index](./INDEX.md): Reading order, status legend, and source-of-truth boundaries.
+- [Product requirements](./hathor-req-001-integration-console-requirements-20260916.md): POC scope, capability baseline, requirements, and acceptance criteria.
+- [Getting started](./hathor-guide-037-getting-started-20260916.md): Verify the implemented CLI and orient the documentation-first repository.
+
+## Design and integration
+
+- [Architecture](./hathor-arch-003-integration-console-architecture-20260916.md): Browser, TypeScript adapter, CLI, Framework, control-tower, and knowledge trust boundaries.
+- [CLI and Framework integration](./hathor-guide-038-cli-framework-integration-20260916.md): Implemented command surface, safe adapter operations, and capability adoption.
+
+## Build, govern, and operate
+
+- [Development and testing](./hathor-guide-039-development-testing-20260916.md): Proposed scaffold, source layout, scripts, tests, and quality gate.
+- [Security, governance, and delivery](./hathor-guide-040-security-governance-delivery-20260916.md): Subprocess safety, secrets, work authorization, and promotion.
+- [Troubleshooting](./hathor-guide-041-troubleshooting-20260916.md): CLI, control-tower, KB, application, and framework diagnostics.
+
+## External authorities
+
+- [HATHOR Framework canonical docs](../../hath0r/docs/README.md)
+- [OpenSource HATHOR CLI](../../HATH0R-CLI/README.md)
+- [POC project rules](../AGENTS.md)
