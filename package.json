@@ -22,7 +22,9 @@
     "test:smoke": "vitest run --config vitest.smoke.config.ts",
     "test:e2e": "playwright test",
     "check": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run test:integration && npm run build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:build": "docker build -t hath0r-poc-ui:latest .",
+    "docker:run": "docker run --rm -p 8080:8080 hath0r-poc-ui:latest"
   },
   "dependencies": {
     "cors": "^2.8.5",
