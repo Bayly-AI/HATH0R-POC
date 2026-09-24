@@ -14,7 +14,7 @@ test.describe("Integration Console shell", () => {
     await expect(page.getByRole("button", { name: /Retry|Refreshing/i })).toBeVisible({
       timeout: 30_000,
     });
-    await expect(page.getByText("Overall")).toBeVisible();
+    await expect(page.getByText("Overall", { exact: true })).toBeVisible();
   });
 
   test("products page renders catalog region or error remediation", async ({ page }) => {
