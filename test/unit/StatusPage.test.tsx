@@ -116,7 +116,7 @@ describe("StatusOverviewPage", () => {
       />,
     );
     await screen.findByRole("heading", { name: "Status" });
-    expect(screen.getByRole("heading", { name: "CLI" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "CLI" })).toBeInTheDocument();
     expect(screen.getByText("0.2.0")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Doctor" })).toBeInTheDocument();
     expect(screen.getByText("hath0r-cli")).toBeInTheDocument();
