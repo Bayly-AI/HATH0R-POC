@@ -119,3 +119,8 @@ See `docs/governance/pr-workflow.md`. Work PRs → `development` (agents + CODEO
 - PR check **SonarCloud Quality Gate** is a hard stop on failure.
 - See `docs/governance/sonarcloud-quality-gates.md`
 - Secret required: `SONAR_TOKEN`
+## Documentation → MCP
+
+Docs are published to the **proper group MCP** via control-tower
+`python3 scripts/publish-docs-to-mcp.py` (`cfg/mcp-doc-publish.json`).
+See HATH0R-CLI `docs/governance/mcp-doc-publish.md`.
