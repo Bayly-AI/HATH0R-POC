@@ -7,10 +7,7 @@
   "product_name": "HATHOR-POC",
   "mode": "member",
   "generated_at": "2026-09-23T20:00:17Z",
-  "modes": [
-    "member",
-    "standalone"
-  ],
+  "modes": ["member", "standalone"],
   "contracts": [
     "README.md",
     "exit-codes.yaml",
