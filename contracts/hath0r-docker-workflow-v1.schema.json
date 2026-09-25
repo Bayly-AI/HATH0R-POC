@@ -4,12 +4,7 @@
   "title": "Hath0r Docker Workflow Specification",
   "description": "Declarative Docker workflow contract for Hath0r container validation and Docker Factory execution.",
   "type": "object",
-  "required": [
-    "apiVersion",
-    "kind",
-    "metadata",
-    "spec"
-  ],
+  "required": ["apiVersion", "kind", "metadata", "spec"],
   "additionalProperties": false,
   "properties": {
     "apiVersion": {
@@ -24,11 +19,7 @@
     },
     "metadata": {
       "type": "object",
-      "required": [
-        "id",
-        "name",
-        "group"
-      ],
+      "required": ["id", "name", "group"],
       "additionalProperties": false,
       "properties": {
         "id": {
@@ -43,11 +34,7 @@
         },
         "group": {
           "type": "string",
-          "enum": [
-            "hath0r-opensource",
-            "bai",
-            "1-nation"
-          ],
+          "enum": ["hath0r-opensource", "bai", "1-nation"],
           "description": "Target organizational group."
         },
         "product": {
@@ -62,18 +49,12 @@
     },
     "spec": {
       "type": "object",
-      "required": [
-        "factory",
-        "steps"
-      ],
+      "required": ["factory", "steps"],
       "additionalProperties": false,
       "properties": {
         "factory": {
           "type": "string",
-          "enum": [
-            "docker-factory",
-            "docker-monitor-factory"
-          ],
+          "enum": ["docker-factory", "docker-monitor-factory"],
           "default": "docker-factory",
           "description": "Target execution factory."
         },
@@ -98,9 +79,7 @@
         },
         "compose": {
           "type": "object",
-          "required": [
-            "file"
-          ],
+          "required": ["file"],
           "additionalProperties": false,
           "properties": {
             "file": {
@@ -118,15 +97,7 @@
           "description": "List of services participating in the workflow stack.",
           "items": {
             "type": "string",
-            "enum": [
-              "atc",
-              "mcp",
-              "uxp",
-              "redis",
-              "nginx",
-              "poc-ui",
-              "hath0r-poc-ui"
-            ]
+            "enum": ["atc", "mcp", "uxp", "redis", "nginx", "poc-ui", "hath0r-poc-ui"]
           }
         },
         "env_refs": {
@@ -142,21 +113,12 @@
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": [
-              "op"
-            ],
+            "required": ["op"],
             "additionalProperties": false,
             "properties": {
               "op": {
                 "type": "string",
-                "enum": [
-                  "validate",
-                  "build",
-                  "up",
-                  "healthcheck",
-                  "diagnose",
-                  "down"
-                ],
+                "enum": ["validate", "build", "up", "healthcheck", "diagnose", "down"],
                 "description": "Operation code."
               },
               "params": {
@@ -165,11 +127,7 @@
               },
               "on_failure": {
                 "type": "string",
-                "enum": [
-                  "abort",
-                  "continue",
-                  "retry"
-                ],
+                "enum": ["abort", "continue", "retry"],
                 "default": "abort"
               }
             }

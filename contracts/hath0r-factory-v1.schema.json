@@ -4,13 +4,7 @@
   "title": "Hath0rFactoryManifest",
   "description": "Schema definition for Hath0r declarative automation factories and orchestrated micro-bots.",
   "type": "object",
-  "required": [
-    "factory_id",
-    "name",
-    "version",
-    "bots",
-    "workflows"
-  ],
+  "required": ["factory_id", "name", "version", "bots", "workflows"],
   "additionalProperties": true,
   "properties": {
     "factory_id": {
@@ -45,11 +39,7 @@
       "description": "List of micro-bots participating in the factory.",
       "items": {
         "type": "object",
-        "required": [
-          "id",
-          "name",
-          "capabilities"
-        ],
+        "required": ["id", "name", "capabilities"],
         "additionalProperties": true,
         "properties": {
           "id": {
@@ -85,11 +75,7 @@
       "description": "List of declarative workflows executed by the factory.",
       "items": {
         "type": "object",
-        "required": [
-          "id",
-          "name",
-          "steps"
-        ],
+        "required": ["id", "name", "steps"],
         "additionalProperties": true,
         "properties": {
           "id": {
@@ -111,10 +97,7 @@
             "description": "Sequential steps executed within the workflow.",
             "items": {
               "type": "object",
-              "required": [
-                "bot",
-                "action"
-              ],
+              "required": ["bot", "action"],
               "additionalProperties": true,
               "properties": {
                 "bot": {

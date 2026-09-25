@@ -41,13 +41,7 @@
     },
     "intent": {
       "type": "string",
-      "enum": [
-        "cli_command",
-        "computer_use",
-        "agent_delegate",
-        "system_control",
-        "unresolved"
-      ],
+      "enum": ["cli_command", "computer_use", "agent_delegate", "system_control", "unresolved"],
       "description": "Categorized intent classification"
     },
     "confidence": {

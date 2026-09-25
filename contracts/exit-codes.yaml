@@ -18,7 +18,8 @@ exits:
   - code: 2
     meaning: "Usage or validation error"
     envelope_states: [error]
-    diagnostic_codes: [USAGE_INVALID, PRODUCT_CATALOG_INVALID, PROJECT_RULE_REFUSED, POLICY_CONFLICT]
+    diagnostic_codes:
+      [USAGE_INVALID, PRODUCT_CATALOG_INVALID, PROJECT_RULE_REFUSED, POLICY_CONFLICT]
 
   - code: 3
     meaning: "Not found"
