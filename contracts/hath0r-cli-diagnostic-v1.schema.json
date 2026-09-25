@@ -47,7 +47,10 @@
     },
     "ttl": {
       "description": "Bounded offline trust lifetime when applicable; null when not used.",
-      "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }]
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        { "type": "null" }
+      ]
     },
     "details": {
       "type": "object",

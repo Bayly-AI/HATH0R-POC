@@ -25,7 +25,13 @@
       "items": {
         "type": "object",
         "additionalProperties": true,
-        "required": ["product_id", "product_name", "role", "canonical", "is_control_tower"],
+        "required": [
+          "product_id",
+          "product_name",
+          "role",
+          "canonical",
+          "is_control_tower"
+        ],
         "properties": {
           "product_id": {
             "type": "string",
@@ -69,7 +75,10 @@
         },
         "next_cursor": {
           "description": "Opaque cursor for the next page, or null when no further pages.",
-          "oneOf": [{ "type": "string" }, { "type": "null" }]
+          "oneOf": [
+            { "type": "string" },
+            { "type": "null" }
+          ]
         },
         "truncated": {
           "type": "boolean",
