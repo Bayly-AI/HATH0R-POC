@@ -53,7 +53,7 @@ Do not market local process isolation as a security sandbox.
 6. The POC does not issue waivers, credentials, writes, or promotions.
 7. Framework metadata lives only under `.hath0r/`.
 
-Legacy hidden roots (`.ai/`, `.aegis/`, and `.infraOS/`) are forbidden. If
+Legacy hidden roots (`.ai/`, `.customerSystem/`, and `.infraOS/`) are forbidden. If
 found, remove or migrate them under an authorized change; do not add
 compatibility writes.
 

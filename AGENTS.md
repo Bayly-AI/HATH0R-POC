@@ -44,7 +44,7 @@ Control tower epic: HATH0R-CLI #58–#63 / PR #111
 
 Use **only** `.hath0r/` for framework-created / modified / saved project metadata (including this repo’s KB stub).
 
-Do **not** use `.ai/`, `.aegis/`, or `.infraOS/`.
+Do **not** use `.ai/`, `.customerSystem/`, or `.infraOS/`.
 
 ## Knowledgebase (CRITICAL — cr-kb-tower-001)
 
@@ -116,7 +116,7 @@ Before initializing (or re-initializing) any repository with Hath0r, agents MUST
 
 Do not skip the playbook/runbook gate. Layout scaffolding without a documented ops path is incomplete initialization.
 
-Operator CLI: `hath0r` (pin 0.2.0). Hidden root: **only** `.hath0r/` (never `.ai/`, `.aegis/`, `.infraOS/`).
+Operator CLI: `hath0r` (pin 0.2.0). Hidden root: **only** `.hath0r/` (never `.ai/`, `.customerSystem/`, `.infraOS/`).
 Runbook: [`docs/runbook.md`](docs/runbook.md)
 
 
