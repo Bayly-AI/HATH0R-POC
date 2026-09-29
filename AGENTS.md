@@ -161,3 +161,15 @@ See HATH0R-CLI `docs/governance/mcp-doc-publish.md`.
 
 ## Hyper Context Pointers
 - **Src Subsystem**: `src/AGENTS.md`
+
+## Hyper Context Pointers
+- **POC Source Subsystem**: `src/AGENTS.md`
+
+## Hyper Context Pointers
+- **POC Test Subsystem**: `test/AGENTS.md`
+
+## Hyper Context Pointers
+- **Configuration Subsystem**: `cfg/AGENTS.md`
+
+## Hyper Context Pointers
+- **Documentation Subsystem**: `docs/AGENTS.md`
