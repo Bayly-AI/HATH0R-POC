@@ -4,12 +4,7 @@
   "title": "Hath0rContextGraphSnapshot",
   "description": "Schema definition for dynamic runtime ContextGraph tracking sessions, subagent topologies, and task context.",
   "type": "object",
-  "required": [
-    "schema_version",
-    "session_id",
-    "nodes",
-    "edges"
-  ],
+  "required": ["schema_version", "session_id", "nodes", "edges"],
   "additionalProperties": true,
   "properties": {
     "schema_version": {
@@ -34,11 +29,7 @@
       "description": "Runtime entity nodes in ContextGraph.",
       "items": {
         "type": "object",
-        "required": [
-          "id",
-          "type",
-          "label"
-        ],
+        "required": ["id", "type", "label"],
         "additionalProperties": true,
         "properties": {
           "id": {
@@ -47,7 +38,15 @@
           },
           "type": {
             "type": "string",
-            "enum": ["agent", "subagent", "task", "tool_invocation", "jev_guard", "context_slice", "artifact"],
+            "enum": [
+              "agent",
+              "subagent",
+              "task",
+              "tool_invocation",
+              "jev_guard",
+              "context_slice",
+              "artifact"
+            ],
             "description": "Runtime node classification."
           },
           "label": {
@@ -71,11 +70,7 @@
       "description": "Directed runtime relationship edges.",
       "items": {
         "type": "object",
-        "required": [
-          "source",
-          "target",
-          "relation"
-        ],
+        "required": ["source", "target", "relation"],
         "additionalProperties": true,
         "properties": {
           "source": {
@@ -88,7 +83,14 @@
           },
           "relation": {
             "type": "string",
-            "enum": ["spawned_by", "delegated_to", "executed_tool", "guarded_by", "produced_artifact", "consumed_context"],
+            "enum": [
+              "spawned_by",
+              "delegated_to",
+              "executed_tool",
+              "guarded_by",
+              "produced_artifact",
+              "consumed_context"
+            ],
             "description": "Dynamic runtime relationship type."
           },
           "metadata": {
