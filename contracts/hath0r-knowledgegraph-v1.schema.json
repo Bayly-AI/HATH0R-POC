@@ -4,11 +4,7 @@
   "title": "Hath0rKnowledgeGraphManifest",
   "description": "Schema definition for static and compiled Hath0r KnowledgeGraph entity nodes and relational edges.",
   "type": "object",
-  "required": [
-    "schema_version",
-    "nodes",
-    "edges"
-  ],
+  "required": ["schema_version", "nodes", "edges"],
   "additionalProperties": true,
   "properties": {
     "schema_version": {
@@ -29,11 +25,7 @@
       "description": "Entity nodes in the KnowledgeGraph.",
       "items": {
         "type": "object",
-        "required": [
-          "id",
-          "type",
-          "title"
-        ],
+        "required": ["id", "type", "title"],
         "additionalProperties": true,
         "properties": {
           "id": {
@@ -43,7 +35,19 @@
           },
           "type": {
             "type": "string",
-            "enum": ["document", "contract", "procedure", "strategy", "playbook", "runbook", "checklist", "policy", "tool", "bot", "subsystem"],
+            "enum": [
+              "document",
+              "contract",
+              "procedure",
+              "strategy",
+              "playbook",
+              "runbook",
+              "checklist",
+              "policy",
+              "tool",
+              "bot",
+              "subsystem"
+            ],
             "description": "Canonical classification type for the node."
           },
           "title": {
@@ -71,11 +75,7 @@
       "description": "Directed relational edges between KnowledgeGraph nodes.",
       "items": {
         "type": "object",
-        "required": [
-          "source",
-          "target",
-          "relation"
-        ],
+        "required": ["source", "target", "relation"],
         "additionalProperties": true,
         "properties": {
           "source": {
@@ -88,7 +88,16 @@
           },
           "relation": {
             "type": "string",
-            "enum": ["depends_on", "implements", "references", "governed_by", "validates", "contains", "routes_to", "invokes"],
+            "enum": [
+              "depends_on",
+              "implements",
+              "references",
+              "governed_by",
+              "validates",
+              "contains",
+              "routes_to",
+              "invokes"
+            ],
             "description": "Semantic relationship type."
           },
           "weight": {
