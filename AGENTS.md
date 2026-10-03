@@ -147,35 +147,47 @@ See HATH0R-CLI `docs/governance/mcp-doc-publish.md`.
 ## Hyper Context Pointers
 - **Test Subsystem**: `test/AGENTS.md`
 
+
 ## Hyper Context Pointers
 - **Contracts Subsystem**: `contracts/AGENTS.md`
+
 
 ## Hyper Context Pointers
 - **Docs Subsystem**: `docs/AGENTS.md`
 
+
 ## Hyper Context Pointers
 - **Cfg Subsystem**: `cfg/AGENTS.md`
+
 
 ## Hyper Context Pointers
 - **Lib Subsystem**: `lib/AGENTS.md`
 
+
 ## Hyper Context Pointers
 - **Src Subsystem**: `src/AGENTS.md`
+
 
 ## Hyper Context Pointers
 - **POC Source Subsystem**: `src/AGENTS.md`
 
+
 ## Hyper Context Pointers
 - **POC Test Subsystem**: `test/AGENTS.md`
+
 
 ## Hyper Context Pointers
 - **Configuration Subsystem**: `cfg/AGENTS.md`
 
+
 ## Hyper Context Pointers
 - **Documentation Subsystem**: `docs/AGENTS.md`
+
 
 ## AgentGraph Substrate
 
 This repository is governed by the Hath0r AgentGraph substrate. Dynamic rule retrieval, role RBAC, and policy graphs are stored under `.hath0r/agentgraph/`.
 - Query status: `hath0r agentgraph status`
+- Query rules: `hath0r agentgraph query "<topic>"`
+- Route role: `hath0r agentgraph route --role <role>`
 - Validate rules: `hath0r agentgraph validate`
