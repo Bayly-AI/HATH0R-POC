@@ -1,0 +1,468 @@
+{
+  "schema_version": "hath0r.agentgraph/1",
+  "graph_id": "agentgraph-hath0r-poc",
+  "timestamp": "2026-10-03T10:55:24.050881+00:00",
+  "nodes": [
+    {
+      "id": "doc:agents-root",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (root)",
+      "content": "# AGENTS.md — HATHOR POC\n\n> Role: **Integration test bed for the HATHOR system** · member of **OpenSource Project** (`hath0r-opensource`)  \n> Updated: 2026-09-15\n\n## Group membership (CRITICAL)\n\n| Field | Value |\n|-------|-------|\n| Group | `hath0r-opensource` |\n| Project | **OpenSource Project** |\n| Group root | `/Users/raybayly/Development/OpenSource` |\n| **Control tower** | `/Users/raybayly/Development/OpenSource/HATH0R-CLI` (`Bayly-AI/HATH0R-CLI`) |\n| This product | `HATHOR-POC` |\n| GitHub | `Bayly-AI/HATH0R-Agentic-POC` |\n| Local path | `/Users/raybayly/Development/OpenSource/hath0r-poc` |\n| Canonical KB | `/Users/raybayly/Development/OpenSource/.hath0r/knowledgebase` |\n| Operator CLI | `hath0r` |\n| KB mode | stub |\n\n### Canonical siblings (all under OpenSource are project members)\n\n- **Control tower / CLI**: `/Users/raybayly/Development/OpenSource/HATH0R-CLI` → `Bayly-AI/HATH0R-CLI`\n- Framework: `/Users/raybayly/Development/OpenSource/hath0r` → `Bayly-AI/HATH0R-Agentic-Framework`",
+      "properties": {
+        "path": "AGENTS.md",
+        "subsystem": "root"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-test",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (test)",
+      "content": "# Test Subsystem - AGENTS Context\n\n> This file contains hyper-localized context for Test Subsystem.\n\n## Roles and Focus\n- Localized focus rules go here.\n",
+      "properties": {
+        "path": "test/AGENTS.md",
+        "subsystem": "test"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-contracts",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (contracts)",
+      "content": "# Contracts Subsystem - AGENTS Context\n\n> This file contains hyper-localized context for Contracts Subsystem.\n\n## Roles and Focus\n- Localized focus rules go here.\n",
+      "properties": {
+        "path": "contracts/AGENTS.md",
+        "subsystem": "contracts"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-docs",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (docs)",
+      "content": "# Docs Subsystem - AGENTS Context\n\n> This file contains hyper-localized context for Docs Subsystem.\n\n## Roles and Focus\n- Localized focus rules go here.\n",
+      "properties": {
+        "path": "docs/AGENTS.md",
+        "subsystem": "docs"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-cfg",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (cfg)",
+      "content": "# Cfg Subsystem - AGENTS Context\n\n> This file contains hyper-localized context for Cfg Subsystem.\n\n## Roles and Focus\n- Localized focus rules go here.\n",
+      "properties": {
+        "path": "cfg/AGENTS.md",
+        "subsystem": "cfg"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-lib",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (lib)",
+      "content": "# Lib Subsystem - AGENTS Context\n\n> This file contains hyper-localized context for Lib Subsystem.\n\n## Roles and Focus\n- Localized focus rules go here.\n",
+      "properties": {
+        "path": "lib/AGENTS.md",
+        "subsystem": "lib"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-src",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (src)",
+      "content": "# Src Subsystem - AGENTS Context\n\n> This file contains hyper-localized context for Src Subsystem.\n\n## Roles and Focus\n- Localized focus rules go here.\n",
+      "properties": {
+        "path": "src/AGENTS.md",
+        "subsystem": "src"
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Src Subsystem - Local Rules\n\n> Specific rules and constraints for the Src Subsystem module.\n\n## Constraints\n\n-\n",
+      "properties": {
+        "path": "src/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-voice-action-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "HATH0R Voice Action Contract v1",
+      "content": "Standardized contract for voice-driven intent recognition, routing, and dispatch across platforms and agents in HATHOR.",
+      "properties": {
+        "schema_id": "https://hath0r.dev/schemas/hath0r-voice-action-v1.schema.json",
+        "path": "contracts/hath0r-voice-action-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-knowledgegraph-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0rKnowledgeGraphManifest",
+      "content": "Schema definition for static and compiled Hath0r KnowledgeGraph entity nodes and relational edges.",
+      "properties": {
+        "schema_id": "https://raw.githubusercontent.com/Bayly-AI/HATH0R-Agentic-Framework/development/contracts/hath0r-knowledgegraph-v1.schema.json",
+        "path": "contracts/hath0r-knowledgegraph-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-response-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.response/1",
+      "content": "Top-level structured JSON response envelope for hath0r CLI machine output (HATHOR-TS-005 §4).",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-response-v1.schema.json",
+        "path": "contracts/hath0r-cli-response-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-docker-workflow-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0r Docker Workflow Specification",
+      "content": "Declarative Docker workflow contract for Hath0r container validation and Docker Factory execution.",
+      "properties": {
+        "schema_id": "https://schemas.baylyai.com/hath0r/contracts/hath0r-docker-workflow-v1.schema.json",
+        "path": "contracts/hath0r-docker-workflow-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-diagnostic-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.diagnostic/1",
+      "content": "Structured diagnostic entry for hath0r CLI machine responses (HATHOR-TS-005 §5).",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-diagnostic-v1.schema.json",
+        "path": "contracts/hath0r-cli-diagnostic-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-doctor-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.doctor.data/1",
+      "content": "Command-specific data payload for the doctor operation (HATHOR-TS-005 §10). Placed under response envelope field data when command is doctor.",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-doctor-v1.schema.json",
+        "path": "contracts/hath0r-cli-doctor-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-mcp-servers-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0r MCP Servers Configuration",
+      "content": "Configuration specification for Model Context Protocol (MCP) servers with priority ordering and scope rules.",
+      "properties": {
+        "schema_id": "https://schema.bayly.ai/hath0r/contracts/hath0r-mcp-servers-v1.schema.json",
+        "path": "contracts/hath0r-mcp-servers-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-kb-products-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.kb-products.data/1",
+      "content": "Command-specific data payload for the kb.products operation (HATHOR-TS-005 §12). Placed under response envelope field data when command is kb.products.",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-kb-products-v1.schema.json",
+        "path": "contracts/hath0r-cli-kb-products-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-kb-path-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.kb-path.data/1",
+      "content": "Command-specific data payload for the kb.path operation (HATHOR-TS-005 §11). Placed under response envelope field data when command is kb.path. Path is operator data; POC adapters must strip it from normal browser responses.",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-kb-path-v1.schema.json",
+        "path": "contracts/hath0r-cli-kb-path-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-contextgraph-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0rContextGraphSnapshot",
+      "content": "Schema definition for dynamic runtime ContextGraph tracking sessions, subagent topologies, and task context.",
+      "properties": {
+        "schema_id": "https://raw.githubusercontent.com/Bayly-AI/HATH0R-Agentic-Framework/development/contracts/hath0r-contextgraph-v1.schema.json",
+        "path": "contracts/hath0r-contextgraph-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-factory-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "Hath0rFactoryManifest",
+      "content": "Schema definition for Hath0r declarative automation factories and orchestrated micro-bots.",
+      "properties": {
+        "schema_id": "https://raw.githubusercontent.com/Bayly-AI/HATH0R-Agentic-Framework/development/contracts/hath0r-factory-v1.schema.json",
+        "path": "contracts/hath0r-factory-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "contract:hath0r-cli-version-v1.schema.json",
+      "plane": "knowledge",
+      "type": "contract",
+      "label": "hath0r.cli.version.data/1",
+      "content": "Command-specific data payload for the version operation (HATHOR-TS-005 §9). Placed under response envelope field data when command is version.",
+      "properties": {
+        "schema_id": "https://schemas.hath0r.dev/hath0r-cli-version-v1.schema.json",
+        "path": "contracts/hath0r-cli-version-v1.schema.json"
+      },
+      "is_current": true
+    },
+    {
+      "id": "role:developer",
+      "plane": "rules",
+      "type": "agent_role",
+      "label": "Developer Agent",
+      "content": "Full access software engineer role permitted to run commands, edit files, and build.",
+      "properties": {
+        "role_name": "developer",
+        "permitted_tools": [
+          "read_file",
+          "write_file",
+          "run_command",
+          "search_code"
+        ],
+        "forbidden_tools": [
+          "direct_push_master"
+        ]
+      },
+      "is_current": true
+    },
+    {
+      "id": "role:reader",
+      "plane": "rules",
+      "type": "agent_role",
+      "label": "Read-Only Agent",
+      "content": "Read-only inspection role strictly prohibited from modifying code or executing commands.",
+      "properties": {
+        "role_name": "reader",
+        "permitted_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "forbidden_tools": [
+          "run_command",
+          "write_file",
+          "git_push"
+        ]
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-bai-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "BAI Promotion Gate",
+      "content": "Canonical promotion development -> testing -> staging -> master.",
+      "policy_type": "governance",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-BAI-001"
+      }
+    },
+    {
+      "id": "rule:cr-hath0r-init-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Hath0r Repo Init Gate",
+      "content": "Follow canonical playbook and runbook before repo initialization.",
+      "policy_type": "workflow",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-HATH0R-INIT-001"
+      }
+    },
+    {
+      "id": "rule:cr-branch-gov-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Branch Governance",
+      "content": "Branch & Promotion Governance: work PRs target development only, canonical promotion path.",
+      "policy_type": "governance",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-BRANCH-GOV-001"
+      }
+    },
+    {
+      "id": "rule:cr-cli-first-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-CLI-FIRST-001",
+      "content": "Governance policy rule CR-CLI-FIRST-001",
+      "policy_type": "governance",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-CLI-FIRST-001"
+      }
+    },
+    {
+      "id": "rule:cr-hath0r-root-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Hidden Root Rule",
+      "content": "Use only .hath0r/ as hidden project root. Never create legacy .ai/ or .infraOS/.",
+      "policy_type": "governance",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-HATH0R-ROOT-001"
+      }
+    },
+    {
+      "id": "rule:cr-kb-tower-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-KB-TOWER-001",
+      "content": "Governance policy rule CR-KB-TOWER-001",
+      "policy_type": "governance",
+      "enforcement_level": "hard_stop",
+      "is_current": true,
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "properties": {
+        "rule_code": "CR-KB-TOWER-001"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:rules",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-bai-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-hath0r-init-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-branch-gov-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-cli-first-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-hath0r-root-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "is_current": true
+    },
+    {
+      "source": "role:developer",
+      "target": "rule:cr-kb-tower-001",
+      "relation": "RESTRICTED_BY",
+      "valid_from": "2026-10-03T10:55:24.050768+00:00",
+      "valid_to": null,
+      "is_current": true
+    }
+  ],
+  "metadata": {
+    "repo_root": "/Users/raybayly/Development/OpenSource/hath0r-poc",
+    "synced_sources": 25
+  }
+}

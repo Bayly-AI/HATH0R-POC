@@ -18,7 +18,7 @@ This compliance audit certifies that `Bayly-AI/HATH0R-POC` fulfills all organiza
 | Category | Requirement | Evaluation | Status |
 |:---|:---|:---|:---:|
 | **POC Role** | Member product & machine client | Connects to `hath0r` CLI and serves UI | **PASS** |
-| **Hidden Root** | Hidden root restricted exclusively to `.hath0r/` | `.hath0r/` verified; no `.ai/`, `.aegis/`, or `.infraOS/` | **PASS** |
+| **Hidden Root** | Hidden root restricted exclusively to `.hath0r/` | `.hath0r/` verified; no `.ai/`, `.customerSystem/`, or `.infraOS/` | **PASS** |
 | **Identity Contract** | Canonical `AGENTS.md` identity declaration | Declares group `hath0r-opensource`, roles, and tower links | **PASS** |
 | **Schema Contracts** | Versioned contracts pinned in `contracts/` | `hath0r-cli-response-v1.schema.json`, `doctor`, `version` | **PASS** |
 | **Configuration** | Tower and product configuration in `cfg/` | `suite.yaml`, `product.yaml`, `knowledge-tower.yaml` | **PASS** |
