@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-poc",
-  "timestamp": "2026-10-03T10:55:24.050881+00:00",
+  "timestamp": "2026-10-04T20:21:21.527939+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -84,6 +84,71 @@
       "properties": {
         "path": "src/AGENTS.md",
         "subsystem": "src"
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Test Subsystem - Local Rules\n\n> Specific rules and constraints for the Test Subsystem module.\n\n## Constraints\n\n-\n",
+      "properties": {
+        "path": "test/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Contracts Subsystem - Local Rules\n\n> Specific rules and constraints for the Contracts Subsystem module.\n\n## Constraints\n\n-\n",
+      "properties": {
+        "path": "contracts/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Docs Subsystem - Local Rules\n\n> Specific rules and constraints for the Docs Subsystem module.\n\n## Constraints\n- \n",
+      "properties": {
+        "path": "docs/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Cfg Subsystem - Local Rules\n\n> Specific rules and constraints for the Cfg Subsystem module.\n\n## Constraints\n- \n",
+      "properties": {
+        "path": "cfg/rules.md",
+        "priority": 3,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:rules",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule rules",
+      "content": "# Lib Subsystem - Local Rules\n\n> Specific rules and constraints for the Lib Subsystem module.\n\n## Constraints\n- \n",
+      "properties": {
+        "path": "lib/rules.md",
+        "priority": 3,
+        "restricted_actions": []
       },
       "is_current": true
     },
@@ -245,6 +310,747 @@
       "is_current": true
     },
     {
+      "id": "doc:docs__canonical_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Canonical",
+      "content": "# Docs Subsystem - Canonical Reference\n\n> Canonical sources of truth for Docs Subsystem.\n\n## Architecture\n- \n",
+      "properties": {
+        "path": "docs/canonical.md",
+        "category": "docs",
+        "size_bytes": 109
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__compliance-audit-report-hathor-poc_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Compliance Audit Report Hathor Poc",
+      "content": "# Hath0r Context Structure & Framework Compliance Audit Report\n\n> Target: **Bayly-AI/HATH0R-POC** (OpenSource Integration Console & POC)  \n> Standard: **HATHOR-PLAYBOOK-001 / CR-HATH0R-INIT-001 / CR-BAI-001**  \n> Date: 2026-09-24  \n> Status: **100% Compliant**\n\n---\n\n## 1. Executive Summary\n\nThis compliance audit certifies that `Bayly-AI/HATH0R-POC` fulfills all organizational governance, layout structure, and operational standards established by the Hath0r Agentic Framework. As the reference web/UI implementation and machine interface client, the repository strictly adheres to universal schema contracts and environment promotion gates.\n\n---\n\n## 2. Compliance Evaluation Matrix\n\n| Category | Requirement | Evaluation | Status |\n|:---|:---|:---|:---:|\n| **POC Role** | Member product & machine client | Connects to `hath0r` CLI and serves UI | **PASS** |\n| **Hidden Root** | Hidden root restricted exclusively to `.hath0r/` | `.hath0r/` verified; no `.ai/`, `.customerSystem/`, or `.infraOS/` | **PASS** |\n| **Identity Contract** | Canonical `AGENTS.md` identity declaration | Declares group `hath0r-opensource`, roles, and tower links | **PASS** |\n| **Schema Contracts** | Versioned contracts ",
+      "properties": {
+        "path": "docs/compliance-audit-report-hathor-poc.md",
+        "category": "docs",
+        "size_bytes": 2617
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__hathor-report-001-poc-completion-archive-20260918_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Hathor Report 001 Poc Completion Archive 20260918",
+      "content": "---\nid: HATHOR-REPORT-001\ntitle: OpenSource HATHOR POC — Completion & Archive Report\ndate: 2026-09-18\nproduct: hath0r-poc\ngithub: Bayly-AI/HATH0R-Agentic-POC\nstatus: complete\nmilestone: Phase 3 P1–P11\nbranch: development\ntip: 53b26db\n---\n\n# OpenSource HATHOR POC — Completion & Archive Report\n\n## 1. Executive summary\n\nThe **HATHOR Integration Console POC** (`Bayly-AI/HATH0R-Agentic-POC`) is complete as an OpenSource **integration test bed**. It proves that a browser application can consume the HATH0R CLI through a narrow, read-only TypeScript adapter without becoming a second control plane, shell, or policy engine.\n\nWork followed the trio build order **Framework → CLI → POC**. Framework contracts (F1–F4) and CLI structured output (C1–C9) were completed earlier. This report closes **POC Phase 3 (P1–P11)**.\n\n| Field | Value |\n| --- | --- |\n| Group | `hath0r-opensource` |\n| Product | HATHOR-POC / Integration Console |\n| Control tower | HATH0R-CLI (`Bayly-AI/HATH0R-CLI`) |\n| Framework | `Bayly-AI/HATH0R-Agentic-Framework` |\n| Default branch | `development` @ `53b26db` (test pyramid + CI merge) |\n| License | Apache-2.0 |\n| Archive intent | Milestone archive (read-only GitHub repo); not d",
+      "properties": {
+        "path": "docs/hathor-report-001-poc-completion-archive-20260918.md",
+        "category": "docs",
+        "size_bytes": 6438
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__hathor-guide-037-getting-started-20260916_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Hathor Guide 037 Getting Started 20260916",
+      "content": "---\nid: HATHOR-GUIDE-037\ntitle: \"Getting Started with the HATHOR React/TypeScript POC\"\nsummary: \"Orient the current POC repository and verify the implemented OpenSource HATHOR CLI before application scaffolding.\"\ndoc_type: GUIDE\ndiataxis: tutorial\naudience: [developer, operator, agent]\ntags: [getting-started, cli, react, typescript]\nversion: 0.1.0\nstatus: draft\ncreated: 2026-09-16\nupdated: 2026-09-16\nowner: \"Raymond Bayly (BaylyAI)\"\nreview:\n  trust: unverified\n  reviewed_by: null\n  reviewed_at: null\n  interval: 180d\n  next_review: null\nstale: false\nsupersedes: []\nsuperseded_by: null\namended_by: []\nparent: HATHOR-CANON-013\nsources:\n  - \"../README.md\"\n  - \"../AGENTS.md\"\n  - \"../cfg/suite.yaml\"\n  - \"../cfg/knowledge-tower.yaml\"\n  - \"../../HATH0R-CLI/README.md\"\n---\n# Getting Started with the HATHOR React/TypeScript POC\n\n## 1. What works today\n\nThis repository currently contains product identity, governance, suite\npointers, a KB stub, and documentation. It does **not** yet contain a\nReact/TypeScript scaffold.\n\nThe sibling OpenSource CLI currently supports:\n\n```text\nhath0r --version\nhath0r doctor\nhath0r kb path\nhath0r kb products\n```\n\nDo not infer additional executable commands from Fram",
+      "properties": {
+        "path": "docs/hathor-guide-037-getting-started-20260916.md",
+        "category": "docs",
+        "size_bytes": 5401
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__hathor-arch-003-integration-console-architecture-20260916_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Hathor Arch 003 Integration Console Architecture 20260916",
+      "content": "---\nid: HATHOR-ARCH-003\ntitle: \"HATHOR Integration Console POC Architecture\"\nsummary: \"Logical and trust-boundary architecture for a React client using a narrow TypeScript adapter and the OpenSource HATHOR CLI.\"\ndoc_type: ARCH\ndiataxis: explanation\naudience: [developer, architect, operator, agent]\ntags: [architecture, react, typescript, cli, dmz]\nversion: 0.1.0\nstatus: draft\ncreated: 2026-09-16\nupdated: 2026-09-16\nowner: \"Raymond Bayly (BaylyAI)\"\nreview:\n  trust: unverified\n  reviewed_by: null\n  reviewed_at: null\n  interval: 180d\n  next_review: null\nstale: false\nsupersedes: []\nsuperseded_by: null\namended_by: []\nparent: HATHOR-CANON-013\nsources:\n  - HATHOR-CANON-011\n  - HATHOR-ADR-003\n  - HATHOR-ADR-004\n  - HATHOR-RP-010\n  - HATHOR-RP-013\n  - HATHOR-TS-004\n---\n# HATHOR Integration Console POC Architecture\n\n## 1. Decision status\n\nThis document defines the proposed product architecture. No application\ncomponents shown here exist until implemented by an issue-backed scaffold\nchange.\n\nThe design applies HATHOR's application/framework boundary without importing\nolder hidden-root or binary examples from design-stage papers. For this\nOpenSource product:\n\n- the public operator binary is `ha",
+      "properties": {
+        "path": "docs/hathor-arch-003-integration-console-architecture-20260916.md",
+        "category": "docs",
+        "size_bytes": 9140
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__runbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Runbook",
+      "content": "# Runbook: HATHOR POC\n\n> Canonical operations runbook for **HATHOR POC**.  \n> Satisfies Hath0r initialization gate **CR-HATH0R-INIT-001**.  \n> Tech family: HATHOR POC / agentic integration test bed. Peer reference: `/Users/raybayly/Development/OpenSource/hath0r-mcp/docs/runbook.md`.\n\n---\n\n## 1. Overview\n\nProduct workspace initialized on the HATHOR Universal Project Layout (`layout: hathor-upl`).\n\n---\n\n## 2. Prerequisites\n\n- Operator CLI: `hath0r` on PATH (pin 0.2.0)\n- Framework checkout: `/Users/raybayly/Development/OpenSource/hath0r`\n- Secrets: `/Users/raybayly/Development/.credentials/<service>/.env` (never commit)\n\n---\n\n## 3. Install / bootstrap\n\n```bash\ncd /Users/raybayly/Development/OpenSource/hath0r-poc\n./bin/hath0r-bootstrap.sh\n```\n\n---\n\n## 4. Develop / quality / test / build\n\n```bash\nnpm install || true\nnpm test || true\n./bin/hath0r-bootstrap.sh\n```\n\n---\n\n## 5. Hath0r doctor\n\n```bash\n# standalone (default)\n./bin/hath0r-bootstrap.sh\n\n# optional suite doctor\nexport HATH0R_GROUP_ROOT=/Users/raybayly/Development/OpenSource   # or product group root\nhath0r doctor\n```\n\n---\n\n## 6. Deploy / rollback\n\nDocument host-specific deploy/rollback here as the product matures. Prefer sibling",
+      "properties": {
+        "path": "docs/runbook.md",
+        "category": "docs",
+        "size_bytes": 1796
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__hathor-guide-041-troubleshooting-20260916_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Hathor Guide 041 Troubleshooting 20260916",
+      "content": "---\nid: HATHOR-GUIDE-041\ntitle: \"HATHOR React/TypeScript POC Troubleshooting\"\nsummary: \"Diagnostic steps for OpenSource CLI, control-tower pointers, knowledgebase, frontend scaffold, and framework capability failures.\"\ndoc_type: GUIDE\ndiataxis: how-to\naudience: [developer, operator, agent]\ntags: [troubleshooting, cli, knowledgebase, react, diagnostics]\nversion: 0.1.0\nstatus: draft\ncreated: 2026-09-16\nupdated: 2026-09-16\nowner: \"Raymond Bayly (BaylyAI)\"\nreview:\n  trust: unverified\n  reviewed_by: null\n  reviewed_at: null\n  interval: 180d\n  next_review: null\nstale: false\nsupersedes: []\nsuperseded_by: null\namended_by: []\nparent: HATHOR-CANON-013\nsources:\n  - \"../README.md\"\n  - \"../AGENTS.md\"\n  - \"../cfg/suite.yaml\"\n  - \"../cfg/knowledge-tower.yaml\"\n  - \"../../HATH0R-CLI/README.md\"\n  - \"../../HATH0R-CLI/src/hath0r_cli/cli.py\"\n---\n# HATHOR React/TypeScript POC Troubleshooting\n\n## 1. Start here\n\nRun the implemented probes in order:\n\n```sh\nhath0r --version\nhath0r doctor\nhath0r kb path\nhath0r kb products\n```\n\nStop at the first failure and use the matching section below. Do not try\ndesign-stage Framework commands as a workaround.\n\n## 2. `hath0r` command not found\n\n### Cause\n\nThe sibling CLI ",
+      "properties": {
+        "path": "docs/hathor-guide-041-troubleshooting-20260916.md",
+        "category": "docs",
+        "size_bytes": 7478
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__hathor-guide-038-cli-framework-integration-20260916_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Hathor Guide 038 Cli Framework Integration 20260916",
+      "content": "---\nid: HATHOR-GUIDE-038\ntitle: \"OpenSource CLI and HATHOR Framework Integration\"\nsummary: \"Implemented HATHOR CLI commands, product boundaries, and the safe adapter contract for the React/TypeScript POC.\"\ndoc_type: GUIDE\ndiataxis: reference\naudience: [developer, operator, architect, agent]\ntags: [cli, framework, integration, knowledgebase]\nversion: 0.1.0\nstatus: draft\ncreated: 2026-09-16\nupdated: 2026-09-16\nowner: \"Raymond Bayly (BaylyAI)\"\nreview:\n  trust: unverified\n  reviewed_by: null\n  reviewed_at: null\n  interval: 180d\n  next_review: null\nstale: false\nsupersedes: []\nsuperseded_by: null\namended_by: []\nparent: HATHOR-CANON-013\nsources:\n  - HATHOR-ADR-003\n  - HATHOR-RP-010\n  - HATHOR-RP-012\n  - HATHOR-TS-004\n  - \"../../HATH0R-CLI/README.md\"\n  - \"../../HATH0R-CLI/src/hath0r_cli/cli.py\"\n  - \"../cfg/suite.yaml\"\n  - \"../cfg/knowledge-tower.yaml\"\n---\n# OpenSource CLI and HATHOR Framework Integration\n\n## 1. Three products, three responsibilities\n\n| Product | Responsibility | POC relationship |\n|---------|----------------|------------------|\n| HATH0R-CLI | OpenSource control tower and implemented `hath0r` operator CLI | Runtime integration boundary |\n| HATHOR Framework | Canonical archi",
+      "properties": {
+        "path": "docs/hathor-guide-038-cli-framework-integration-20260916.md",
+        "category": "docs",
+        "size_bytes": 7655
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__INDEX_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Index",
+      "content": "---\nid: HATHOR-CANON-013\ntitle: \"HATHOR React/TypeScript POC Documentation Index\"\nsummary: \"Reading order and source-of-truth map for the HATHOR Integration Console POC.\"\ndoc_type: CANON\ndiataxis: reference\naudience: [developer, operator, architect, agent]\ntags: [poc, react, typescript, index]\nversion: 0.1.0\nstatus: draft\ncreated: 2026-09-16\nupdated: 2026-09-16\nowner: \"Raymond Bayly (BaylyAI)\"\nreview:\n  trust: unverified\n  reviewed_by: null\n  reviewed_at: null\n  interval: 365d\n  next_review: null\nstale: false\nsupersedes: []\nsuperseded_by: null\namended_by: []\nparent: null\nsources: [HATHOR-CANON-001]\n---\n# HATHOR React/TypeScript POC Documentation\n\nProduct-local documentation for the planned React/TypeScript **HATHOR\nIntegration Console**.\n\n## Status legend\n\nEvery page distinguishes these states:\n\n| State | Meaning |\n|-------|---------|\n| **Implemented** | Verified in the current POC, CLI source, or checked-in configuration |\n| **Proposed** | Product decision for the React/TypeScript scaffold; implementation is still required |\n| **Framework design** | Described by the canonical HATHOR corpus but not necessarily shipped in the current OpenSource CLI |\n| **Out of scope** | Deliberatel",
+      "properties": {
+        "path": "docs/INDEX.md",
+        "category": "docs",
+        "size_bytes": 5014
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__TICKET-AGENTGRAPH-REFACTOR_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Ticket Agentgraph Refactor",
+      "content": "---\ntitle: \"Ticket: Refactor Agents Files to Utilize AgentGraph Substrate\"\nrepository: \"OpenSource/hath0r-poc\"\ngithub_issue: \"https://github.com/Bayly-AI/HATH0R-POC/issues/79\"\ncreated: \"2026-10-03\"\nstatus: \"closed\"\nclosed_at: \"2026-10-03\"\nvalidation_result: \"PASSED (28 nodes, 12 edges)\"\n---\n\n# Refactor Agent Files to Utilize Hath0r AgentGraph Substrate\n\n## Repository Context\n- **Repository**: `OpenSource/hath0r-poc`\n- **System Archetype / Role**: Machine Interface & Contract Validation\n- **Technology Stack**: Python 3.11 / POC Adapters / JSON Schemas\n- **Primary Subsystems**: `src`, `contracts`, `test`\n- **Current Agent Files**: `AGENTS.md`, `test/AGENTS.md`, `contracts/AGENTS.md`, `docs/AGENTS.md`, `cfg/AGENTS.md`, `lib/AGENTS.md` (+1 more) (7 total)\n- **Current AgentGraph Snapshot**: Initialized (27 nodes, 6 edges)\n\n---\n\n## Architectural Purpose\n\nUnder **CR-BAI-001** and the **Hath0r Zero-Prompt-Tax Governance** model, storing static policies, rules, and tool authorizations as monolithic Markdown documents in `AGENTS.md` wastes 40%–60% of LLM context windows and introduces probabilistic security bypasses. \n\nThis work refactors this repository's agent configuration into the determ",
+      "properties": {
+        "path": "docs/TICKET-AGENTGRAPH-REFACTOR.md",
+        "category": "docs",
+        "size_bytes": 4352
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__hathor-req-001-integration-console-requirements-20260916_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Hathor Req 001 Integration Console Requirements 20260916",
+      "content": "---\nid: HATHOR-REQ-001\ntitle: \"HATHOR Integration Console POC Requirements\"\nsummary: \"Requirements and acceptance criteria for a read-only React/TypeScript POC over the OpenSource HATHOR CLI.\"\ndoc_type: REQ\ndiataxis: reference\naudience: [developer, operator, architect, agent]\ntags: [poc, react, typescript, requirements]\nversion: 0.1.0\nstatus: draft\ncreated: 2026-09-16\nupdated: 2026-09-16\nowner: \"Raymond Bayly (BaylyAI)\"\nreview:\n  trust: unverified\n  reviewed_by: null\n  reviewed_at: null\n  interval: 180d\n  next_review: null\nstale: false\nsupersedes: []\nsuperseded_by: null\namended_by: []\nparent: HATHOR-CANON-013\nsources:\n  - HATHOR-CANON-011\n  - HATHOR-ADR-003\n  - HATHOR-ADR-004\n  - \"../cfg/suite.yaml\"\n  - \"../cfg/knowledge-tower.yaml\"\n  - \"../../HATH0R-CLI/src/hath0r_cli/cli.py\"\n---\n# HATHOR Integration Console POC Requirements\n\n## 1. Product definition\n\n**Working name:** HATHOR Integration Console.\n\nThe product is a local-first React/TypeScript proof of concept that verifies\nsafe consumption of the OpenSource HATHOR control tower and Framework. It is\nan integration client, not a replacement CLI, policy engine, knowledge store,\nor deployment authority.\n\n## 2. Problem\n\nThe OpenSource ",
+      "properties": {
+        "path": "docs/hathor-req-001-integration-console-requirements-20260916.md",
+        "category": "docs",
+        "size_bytes": 9935
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__rules_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Rules",
+      "content": "# Docs Subsystem - Local Rules\n\n> Specific rules and constraints for the Docs Subsystem module.\n\n## Constraints\n- \n",
+      "properties": {
+        "path": "docs/rules.md",
+        "category": "docs",
+        "size_bytes": 115
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__hathor-guide-040-security-governance-delivery-20260916_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Hathor Guide 040 Security Governance Delivery 20260916",
+      "content": "---\nid: HATHOR-GUIDE-040\ntitle: \"POC Security, Governance, and Delivery Guide\"\nsummary: \"Secure CLI mediation, secret handling, issue-backed delivery, and environment promotion for the HATHOR React/TypeScript POC.\"\ndoc_type: GUIDE\ndiataxis: how-to\naudience: [developer, operator, agent]\ntags: [security, governance, delivery, secrets, promotion]\nversion: 0.1.0\nstatus: draft\ncreated: 2026-09-16\nupdated: 2026-09-16\nowner: \"Raymond Bayly (BaylyAI)\"\nreview:\n  trust: unverified\n  reviewed_by: null\n  reviewed_at: null\n  interval: 180d\n  next_review: null\nstale: false\nsupersedes: []\nsuperseded_by: null\namended_by: []\nparent: HATHOR-CANON-013\nsources:\n  - HATHOR-CANON-011\n  - HATHOR-RP-013\n  - HATHOR-ADR-004\n  - HATHOR-GUIDE-032\n  - HATHOR-GUIDE-033\n  - \"../AGENTS.md\"\n  - \"../../WARP.md\"\n---\n# POC Security, Governance, and Delivery Guide\n\n## 1. Security posture\n\nThe POC is local-first and read-only at the HATHOR boundary. Its controls are\ndesigned for cooperative-but-fallible users and agents. A fully adversarial\nlocal process with the developer's filesystem privileges is outside the\npreventive guarantee of this POC.\n\nDo not market local process isolation as a security sandbox.\n\n## 2. Non-ne",
+      "properties": {
+        "path": "docs/hathor-guide-040-security-governance-delivery-20260916.md",
+        "category": "docs",
+        "size_bytes": 7273
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__hathor-guide-039-development-testing-20260916_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Hathor Guide 039 Development Testing 20260916",
+      "content": "---\nid: HATHOR-GUIDE-039\ntitle: \"React/TypeScript POC Development and Testing Guide\"\nsummary: \"Proposed application baseline, source layout, scripts, tests, and definition of done for the HATHOR POC.\"\ndoc_type: GUIDE\ndiataxis: how-to\naudience: [developer, agent]\ntags: [react, typescript, development, testing, quality]\nversion: 0.1.0\nstatus: draft\ncreated: 2026-09-16\nupdated: 2026-09-16\nowner: \"Raymond Bayly (BaylyAI)\"\nreview:\n  trust: unverified\n  reviewed_by: null\n  reviewed_at: null\n  interval: 180d\n  next_review: null\nstale: false\nsupersedes: []\nsuperseded_by: null\namended_by: []\nparent: HATHOR-CANON-013\nsources:\n  - HATHOR-CANON-011\n  - HATHOR-RP-007\n  - HATHOR-ADR-004\n  - HATHOR-GUIDE-030\n  - HATHOR-REQ-001\n  - HATHOR-ARCH-003\n---\n# React/TypeScript POC Development and Testing Guide\n\n## 1. Current-state warning\n\nThe following is the target development contract. No Node project exists in\nthe repository yet. The scaffold ticket must create and pin the actual\n`package.json`, lockfile, runtime versions, scripts, and CI.\n\n## 2. Proposed baseline\n\n| Concern | Proposed choice |\n|---------|-----------------|\n| UI | React with functional components |\n| Language | TypeScript in strict m",
+      "properties": {
+        "path": "docs/hathor-guide-039-development-testing-20260916.md",
+        "category": "docs",
+        "size_bytes": 7496
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__workflow-documentation-standard_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Workflow Documentation Standard",
+      "content": "# Workflow Documentation Standard (POC Member)\n\n> Member: `Bayly-AI/HATH0R-Agentic-POC` · Issue track: #45  \n> Canonical Control Tower Specification: [`Bayly-AI/HATH0R-CLI` workflow-documentation-standard.md](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/workflow-documentation-standard.md)\n\n## Requirement\n\nEvery durable workflow in this repository (CI, Docker, testing, and lifecycle automation) MUST have a complete documentation set covering the six canonical document types:\n\n| Type | Purpose | Local path |\n|------|---------|------------|\n| **Strategy** | Why / goals / non-goals | `docs/governance/strategies/<id>-strategy.md` |\n| **Procedure** | Ordered normative steps | `docs/governance/procedures/<id>-procedure.md` |\n| **Playbook** | Guided scenarios / decision branches | `docs/governance/playbooks/<id>-playbook.md` |\n| **Runbook** | Ops incident / execution steps | `docs/runbook.md`, `docs/governance/playbooks/*-runbook.md` |\n| **Checklist** | Pre/post gates and tick boxes | `docs/governance/checklists/<id>.md` |\n| **Test-doc** | Verification and test specifications | `test/` suites + `docs/hathor-guide-039-development-testing-20260916.md` |\n\n## Local W",
+      "properties": {
+        "path": "docs/governance/workflow-documentation-standard.md",
+        "category": "governance",
+        "size_bytes": 3809
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__openfeature-standards_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Openfeature Standards",
+      "content": "# OpenFeature standards — setup and adherence\n\n> Product: `Bayly-AI/HATH0R-POC` · Control tower: `Bayly-AI/HATH0R-CLI` · Issue track: #42  \n> Applies org-wide across product groups.\n\n## Policy (CRITICAL)\n\n1. **OpenFeature is the canonical feature-flag API** for runtime toggles (no ad-hoc `if ENV_FLAG` sprawl for product behavior).\n2. Flag evaluation MUST go through an OpenFeature-compatible client/provider abstraction.\n3. Flag keys are **stable, lowercase, dotted or kebab** identifiers (e.g. `poc.fixture_mode.default`, `poc.dark_mode.preview`).\n4. Default values ship safe-for-production (fail closed for mutating/dangerous paths).\n5. Providers and remote config URLs are configured via env/config — **no secrets in repo**.\n6. Evaluation context SHOULD include: `targetingKey` / principal (non-PII when possible), `environment`, `product`, `service.name`.\n\n## Configuration surface\n\n- `cfg/feature-flags/openfeature.json` — provider kind, defaults, flag catalog pointers\n- Env:\n  - `OPENFEATURE_PROVIDER` (`in-memory` | `env` | `file` | vendor)\n  - `OPENFEATURE_PROVIDER_OPTIONS` (JSON string; secrets via env interpolation outside git)\n\n## Flag catalog expectations\n\nEach product maintains a s",
+      "properties": {
+        "path": "docs/governance/openfeature-standards.md",
+        "category": "governance",
+        "size_bytes": 2079
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__semantic-versioning_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Semantic Versioning",
+      "content": "# Semantic Versioning Policy & Specification\n\n> Product: **HATH0R Agentic Framework & Ecosystem**  \n> Status: **Canonical Policy** (cr-semver-gov-001 / CR-BAI-001)  \n> Updated: 2026-09-24\n\n---\n\n## 1. Core Principle & Format\n\nAll repositories across the Hath0r ecosystem strictly adhere to **Semantic Versioning 2.0.0** (`MAJOR.MINOR.PATCH`):\n\n- **`MAJOR`**: Incompatible API, contract, schema, or structural changes.\n- **`MINOR`**: Backwards-compatible new features, capabilities, or schema additions.\n- **`PATCH`**: Backwards-compatible bug fixes, security patches, documentation enhancements, and internal chores.\n\nOptional pre-release identifiers (`-rc.1`, `-alpha.1`) are permitted exclusively on release staging branches (`release/x.x.x`).\n\n---\n\n## 2. Single Canonical Source of Truth\n\nTo eliminate version drift across artifacts, configurations, and manifests:\n\n1. **`VERSION` file in repository root** is the **exclusive canonical source of truth** for repository version state.\n2. Package manifests (e.g. `pyproject.toml`, `package.json`, `Cargo.toml`, Helm `Chart.yaml`) MUST derive from or match `VERSION`.\n3. In-code version constants MUST read from `VERSION` or import from package metada",
+      "properties": {
+        "path": "docs/governance/semantic-versioning.md",
+        "category": "governance",
+        "size_bytes": 2389
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__openobservation-standards_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Openobservation Standards",
+      "content": "# OpenObservation standards — setup and adherence\n\n> Product: `Bayly-AI/HATH0R-POC` · Control tower: `Bayly-AI/HATH0R-CLI` · Issue track: #41  \n> Org-wide observability *intent* and SLI baseline (pairs with OpenTelemetry implementation).\n\n## Intent\n\n**OpenObservation** defines *what* we observe and the operator-facing baseline: SLIs/SLOs, golden signals, audit/event classes, and dashboard/alert expectations.  \n**OpenTelemetry** defines *how* signals are produced and exported (`opentelemetry-standards.md`).\n\n## Golden signals (required per service)\n\n1. **Latency** — p50/p95 for primary UI navigation, render cycles, and API requests\n2. **Traffic** — page views, route navigations, and integration API calls per minute  \n3. **Errors** — client exceptions, console errors, HTTP 4xx/5xx API responses  \n4. **Saturation** — browser memory footprint, client pool wait, UI event loop lag  \n\n## Event / audit classes\n\n| Class | Examples | Retention guidance |\n|-------|----------|--------------------|\n| `security` | authz deny, secret access attempt | longest; restricted |\n| `governance` | branch guard block, quality gate fail | medium |\n| `ops` | deploy, container health check, status page refres",
+      "properties": {
+        "path": "docs/governance/openobservation-standards.md",
+        "category": "governance",
+        "size_bytes": 2284
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__pr-workflow_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Workflow",
+      "content": "# PR workflow hardening (CR-BAI-001 / cr-branch-gov-001)\n\n> Control tower: `Bayly-AI/HATH0R-CLI`  \n> Companion: `docs/governance/branch-rules.md`  \n> Issue track: PR workflow hardening (all-repos)\n\n## Canonical end-to-end flow\n\n```text\n1) GitHub issue created (required)\n2) Work branch from development:\n     feature|bugfix|hotfix|enhancement|research|fix|chore/<issue>-slug\n3) Implement on work branch\n4) PR: work branch → development\n5) Review: agents/bots + required checks (validate-promotion-path, CI, quality gates)\n6) Owner CODEOWNERS approval → merge → development\n7) Cut release branch: release/x.x.x (from development when ready)\n8) Promote → testing (deploy + validate)\n9) HUMAN REVIEW GATE  ← hard stop for automated/agent-heavy path\n   Human initiates release to staging\n10) testing → release PR → Human review → merge → staging\n11) staging → release PR → Human review → merge → master (Production)\n```\n\n### Hard stops\n\n| Stage | Who reviews | Notes |\n|-------|-------------|-------|\n| Work PR → `development` | Agents/bots + CODEOWNERS (`@somesayray`) | Primary automation surface |\n| → `testing` | CI + promotion path check | Deploy/validate before next stage |\n| → `staging` | **Human",
+      "properties": {
+        "path": "docs/governance/pr-workflow.md",
+        "category": "governance",
+        "size_bytes": 4225
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__opentelemetry-standards_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Opentelemetry Standards",
+      "content": "# OpenTelemetry (OTel) standards — setup and adherence\n\n> Product: `Bayly-AI/HATH0R-POC` · Control tower: `Bayly-AI/HATH0R-CLI` · Issue track: #43  \n> Applies org-wide across product groups.\n\n## Policy (CRITICAL)\n\n1. **OpenTelemetry is the canonical observability SDK/API** for traces, metrics, and (where adopted) logs bridge.\n2. Every long-running service (MCP, ATC, UXP backends, factories that emit runtime telemetry) MUST initialize OTel once at process start.\n3. **Resource attributes** (required):\n   - `service.name` — stable service id (`hath0r-poc-ui`)\n   - `service.namespace` or product/group — `hath0r-opensource`\n   - `deployment.environment` — `local` | `development` | `testing` | `staging` | `production`\n   - `service.version` — from `VERSION` / build metadata when available\n4. **Export**: OTLP preferred (HTTP or gRPC). Endpoints via config/env only.\n5. **Secrets**: collector auth tokens / API keys ONLY via env refs under `/Users/raybayly/Development/.credentials/<service>/.env` — never commit.\n6. Do not invent competing proprietary trace formats. Bridge legacy metrics into OTel views when practical.\n\n## Configuration surface\n\n- `cfg/observability/otel.json` — exporter endp",
+      "properties": {
+        "path": "docs/governance/opentelemetry-standards.md",
+        "category": "governance",
+        "size_bytes": 2289
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__sonarcloud-quality-gates_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Sonarcloud Quality Gates",
+      "content": "# SonarCloud Quality Gates (PR hard stop)\n\n> Control tower: `Bayly-AI/HATH0R-CLI`  \n> Ticket track: PR quality gates — SonarCloud hard stop (all-repos)\n\n## Policy (CRITICAL)\n\n1. **SonarCloud Quality Gate** is the **only** canonical threshold source for ratings, coverage, duplications, security hotspots, etc.\n2. **Do not** invent or relax project-local threshold numbers in `sonar-project.properties` (no `sonar.coverage.minimum`, no homemade rating floors that diverge from the cloud gate).\n3. If the Quality Gate **fails**, the PR **cannot** be merged until fixed (required check **SonarCloud Quality Gate**).\n4. Fix findings; **do not** weaken the org/project Quality Gate to go green.\n\n## CI\n\nWorkflow: `.github/workflows/sonarcloud-quality-gate.yml`\n\n- Runs on PRs into `development` / `testing` / `staging` / `master`\n- Runs scan against **SonarCloud** (`https://sonarcloud.io`)\n- Sets `sonar.qualitygate.wait=true` so the job **fails** when the gate fails\n\nRequired check context name: **`SonarCloud Quality Gate`**\n\n## Required secrets / variables\n\n| Name | Type | Purpose |\n|------|------|---------|\n| `SONAR_TOKEN` | Actions **secret** | SonarCloud analysis token (repo or org) |\n| `SONAR_",
+      "properties": {
+        "path": "docs/governance/sonarcloud-quality-gates.md",
+        "category": "governance",
+        "size_bytes": 2889
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__SUITE_STANDARDS_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Suite Standards",
+      "content": "# Suite standards (member pointer)\n\n> Product: **HATH0R-Agentic-POC** · Group: `hath0r-opensource`  \n> Control tower: [`Bayly-AI/HATH0R-CLI`](https://github.com/Bayly-AI/HATH0R-CLI) · branch `development`  \n> Fan-out issues: #41–#46 · Tower epic: HATH0R-CLI #58–#63 / PR #111\n\nThis repository **adopts** suite governance from the control tower. Canonical prose lives on the tower `development` branch; this product keeps **local stubs** (`cfg/`), **agent rules** (`AGENTS.md`), and short pointers so agents resolve the right source of truth.\n\n## Canonical tower URLs (`development`)\n\n| Standard | Control-tower document |\n|----------|------------------------|\n| OpenObservation | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openobservation-standards.md |\n| OpenFeature | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/openfeature-standards.md |\n| OpenTelemetry | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/opentelemetry-standards.md |\n| CLI-first | https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/cli-first-rules.md |\n| Workflow documentation | https://github.com/Bayly-AI/HATH0R-CLI/blob/devel",
+      "properties": {
+        "path": "docs/governance/SUITE_STANDARDS.md",
+        "category": "governance",
+        "size_bytes": 2787
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__mcp-configuration_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Mcp Configuration",
+      "content": "# Model Context Protocol (MCP) Configuration Specification\n\n> Product: **HATH0R Agentic Framework & Ecosystem**  \n> Rule: **cr-mcp-priority-001**  \n> Status: **Canonical Specification**  \n> Updated: 2026-09-24\n\n---\n\n## 1. Overview & Core Rules\n\nHath0r orchestrates multiple Model Context Protocol (MCP) servers providing tool calls, knowledgebase lookups, and specialized actions. All MCP connections are declaratively managed through a repository-local configuration file (`cfg/mcp.servers.json`).\n\n### Priority Ordering Rule (CRITICAL)\n- **Project MCP is ALWAYS Priority #1**:\n  - The local repository's project-specific MCP server (e.g., `hath0r-mcp`) must always precede group and org servers.\n  - Priority resolution strictly follows:\n    1. Scope `project` (Priority 1)\n    2. Scope `group`\n    3. Scope `org` / `user`\n    4. Numeric `priority` ascending within matching scope.\n- **Config-Driven Dynamism**: Adding, removing, or disabling MCP servers requires no code changes—only updating `cfg/mcp.servers.json`.\n- **Zero Secrets**: Secrets, API keys, and credentials must NEVER be placed in `cfg/mcp.servers.json`. Use `env_ref` pointing to `/Users/raybayly/Development/.credentials/<service>",
+      "properties": {
+        "path": "docs/governance/mcp-configuration.md",
+        "category": "governance",
+        "size_bytes": 2126
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__branch-rules_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Branch Rules",
+      "content": "# Branch rules (cr-branch-gov-001 / CR-BAI-001)\n\n> Control tower source: `Bayly-AI/HATH0R-CLI`  \n> Applies org-wide to Hath0r/OpenSource, BAI, and 1-Nation product repos.  \n> Issue track: define-branch-rules (all-repos)\n\n## Locked canonical branches\n\n| Branch | Role | Protection |\n|--------|------|------------|\n| `development` | Default integration; **only** target for work PRs | PR + 1 review + CODEOWNERS + `validate-promotion-path` + no force-push/delete |\n| `testing` | Pre-staging validation | Same; heads: `development` or `release/x.x.x` |\n| `staging` | Pre-production | Same; heads: `testing` or `release/x.x.x`; **human review** |\n| `master` | Production | Same; heads: `staging` or `release/x.x.x`; **human review** |\n\n## Work branches (PR → `development` only)\n\n```text\nfeature|bugfix|hotfix|enhancement|research|fix|chore/<issue-number>-short-slug\n```\n\n- Create a GitHub **issue first** (no issue → no branch).\n- Branch **from `development` only**.\n- **Never** open work PRs into `testing`, `staging`, or `master`.\n\n## Release branches\n\n```text\nrelease/x.x.x\n```\n\nExamples: `release/1.4.0`, `release/2.0.0-rc.1`\n\n- Cut from `development` when a release train starts.\n- Used **only** fo",
+      "properties": {
+        "path": "docs/governance/branch-rules.md",
+        "category": "governance",
+        "size_bytes": 2603
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__docker-group-standard_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Docker Group Standard",
+      "content": "# Docker group standard (ATC + MCP + UXP + Redis + NGINX)\n\n> Product: `Bayly-AI/HATH0R-POC` · Control tower: `Bayly-AI/HATH0R-CLI` · Issue #46\n\n## Topology\n\nPer product family (`hath0r`, `1-nation`, `bai`):\n\n1. **Redis** — shared state  \n2. **NGINX** — shared edge  \n3. **ATC** — **config manager** for the group  \n4. **MCP** — knowledge/tools  \n5. **UXP** — experience UI (`hath0r-poc-ui`)\n\n## Templates\n\n| Group | Path |\n|-------|------|\n| Hath0r | `cfg/docker/groups/hath0r/docker-compose.yml` (on Control Tower) |\n| 1-Nation | ATC canonical + `cfg/docker/groups/1-nation/README.md` |\n| BAI | `cfg/docker/groups/bai/docker-compose.yml` |\n\n## Workflows\n\n- `cfg/docker/workflows/hath0r-poc-ui.json` (POC UI stack workflow)\n- `cfg/docker/workflows/hath0r-docker-group.json` (Full group workflow on Control Tower)\n\nValidate: `hath0r docker workflow validate <file>`\n\n## Docs set\n\n- Checklist: `docs/governance/checklists/docker-group.md`\n- Playbook: `docs/governance/playbooks/docker-group-playbook.md`\n- Runbook: `docs/governance/runbooks/docker-group-runbook.md`\n",
+      "properties": {
+        "path": "docs/governance/docker-group-standard.md",
+        "category": "governance",
+        "size_bytes": 1076
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__procedures__client-telemetry-procedure_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Client Telemetry Procedure",
+      "content": "# Procedure: Client Telemetry and Golden Signals Collection\n\n> Document Type: **Procedure** (`cr-workflow-doc-001`)  \n> Product: **HATH0R-Agentic-POC** · Issue: #68 · SemVer: `minor`\n\n## 1. Scope\n\nNormative procedure for implementing and validating client telemetry, SLI evaluation, and OpenFeature flag integration in the `hath0r-poc` React/Vite UI.\n\n## 2. Steps\n\n### Step 1: Client Telemetry Collector Module\n1. Define `ClientTelemetryCollector` in `src/app/services/telemetry.ts`.\n2. Maintain bounded ring buffers for:\n   - API request metrics (method, url, durationMs, success, statusCode)\n   - Route transition / component render timings (name, durationMs)\n   - UI errors (message, stack, componentName)\n3. Implement `computeSLIs()` calculating:\n   - `ui.health.success_rate`: fraction of successful status/health checks.\n   - `ui.api.error_rate`: ratio of failed API calls to total calls.\n   - `ui.render.latency_p95_ms`: 95th percentile latency of render timings.\n4. Integrate PII and secret redaction (`stripAnsi`, `redactSecrets`, `redactAbsolutePaths`) on all error messages and URL queries.\n\n### Step 2: OpenFeature Flag Integration\n1. Define an in-memory feature flag manager in `src/app/",
+      "properties": {
+        "path": "docs/governance/procedures/client-telemetry-procedure.md",
+        "category": "procedures",
+        "size_bytes": 2508
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__strategies__client-telemetry-strategy_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Client Telemetry Strategy",
+      "content": "# Strategy: Client Telemetry and Golden Signals Collection\n\n> Document Type: **Strategy** (`cr-workflow-doc-001`)  \n> Product: **HATH0R-Agentic-POC** · Issue: #68 · SemVer: `minor`  \n> Suite Reference: [`cfg/observability/openobservation.json`](../../cfg/observability/openobservation.json)\n\n## 1. Context & Motivation\n\n`HATH0R-Agentic-POC` provides a read-only React/TypeScript Integration Console over the `hath0r` CLI. Per suite OpenObservation standards (`cfg/observability/openobservation.json`), services must observe the four golden signals:\n- **Latency**: UI render timing, route transition latency, and API call latency.\n- **Traffic**: Request counts across UI views, API probe invocations, and route visits.\n- **Errors**: API call failures, error boundary catches, and unhandled promise rejections.\n- **Saturation**: Buffer / event queues and spool volume.\n\nIn client applications, collecting and aggregating these signals locally allows both runtime evaluation against defined Service Level Indicators (SLIs) and operator visibility via an in-console Golden Signals panel or console debug mode.\n\n## 2. Goals & Non-Goals\n\n### Goals\n- Instrument client-side API requests (`fetchStatus`, `fet",
+      "properties": {
+        "path": "docs/governance/strategies/client-telemetry-strategy.md",
+        "category": "strategies",
+        "size_bytes": 2862
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__sonarcloud-pr-gate_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Sonarcloud Pr Gate",
+      "content": "# Checklist: SonarCloud PR Quality Gate\n\n- [ ] `SONAR_TOKEN` configured (repo or org secret)\n- [ ] `SONAR_ORGANIZATION` set if not default\n- [ ] `sonar-project.properties` has identity/sources only (no local gate threshold overrides)\n- [ ] Workflow `.github/workflows/sonarcloud-quality-gate.yml` present\n- [ ] Branch protection requires check **SonarCloud Quality Gate** (where plan allows)\n- [ ] Sample PR shows check; failed gate blocks merge\n- [ ] PR template / AGENTS mention Sonar hard stop\n- [ ] Docs published / linked for agents\n",
+      "properties": {
+        "path": "docs/governance/checklists/sonarcloud-pr-gate.md",
+        "category": "checklists",
+        "size_bytes": 538
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__docker-group_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Docker Group",
+      "content": "# Checklist — Docker group (#46)\n\n- [ ] Group stack topology conforms to Redis + NGINX + ATC + MCP + UXP\n- [ ] ATC labeled config-manager\n- [ ] Network dedicated per group (`hath0r-net`)\n- [ ] Host ports configured via env variables; no secrets in compose/workflows\n- [ ] Workflow JSON validates: `hath0r docker workflow validate`\n- [ ] Runbook reviewed and operational\n",
+      "properties": {
+        "path": "docs/governance/checklists/docker-group.md",
+        "category": "checklists",
+        "size_bytes": 372
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__openobservation-adherence_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Openobservation Adherence",
+      "content": "# Checklist — OpenObservation adherence (#41)\n\n- [ ] Golden signals identified per service (latency, traffic, errors, saturation)\n- [ ] SLIs documented in `cfg/observability/openobservation.json`\n- [ ] Telemetry spool under `.hath0r/spool` only\n- [ ] No secrets in events or configurations\n- [ ] Alert webhook only via environment variable references\n",
+      "properties": {
+        "path": "docs/governance/checklists/openobservation-adherence.md",
+        "category": "checklists",
+        "size_bytes": 353
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__pr-release-to-master_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Release To Master",
+      "content": "# Checklist: release → master (Production)\n\n- [ ] Staging validated\n- [ ] Human opens release PR → `master`\n- [ ] Head = `staging` or `release/x.x.x`\n- [ ] Environment `production` human approval\n- [ ] `validate-promotion-path` green\n- [ ] Tag `vX.Y.Z` + GitHub Release planned/executed\n- [ ] Post-prod smoke complete\n- [ ] Incident channel aware (if applicable)\n",
+      "properties": {
+        "path": "docs/governance/checklists/pr-release-to-master.md",
+        "category": "checklists",
+        "size_bytes": 367
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__pr-pre-merge-development_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Pre Merge Development",
+      "content": "# Checklist: pre-merge → development\n\n- [ ] Linked GitHub issue in branch name and PR body (`Fixes #N` / `Refs #N`)\n- [ ] Branch named `feature|bugfix|hotfix|enhancement|research|fix|chore/<n>-slug`\n- [ ] PR base is **`development`**\n- [ ] Feature PR template completed\n- [ ] `validate-promotion-path` green\n- [ ] CI / tests green\n- [ ] Quality gates (Sonar etc.) green when enabled\n- [ ] CODEOWNERS review requested/approved\n- [ ] No secrets in diff\n- [ ] Docs/runbooks updated if workflow changed\n",
+      "properties": {
+        "path": "docs/governance/checklists/pr-pre-merge-development.md",
+        "category": "checklists",
+        "size_bytes": 501
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__openfeature-adherence_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Openfeature Adherence",
+      "content": "# Checklist — OpenFeature adherence (#42)\n\n- [ ] `cfg/feature-flags/openfeature.json` present and valid\n- [ ] Flag catalog listed with explicit types and safe defaults\n- [ ] No secrets in provider options committed\n- [ ] Mutating paths fail closed when flags missing\n- [ ] README / AGENTS / SUITE_STANDARDS points at `openfeature-standards.md`\n",
+      "properties": {
+        "path": "docs/governance/checklists/openfeature-adherence.md",
+        "category": "checklists",
+        "size_bytes": 346
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__pr-human-gate-before-staging_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Human Gate Before Staging",
+      "content": "# Checklist: HUMAN GATE before staging\n\n**Automation and agent review STOP here. A human initiates staging.**\n\n- [ ] Testing environment validated (functional + smoke)\n- [ ] No open Sev-1/Sev-2 on testing build\n- [ ] Human owner named for staging deploy\n- [ ] Release PR base = `staging`\n- [ ] Head = `testing` or `release/x.x.x`\n- [ ] GitHub Environment `staging` approval by human (`@somesayray` or designated)\n- [ ] Change window / communications done if required\n- [ ] Rollback plan attached to PR\n",
+      "properties": {
+        "path": "docs/governance/checklists/pr-human-gate-before-staging.md",
+        "category": "checklists",
+        "size_bytes": 502
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__pr-pre-promote-testing_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Pre Promote Testing",
+      "content": "# Checklist: pre-promote → testing\n\n- [ ] Release notes / version bump prepared\n- [ ] `release/x.x.x` cut from current `development` (or documented equivalent)\n- [ ] Release PR template completed\n- [ ] Head is `development` or `release/x.x.x` only\n- [ ] Base is `testing`\n- [ ] `validate-promotion-path` green\n- [ ] Deploy + smoke/URL validation plan ready\n- [ ] Rollback owner identified\n",
+      "properties": {
+        "path": "docs/governance/checklists/pr-pre-promote-testing.md",
+        "category": "checklists",
+        "size_bytes": 391
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__semantic-versioning-checklist_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Semantic Versioning Checklist",
+      "content": "# Semantic Versioning Checklist\n\n## PR Author Checklist\n- [ ] PR title adheres to Conventional Commits format (`feat:`, `fix:`, `chore:`, etc.).\n- [ ] PR description specifies **Version Impact**: `major`, `minor`, `patch`, or `none`.\n- [ ] Canonical `VERSION` in root is unmodified on feature PRs (bump happens on release branch).\n- [ ] All code, test fixtures, and schema samples reflect canonical SemVer.\n\n## PR Reviewer Checklist\n- [ ] Version impact declaration matches the actual diff scope.\n- [ ] Breaking changes are explicitly tagged as `semver:major` and documented.\n- [ ] Quality gates (CI, SonarCloud) passed.\n\n## Release Train Checklist\n- [ ] Branch created as `release/X.Y.Z` from `development`.\n- [ ] `VERSION` in root updated to `X.Y.Z`.\n- [ ] `CHANGELOG.md` updated with release highlights.\n- [ ] Passed promotion gates through `testing` and `staging`.\n- [ ] Human approval obtained before merge to `staging` and `master`.\n- [ ] Tag `vX.Y.Z` published to GitHub.\n",
+      "properties": {
+        "path": "docs/governance/checklists/semantic-versioning-checklist.md",
+        "category": "checklists",
+        "size_bytes": 979
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__client-telemetry_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Client Telemetry",
+      "content": "# Checklist: Client Telemetry Verification\n\n> Document Type: **Checklist** (`cr-workflow-doc-001`)  \n> Product: **HATH0R-Agentic-POC** · Issue: #68 · SemVer: `minor`\n\n- [ ] Golden Signals (latency, traffic, errors, saturation) collected in client runtime\n- [ ] SLIs evaluated against `cfg/observability/openobservation.json`:\n  - [ ] `ui.health.success_rate` (target $\\ge 0.99$)\n  - [ ] `ui.api.error_rate` (target $\\le 0.05$)\n  - [ ] `ui.render.latency_p95_ms` (target $\\le 200$ ms)\n- [ ] OpenFeature catalog flag `poc.telemetry.console_debug` toggles console output\n- [ ] React Error Boundary captures UI crashes and updates error signals\n- [ ] PII and secret redaction enforced on captured messages, stacks, and query strings\n- [ ] Dedicated UI page `/observability` accessible from navigation\n- [ ] All unit and integration tests passing (`npm run check`)\n- [ ] No secrets committed\n",
+      "properties": {
+        "path": "docs/governance/checklists/client-telemetry.md",
+        "category": "checklists",
+        "size_bytes": 889
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__mcp-enablement-checklist_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Mcp Enablement Checklist",
+      "content": "# MCP Server Enablement Checklist\n\n## Configuration Checklist\n- [ ] Server declared in `cfg/mcp.servers.json`.\n- [ ] Conforms to `contracts/hath0r-mcp-servers-v1.schema.json`.\n- [ ] **Project MCP is priority 1**; group/org servers follow in sequence.\n- [ ] No hardcoded secrets or sensitive tokens.\n- [ ] Endpoints (`base_url`, `mcp_endpoint`, `health_endpoint`) configured correctly.\n\n## Operational Verification Checklist\n- [ ] `hath0r mcp list` displays server with correct priority.\n- [ ] `hath0r mcp check` passes health checks and discovers available tools.\n- [ ] Test tool execution via `hath0r mcp call` succeeds.\n",
+      "properties": {
+        "path": "docs/governance/checklists/mcp-enablement-checklist.md",
+        "category": "checklists",
+        "size_bytes": 622
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__agent-session-start_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Agent Session Start",
+      "content": "# Agent Session Start Checklist\n\n> Canonical checklist for AI agents and operators beginning any task across the OpenSource Project suite (`HATH0R-CLI`, `HATH0R-Agentic-Framework`, `HATH0R-Agentic-POC`).\n\n## Pre-Work Verification\n\n1. **Verify Control Tower & Tools**:\n   - Ensure `hath0r` CLI is installed and responsive: `python3 -m hath0r_cli.cli --version`.\n   - Run `hath0r doctor --factories` to ensure configuration, catalog, and registered factories are 100% green.\n\n2. **CLI-First Orientation (`cr-cli-first-001`)**:\n   - For all operations involving connections, MCPs, workflows, factories, Docker stacks, or KB lookups, use `hath0r` commands directly (`hath0r factory ...`, `hath0r task ...`, `hath0r docker ...`, `hath0r kb ...`).\n   - Do **not** invent ad-hoc shell scripts or temporary tools when a CLI command or factory exists.\n\n3. **Missing Capability Gate**:\n   - If a requested connection, MCP registration, workflow, or factory does **not** exist:\n     - **Do not silently improvise or hack workarounds.**\n     - Offer to pivot the task: first build/register the missing connection/MCP/workflow/factory, using the user's original request as the automated acceptance test of the new",
+      "properties": {
+        "path": "docs/governance/checklists/agent-session-start.md",
+        "category": "checklists",
+        "size_bytes": 2405
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__pr-post-merge-development_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Post Merge Development",
+      "content": "# Checklist: post-merge → development\n\n- [ ] Merge commit on `development`\n- [ ] CI on `development` still green (if applicable)\n- [ ] Follow-up issues filed for residual work\n- [ ] Knowledge/MCP share bot run when enabled\n- [ ] Decide: stay on development vs cut `release/x.x.x`\n",
+      "properties": {
+        "path": "docs/governance/checklists/pr-post-merge-development.md",
+        "category": "checklists",
+        "size_bytes": 282
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__checklists__opentelemetry-adherence_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Opentelemetry Adherence",
+      "content": "# Checklist — OpenTelemetry adherence (#43)\n\n- [ ] `cfg/observability/otel.json` present and conforms to `hath0r.observability.otel/v1`\n- [ ] Resource attributes: `service.name`, `service_namespace`/group, `deployment_environment`\n- [ ] OTLP endpoint configured via env refs; headers secret via env only\n- [ ] No tokens or credentials in git\n- [ ] HTTP/MCP/UI paths propagate context and trace correlation\n- [ ] Docs linked from AGENTS or SUITE_STANDARDS pointer\n",
+      "properties": {
+        "path": "docs/governance/checklists/opentelemetry-adherence.md",
+        "category": "checklists",
+        "size_bytes": 465
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__runbooks__docker-group-runbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Docker Group Runbook",
+      "content": "# Runbook — Docker group\n\n## Redis unhealthy\n- `docker logs HATH0R-Redis`; ensure volume writable.\n\n## Port conflict\n- Override `HATH0R_*_HOST_PORT` env vars.\n\n## Apps profile image missing\n- Build local images (`docker compose build`) or run redis/nginx only.\n",
+      "properties": {
+        "path": "docs/governance/runbooks/docker-group-runbook.md",
+        "category": "runbooks",
+        "size_bytes": 263
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__runbooks__openobservation-ops-runbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Openobservation Ops Runbook",
+      "content": "# Runbook — OpenObservation ops\n\n## SLI breach remediation\n- Check golden signal telemetry (latency, error rate, saturation); correlate with OpenTelemetry traces.\n- Inspect `.hath0r/spool/telemetry-*.jsonl` for local operation or container health check failures.\n- Verify status endpoints (`/healthz`) and integration API reachability.\n",
+      "properties": {
+        "path": "docs/governance/runbooks/openobservation-ops-runbook.md",
+        "category": "runbooks",
+        "size_bytes": 338
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__runbooks__openfeature-ops-runbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Openfeature Ops Runbook",
+      "content": "# Runbook — OpenFeature ops\n\n## Flag not taking effect\n- Verify provider kind in `cfg/feature-flags/openfeature.json` and catalog key spelling.\n- Confirm evaluation context environment matches deploy stage (`development`, `testing`, `staging`, `master`).\n- Check that runtime flag lookup defaults properly if provider is offline or disconnected.\n",
+      "properties": {
+        "path": "docs/governance/runbooks/openfeature-ops-runbook.md",
+        "category": "runbooks",
+        "size_bytes": 348
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__runbooks__opentelemetry-ops-runbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Opentelemetry Ops Runbook",
+      "content": "# Runbook — OpenTelemetry (OTel) ops\n\n## No spans or telemetry reaching collector\n- Check `OTEL_EXPORTER_OTLP_ENDPOINT` and target collector health.\n- Confirm sampler ratio is not dropping events (`OTEL_TRACES_SAMPLER_ARG`).\n\n## Authentication failures to collector\n- Rotate or set credentials in `/Users/raybayly/Development/.credentials/<service>/.env`.\n- Never commit authorization headers to source control.\n",
+      "properties": {
+        "path": "docs/governance/runbooks/opentelemetry-ops-runbook.md",
+        "category": "runbooks",
+        "size_bytes": 414
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__runbooks__client-telemetry-runbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Client Telemetry Runbook",
+      "content": "# Runbook: Client Telemetry Inspection and Diagnostics\n\n> Document Type: **Runbook** (`cr-workflow-doc-001`)  \n> Product: **HATH0R-Agentic-POC** · Issue: #68 · SemVer: `minor`\n\n## 1. Quick Diagnostics Commands\n\n### Run Telemetry & Component Unit Tests\n```bash\nnpm run test test/unit/telemetry.test.ts test/unit/ObservabilityPage.test.tsx test/unit/TelemetryErrorBoundary.test.tsx\n```\n\n### Run Typecheck & Linter\n```bash\nnpm run typecheck\nnpm run lint\n```\n\n### Start Console in Local Mode\n```bash\nnpm run dev\n```\nOpen `http://localhost:5173/observability` to inspect live Golden Signals and SLIs.\n\n### Enable Console Debug Mode\nSet feature flag in browser console:\n```javascript\nwindow.__HATH0R_FEATURE_FLAGS__ = { \"poc.telemetry.console_debug\": true };\n```\nOr dispatch event to enable real-time telemetry streaming in console logs.\n",
+      "properties": {
+        "path": "docs/governance/runbooks/client-telemetry-runbook.md",
+        "category": "runbooks",
+        "size_bytes": 834
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__playbooks__release-runbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Release Runbook",
+      "content": "# Release Runbook — Semantic Versioning Promotion\n\n> Scope: **Hath0r Ecosystem Release Automation**  \n> Rule: **CR-BAI-001 / cr-semver-gov-001**\n\n---\n\n## Pre-Release Phase (on `development`)\n\n1. Verify `development` branch is green across all CI checks and tests:\n   ```bash\n   git checkout development && git pull origin development\n   ./bin/hath0r-bootstrap.sh test\n   ```\n2. Determine release version according to cumulative PR impacts:\n   - Any `semver:major` -> bump `MAJOR`, reset `MINOR` and `PATCH` to 0.\n   - Any `semver:minor` -> bump `MINOR`, reset `PATCH` to 0.\n   - Only `semver:patch` -> bump `PATCH`.\n\n## Release Branch Creation\n\n3. Create the release train branch:\n   ```bash\n   git checkout -b release/X.Y.Z development\n   ```\n4. Update `VERSION` in root:\n   ```bash\n   echo \"X.Y.Z\" > VERSION\n   ```\n5. Update `CHANGELOG.md` with release summary and linked PRs/issues.\n6. Commit changes:\n   ```bash\n   git commit -am \"chore(release): bump version to X.Y.Z\"\n   git push -u origin release/X.Y.Z\n   ```\n\n## Environment Promotion Path\n\n7. Promote to `testing`:\n   - Open PR: `release/X.Y.Z` -> `testing`\n   - Automated test suite runs.\n   - Merge PR into `testing`.\n8. Promote to `stagin",
+      "properties": {
+        "path": "docs/governance/playbooks/release-runbook.md",
+        "category": "playbooks",
+        "size_bytes": 1841
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__playbooks__sonarcloud-quality-gate-playbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Sonarcloud Quality Gate Playbook",
+      "content": "# Playbook: SonarCloud Quality Gate on PRs\n\n## First-time setup\n\n1. Log into SonarCloud with org admin.\n2. Ensure GitHub org `Bayly-AI` is bound (or correct Sonar org).\n3. Create project (or auto-provision on first scan) with **default/org Quality Gate** only.\n4. Generate project/org token → GitHub secret `SONAR_TOKEN`.\n5. Set Actions variable `SONAR_ORGANIZATION` if needed.\n6. Open a PR; confirm job **SonarCloud Quality Gate** runs.\n\n## PR failed the gate\n\n1. Open SonarCloud project → PR decoration / Quality Gate details.\n2. Fix **blocker/new code** conditions required by the gate (bugs, vulnerabilities, coverage on new code, etc.).\n3. Push commits; do **not** edit gate conditions.\n4. Re-run checks until green.\n\n## Missing SONAR_TOKEN\n\nJob fails closed with explicit error. Add secret, then re-run workflow.\n\n## Local preview (optional)\n\n```bash\n# token from credentials store — do not print\nexport SONAR_TOKEN=\"...\"   # from secure store\nsonar-scanner -Dsonar.qualitygate.wait=true\n```\n\nPrefer CI as source of truth.\n\n## Anti-patterns\n\n- Lowering coverage % in `sonar-project.properties` to pass CI\n- Disabling the workflow on protected branches\n- Marking the check optional on branch pro",
+      "properties": {
+        "path": "docs/governance/playbooks/sonarcloud-quality-gate-playbook.md",
+        "category": "playbooks",
+        "size_bytes": 1276
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__playbooks__openobservation-setup-playbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Openobservation Setup Playbook",
+      "content": "# Playbook — OpenObservation setup\n\n1. Identify golden signals for the service (latency, traffic, errors, saturation).\n2. Configure `cfg/observability/openobservation.json` SLIs and targets.\n3. Ensure telemetry events and spooling write exclusively to `.hath0r/spool`.\n4. Wire alert webhook environment references if notifications are enabled.\n5. Verify against `openobservation-adherence.md` checklist.\n",
+      "properties": {
+        "path": "docs/governance/playbooks/openobservation-setup-playbook.md",
+        "category": "playbooks",
+        "size_bytes": 406
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__playbooks__opentelemetry-setup-playbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Opentelemetry Setup Playbook",
+      "content": "# Playbook — OpenTelemetry setup\n\n1. Copy or maintain `cfg/observability/otel.json` in the service repository.\n2. Configure `OTEL_EXPORTER_OTLP_ENDPOINT` via environment or credential file.\n3. Wire SDK initialization with required resource attributes (`service.name`, `service.namespace`, `deployment.environment`).\n4. Validate that test spans reach designated collector/backend.\n5. Complete checklist `opentelemetry-adherence.md`.\n",
+      "properties": {
+        "path": "docs/governance/playbooks/opentelemetry-setup-playbook.md",
+        "category": "playbooks",
+        "size_bytes": 434
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__playbooks__client-telemetry-playbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Client Telemetry Playbook",
+      "content": "# Playbook: Client Telemetry Operations and SLI Response\n\n> Document Type: **Playbook** (`cr-workflow-doc-001`)  \n> Product: **HATH0R-Agentic-POC** · Issue: #68 · SemVer: `minor`\n\n## 1. Scenario: Degraded SLI Alert or Warning\n\nWhen viewing the Observability dashboard or inspecting telemetry:\n\n### Case A: `ui.api.error_rate` Exceeds Target ($> 5\\%$)\n1. Check the **Recent Errors** panel in `/observability`.\n2. Determine whether errors originate from adapter connection refused (`HTTP 502/503`) or probe failures.\n3. If adapter loopback is down, run `hath0r doctor` to check daemon/CLI health.\n4. Verify server logs via `npm run dev:server`.\n\n### Case B: `ui.render.latency_p95_ms` Exceeds Target ($> 200$ ms)\n1. Enable `poc.telemetry.console_debug` in feature flag config or browser storage.\n2. Open DevTools Performance tab and profile route transitions between `/status` and `/products`.\n3. Check for unbounded array rendering or large JSON payload normalization on the main thread.\n\n### Case C: Unhandled Exception in React Tree\n1. `TelemetryErrorBoundary` renders fallback UI banner (\"Something went wrong in this view\").\n2. The error event is recorded into `telemetryCollector.getErrors()`.\n3.",
+      "properties": {
+        "path": "docs/governance/playbooks/client-telemetry-playbook.md",
+        "category": "playbooks",
+        "size_bytes": 1340
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__playbooks__pr-workflow-playbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Pr Workflow Playbook",
+      "content": "# Playbook: PR workflow (agent + human)\n\n## Scenario A — Feature delivery into development\n\n1. Confirm GitHub issue exists.\n2. `git fetch origin && git checkout development && git pull --ff-only`\n3. `git checkout -b feature/<issue>-short-slug`\n4. Implement; run local tests / `hath0r` preflight when available.\n5. Push branch; open PR with **feature** template, base `development`.\n6. Ensure `validate-promotion-path` and CI green.\n7. Request CODEOWNERS review (`@somesayray`).\n8. Agents may comment/review; merge only after required approvals + checks.\n9. Run post-merge development checklist.\n\n## Scenario B — Release train to testing\n\n1. Ensure development is green and release notes/version ready (version ticket).\n2. `git checkout development && git pull --ff-only`\n3. `git checkout -b release/x.x.x` (SemVer)\n4. Open **release** PR: `release/x.x.x` → `testing` (or `development` → `testing` if policy allows for that cut).\n5. Deploy/validate testing environment.\n6. Complete pre-promote-testing checklist.\n\n## Scenario C — Human gate to staging (STOP for automation)\n\n1. Human confirms testing sign-off.\n2. Human initiates release PR: `testing` or `release/x.x.x` → `staging`.\n3. Environment `s",
+      "properties": {
+        "path": "docs/governance/playbooks/pr-workflow-playbook.md",
+        "category": "playbooks",
+        "size_bytes": 1985
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__playbooks__docker-group-playbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Docker Group Playbook",
+      "content": "# Playbook — Docker group bring-up\n\n1. Ensure container images exist or use redis/nginx-only first.\n2. `docker compose -f cfg/docker/groups/<group>/docker-compose.yml up -d redis nginx`.\n3. Validate workflow: `hath0r docker workflow validate cfg/docker/workflows/hath0r-poc-ui.json`.\n4. `--profile apps` when ATC/MCP/UXP images ready.\n5. ATC remains config manager; do not fork ports without env overrides.\n",
+      "properties": {
+        "path": "docs/governance/playbooks/docker-group-playbook.md",
+        "category": "playbooks",
+        "size_bytes": 409
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__playbooks__openfeature-setup-playbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Openfeature Setup Playbook",
+      "content": "# Playbook — OpenFeature setup\n\n1. Add `cfg/feature-flags/openfeature.json` and catalog (`catalog.example.json`).\n2. Choose provider (`in-memory` local; vendor in higher environments).\n3. Replace ad-hoc env booleans for product behavior with flag keys.\n4. Default to safe values; document flag owners.\n5. Complete `openfeature-adherence.md` checklist.\n",
+      "properties": {
+        "path": "docs/governance/playbooks/openfeature-setup-playbook.md",
+        "category": "playbooks",
+        "size_bytes": 354
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__governance__playbooks__mcp-enablement-runbook_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Mcp Enablement Runbook",
+      "content": "# MCP Enablement Runbook\n\n> Scope: **Connecting and Registering MCP Servers in Hath0r**  \n> Rule: **cr-mcp-priority-001**\n\n---\n\n## 1. Registering an MCP Server\n\n1. Open `cfg/mcp.servers.json`.\n2. Append or edit server entry in the `servers` array.\n3. Assign appropriate `scope` (`project`, `group`, or `org`).\n4. Set `priority`: Ensure project MCP remains priority 1.\n5. Set `enabled: true`.\n6. Verify no inline tokens or credentials are added.\n\n## 2. Validating the Configuration\n\n7. Validate JSON syntax and schema compliance:\n   ```bash\n   hath0r doctor --mcp\n   ```\n8. Check live server endpoints:\n   ```bash\n   hath0r mcp check\n   ```\n9. Test tool invocation:\n   ```bash\n   hath0r mcp call <server-id> <tool-name> --args '{}'\n   ```\n",
+      "properties": {
+        "path": "docs/governance/playbooks/mcp-enablement-runbook.md",
+        "category": "playbooks",
+        "size_bytes": 738
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:_hath0r__knowledgebase__README_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Readme",
+      "content": "# Local Knowledgebase moved (cr-kb-tower-001)\n\nThis repository is a **member** of the **OpenSource Project** (group `hath0r-opensource`).\n\nThe **canonical local knowledgebase** lives in the OpenSource group hub:\n\n```\n/Users/raybayly/Development/OpenSource/.hath0r/knowledgebase\n```\n\n| Field | Value |\n|-------|-------|\n| Group | `hath0r-opensource` |\n| Project | OpenSource Project |\n| Group root | `/Users/raybayly/Development/OpenSource` |\n| Control tower | `/Users/raybayly/Development/OpenSource/HATH0R-CLI` |\n| Canonical KB | `/Users/raybayly/Development/OpenSource/.hath0r/knowledgebase` |\n| This product | `HATHOR-POC` |\n| Mode | `stub` |\n| Operator CLI | `hath0r` |\n| Framework root | `.hath0r/` |\n| Rule | `cr-kb-tower-001` |\n\n## Do\n\n1. Read/write durable group knowledge in the group hub KB.\n2. Keep this directory as a pointer only.\n3. Use **HATH0R CLI** (`hath0r`) and the control tower for knowledge/path orientation.\n4. Treat Framework `docs/` as canonical OpenSource documentation.\n\n## Do not\n\n1. Maintain a second full local KB here.\n2. Point OpenSource work at private internal suite knowledgebases as canonical.\n3. Create or use legacy roots: `.ai/`, `.customerSystem/`, `.infraOS/`",
+      "properties": {
+        "path": ".hath0r/knowledgebase/README.md",
+        "category": "knowledgebase",
+        "size_bytes": 1233
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:README_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Readme",
+      "content": "<p align=\"center\">\n  <img src=\"lib/assets/images/hathor-logo-1.png\" alt=\"HATHOR logo\" width=\"280\" />\n</p>\n\n# HATHOR Agentic POC\n\n> **Archived milestone (2026-09-18).** Phase 3 (P1–P11) is complete on\n> `development`. See the\n> [completion & archive report](docs/hathor-report-001-poc-completion-archive-20260918.md)\n> (`HATHOR-REPORT-001`). The GitHub repository is archived read-only; un-archive\n> only to resume active product work under issue-first governance.\n\nIntegration **test bed** for the HATHOR OpenSource system and the\nReact/TypeScript **HATHOR Integration Console**.\n\n| Field         | Value                                                                         |\n| ------------- | ----------------------------------------------------------------------------- |\n| Group         | `hath0r-opensource`                                                           |\n| GitHub        | [Bayly-AI/HATH0R-Agentic-POC](https://github.com/Bayly-AI/HATH0R-Agentic-POC) |\n| Canonical KB  | `/Users/raybayly/Development/OpenSource/.hath0r/knowledgebase`                |\n| Operator CLI  | `hath0r`                                                                      |\n| Control tower | `../HATH0R-CL",
+      "properties": {
+        "path": "README.md",
+        "category": "root",
+        "size_bytes": 6697
+      },
+      "is_current": true
+    },
+    {
       "id": "role:developer",
       "plane": "rules",
       "type": "agent_role",
@@ -283,96 +1089,6 @@
         ]
       },
       "is_current": true
-    },
-    {
-      "id": "rule:cr-bai-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "BAI Promotion Gate",
-      "content": "Canonical promotion development -> testing -> staging -> master.",
-      "policy_type": "governance",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-BAI-001"
-      }
-    },
-    {
-      "id": "rule:cr-hath0r-init-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Hath0r Repo Init Gate",
-      "content": "Follow canonical playbook and runbook before repo initialization.",
-      "policy_type": "workflow",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-HATH0R-INIT-001"
-      }
-    },
-    {
-      "id": "rule:cr-branch-gov-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Branch Governance",
-      "content": "Branch & Promotion Governance: work PRs target development only, canonical promotion path.",
-      "policy_type": "governance",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-BRANCH-GOV-001"
-      }
-    },
-    {
-      "id": "rule:cr-cli-first-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Rule CR-CLI-FIRST-001",
-      "content": "Governance policy rule CR-CLI-FIRST-001",
-      "policy_type": "governance",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-CLI-FIRST-001"
-      }
-    },
-    {
-      "id": "rule:cr-hath0r-root-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Hidden Root Rule",
-      "content": "Use only .hath0r/ as hidden project root. Never create legacy .ai/ or .infraOS/.",
-      "policy_type": "governance",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-HATH0R-ROOT-001"
-      }
-    },
-    {
-      "id": "rule:cr-kb-tower-001",
-      "plane": "rules",
-      "type": "rule_policy",
-      "label": "Rule CR-KB-TOWER-001",
-      "content": "Governance policy rule CR-KB-TOWER-001",
-      "policy_type": "governance",
-      "enforcement_level": "hard_stop",
-      "is_current": true,
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "properties": {
-        "rule_code": "CR-KB-TOWER-001"
-      }
     }
   ],
   "edges": [
@@ -411,58 +1127,10 @@
       "target": "role:developer",
       "relation": "GOVERNS",
       "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-bai-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-hath0r-init-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-branch-gov-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-cli-first-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-hath0r-root-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "is_current": true
-    },
-    {
-      "source": "role:developer",
-      "target": "rule:cr-kb-tower-001",
-      "relation": "RESTRICTED_BY",
-      "valid_from": "2026-10-03T10:55:24.050768+00:00",
-      "valid_to": null,
-      "is_current": true
     }
   ],
   "metadata": {
     "repo_root": "/Users/raybayly/Development/OpenSource/hath0r-poc",
-    "synced_sources": 25
+    "synced_sources": 82
   }
 }
