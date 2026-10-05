@@ -67,30 +67,36 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
+function validateProductItem(item: unknown): ProductEntry | null {
+  if (!isRecord(item)) return null;
+  const id = item.product_id;
+  if (typeof id !== "string" || id.length === 0) return null;
+  const product: ProductEntry = {
+    ...item,
+    product_id: id,
+  };
+  if (typeof item.product_name === "string") product.product_name = item.product_name;
+  if (typeof item.role === "string") product.role = item.role;
+  if (typeof item.canonical === "boolean") product.canonical = item.canonical;
+  if (typeof item.is_control_tower === "boolean") {
+    product.is_control_tower = item.is_control_tower;
+  }
+  return product;
+}
+
 /**
  * Extract structured products from normalized CLI JSON data.
  * Returns null when the payload is not a valid products object (caller maps to error).
  * Never invents an empty products list on ambiguity.
  */
 export function extractStructuredProducts(data: unknown): ProductsStructuredData | null {
-  if (!isRecord(data)) return null;
-  if (!Array.isArray(data.products)) return null;
+  if (!isRecord(data) || !Array.isArray(data.products)) return null;
 
   const products: ProductEntry[] = [];
   for (const item of data.products) {
-    if (!isRecord(item)) return null;
-    const id = item.product_id;
-    if (typeof id !== "string" || id.length === 0) return null;
-    const product: ProductsStructuredData["products"][number] = {
-      ...item,
-      product_id: id,
-    };
-    if (typeof item.product_name === "string") product.product_name = item.product_name;
-    if (typeof item.role === "string") product.role = item.role;
-    if (typeof item.canonical === "boolean") product.canonical = item.canonical;
-    if (typeof item.is_control_tower === "boolean")
-      product.is_control_tower = item.is_control_tower;
-    products.push(product);
+    const validated = validateProductItem(item);
+    if (!validated) return null;
+    products.push(validated);
   }
 
   const out: ProductsStructuredData = {
