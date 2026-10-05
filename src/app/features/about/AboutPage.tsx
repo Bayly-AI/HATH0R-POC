@@ -102,8 +102,8 @@ export function AboutFeaturePage({
         <h2 id="sot-heading">Source of truth</h2>
         <ul className="about-list">
           <li>
-            <strong>Control tower / operator CLI:</strong>{" "}
-            <code>HATH0R-CLI</code> (<code>Bayly-AI/HATH0R-CLI</code>)
+            <strong>Control tower / operator CLI:</strong> <code>HATH0R-CLI</code> (
+            <code>Bayly-AI/HATH0R-CLI</code>)
           </li>
           <li>
             <strong>Framework contracts &amp; docs corpus:</strong> <code>hath0r/docs</code> and{" "}
