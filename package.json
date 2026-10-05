@@ -1,6 +1,6 @@
 {
   "name": "hathor-poc",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": true,
   "description": "HATHOR Integration Console POC — React/TypeScript client over a local hath0r adapter",
   "type": "module",

@@ -60,7 +60,7 @@ class FeatureFlagService {
     return fallback;
   }
 
-  setOverride(key: string, value: boolean | string | number): void {
+  setOverride(key: string, value: FlagValue): void {
     this.overrides.set(key, value);
   }
 
@@ -68,8 +68,8 @@ class FeatureFlagService {
     this.overrides.clear();
   }
 
-  getAllFlags(): Record<string, boolean | string | number> {
-    const res: Record<string, boolean | string | number> = {};
+  getAllFlags(): Record<string, FlagValue> {
+    const res: Record<string, FlagValue> = {};
     for (const [k, v] of this.defaults.entries()) {
       res[k] = v;
     }

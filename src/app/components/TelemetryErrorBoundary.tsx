@@ -13,7 +13,7 @@ interface State {
 }
 
 export class TelemetryErrorBoundary extends Component<Props, State> {
-  public override state: State = {
+  public override readonly state: State = {
     hasError: false,
     errorMessage: null,
   };

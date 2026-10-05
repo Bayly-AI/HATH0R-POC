@@ -174,7 +174,7 @@ function fromCliJson(
   };
 }
 
-const VERSION_RE = /(?:version[:\s]+|v)?(\d+\.\d+\.\d+(?:-[a-z0-9_]+)?)/i;
+const VERSION_RE = /(?:version\s*[:=]\s*|[vV])?(\d+\.\d+\.\d+(?:-[a-z0-9_]+)?)/;
 
 function normalizeVersionText(operation: HathorOperation, result: RunnerResult): NormalizedResult {
   const text = redactText(result.stdout || result.stderr || "");
