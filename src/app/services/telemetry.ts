@@ -96,6 +96,15 @@ function calculatePercentile(values: number[], p: number): number {
   return typeof val === "number" ? Math.round(val) : 0;
 }
 
+function createTelemetryId(prefix: string): string {
+  if (typeof crypto !== "undefined" && typeof crypto.getRandomValues === "function") {
+    const bytes = new Uint8Array(4);
+    crypto.getRandomValues(bytes);
+    return `${prefix}_${Array.from(bytes, (b) => b.toString(16).padStart(2, "0")).join("")}`;
+  }
+  return `${prefix}_${Date.now().toString(36)}`;
+}
+
 export class ClientTelemetryCollector {
   private maxBufferSize = 200;
   private apiMetrics: ApiCallMetric[] = [];
@@ -109,7 +118,7 @@ export class ClientTelemetryCollector {
 
   recordApiCall(metric: Omit<ApiCallMetric, "id" | "timestamp">): void {
     const item: ApiCallMetric = {
-      id: `api_${Math.random().toString(36).slice(2, 9)}`,
+      id: createTelemetryId("api"),
       timestamp: new Date().toISOString(),
       path: redactSensitiveText(metric.path),
       method: metric.method.toUpperCase(),
@@ -131,7 +140,7 @@ export class ClientTelemetryCollector {
 
   recordRender(viewName: string, durationMs: number): void {
     const item: RenderTimingMetric = {
-      id: `rnd_${Math.random().toString(36).slice(2, 9)}`,
+      id: createTelemetryId("rnd"),
       timestamp: new Date().toISOString(),
       viewName: redactSensitiveText(viewName),
       durationMs: Math.max(0, Math.round(durationMs)),
@@ -159,7 +168,7 @@ export class ClientTelemetryCollector {
     }
 
     const item: ClientErrorMetric = {
-      id: `err_${Math.random().toString(36).slice(2, 9)}`,
+      id: createTelemetryId("err"),
       timestamp: new Date().toISOString(),
       source: redactSensitiveText(source),
       message: redactSensitiveText(msg),
