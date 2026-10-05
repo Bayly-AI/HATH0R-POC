@@ -2,12 +2,13 @@
  * Browser client for POC adapter APIs (relative /api paths).
  */
 
-import type { ApiEnvelope, ApiState, ApiSource } from "../../shared/contracts/api-envelope.js";
+import type { ApiEnvelope, ApiState } from "../../shared/contracts/api-envelope.js";
 import type { CapabilityDocument } from "../../shared/contracts/capability.js";
 import { parseApiEnvelope } from "../../shared/schemas/api-envelope.js";
 import { telemetryCollector } from "./telemetry.js";
 
-export type { ApiEnvelope, ApiState, ApiSource };
+export type { ApiEnvelope, ApiState };
+export type { ApiSource } from "../../shared/contracts/api-envelope.js";
 
 export interface StatusProbeView {
   operation: string;

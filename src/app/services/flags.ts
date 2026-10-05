@@ -3,12 +3,15 @@
  * Conforms to cfg/feature-flags/openfeature.json and catalog.example.json.
  */
 
+export type FlagType = "boolean" | "string" | "number";
+export type FlagValue = boolean | string | number;
+
 export interface FeatureFlagCatalogEntry {
-  key: string;
-  type: "boolean" | "string" | "number";
-  default: boolean | string | number;
-  owner?: string;
-  description?: string;
+  readonly key: string;
+  readonly type: FlagType;
+  readonly default: FlagValue;
+  readonly owner?: string;
+  readonly description?: string;
 }
 
 export const DEFAULT_CATALOG: FeatureFlagCatalogEntry[] = [
@@ -36,8 +39,8 @@ export const DEFAULT_CATALOG: FeatureFlagCatalogEntry[] = [
 ];
 
 class FeatureFlagService {
-  private overrides: Map<string, boolean | string | number> = new Map();
-  private defaults: Map<string, boolean | string | number> = new Map();
+  private readonly overrides: Map<string, FlagValue> = new Map();
+  private readonly defaults: Map<string, FlagValue> = new Map();
 
   constructor() {
     for (const item of DEFAULT_CATALOG) {

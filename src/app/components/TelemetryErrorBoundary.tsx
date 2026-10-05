@@ -2,14 +2,14 @@ import { Component, type ErrorInfo, type ReactNode } from "react";
 import { telemetryCollector } from "../services/telemetry.js";
 
 interface Props {
-  children: ReactNode;
-  fallbackTitle?: string;
-  source?: string;
+  readonly children: ReactNode;
+  readonly fallbackTitle?: string;
+  readonly source?: string;
 }
 
 interface State {
-  hasError: boolean;
-  errorMessage: string | null;
+  readonly hasError: boolean;
+  readonly errorMessage: string | null;
 }
 
 export class TelemetryErrorBoundary extends Component<Props, State> {

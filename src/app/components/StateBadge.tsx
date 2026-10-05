@@ -37,7 +37,6 @@ export function StateBadge({ state, label }: StateBadgeProps) {
   const glyph = GLYPHS[state] ?? "·";
   return (
     <output
-      role="status"
       className={`state-badge state-badge--${state}`}
       data-state={state}
       aria-label={`State: ${text}`}
