@@ -6,15 +6,13 @@ WORKDIR /app
 
 # Install build dependencies
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci --ignore-scripts
 
 # Copy source code and build config
 COPY . .
 
 # Run type checking and production builds
-RUN npm run typecheck
-RUN npx vite build
-RUN npx tsc -p tsconfig.server.json
+RUN npm run build
 
 # Stage 2: Production unprivileged NGINX static asset server with SPA fallback
 FROM nginxinc/nginx-unprivileged:1.27-alpine AS production

@@ -81,37 +81,40 @@ export function extractStructuredProducts(data: unknown): ProductsStructuredData
     if (!isRecord(item)) return null;
     const id = item.product_id;
     if (typeof id !== "string" || id.length === 0) return null;
-    products.push({
+    const product: ProductsStructuredData["products"][number] = {
       ...item,
       product_id: id,
-      ...(typeof item.product_name === "string" ? { product_name: item.product_name } : {}),
-      ...(typeof item.role === "string" ? { role: item.role } : {}),
-      ...(typeof item.canonical === "boolean" ? { canonical: item.canonical } : {}),
-      ...(typeof item.is_control_tower === "boolean"
-        ? { is_control_tower: item.is_control_tower }
-        : {}),
-    });
+    };
+    if (typeof item.product_name === "string") product.product_name = item.product_name;
+    if (typeof item.role === "string") product.role = item.role;
+    if (typeof item.canonical === "boolean") product.canonical = item.canonical;
+    if (typeof item.is_control_tower === "boolean")
+      product.is_control_tower = item.is_control_tower;
+    products.push(product);
   }
 
-  return {
+  const out: ProductsStructuredData = {
     mediaType: "application/json",
-    ...(typeof data.group_id === "string" ? { group_id: data.group_id } : {}),
-    ...(typeof data.control_tower_product_id === "string"
-      ? { control_tower_product_id: data.control_tower_product_id }
-      : {}),
     products,
   };
+  if (typeof data.group_id === "string") out.group_id = data.group_id;
+  if (typeof data.control_tower_product_id === "string") {
+    out.control_tower_product_id = data.control_tower_product_id;
+  }
+  return out;
 }
 
 function fromNormalized(result: NormalizedResult): ProductsResult {
-  const baseMeta = {
+  const baseMeta: ProductsResult["meta"] = {
     durationMs: result.meta.durationMs,
     exitCode: result.meta.exitCode,
     timedOut: result.meta.timedOut,
     truncated: result.meta.truncated,
     source: result.source,
-    ...(result.meta.cliVersion ? { cliVersion: result.meta.cliVersion } : {}),
   };
+  if (result.meta.cliVersion) {
+    baseMeta.cliVersion = result.meta.cliVersion;
+  }
 
   const diagnostics = toApiDiagnostics(result.diagnostics);
 

@@ -101,50 +101,48 @@ export function buildCapabilityDocument(
     });
   }
 
-  capabilities.push({
-    id: "cli.structured-output",
-    state: support.structuredOutput ? "implemented" : "planned",
-    summary: "Machine JSON envelope hath0r.cli.response/1 on CLI probes",
-    evidence: support.structuredOutput
-      ? "runner argv includes --output json; normalizer validates envelope"
-      : "structured JSON not yet wired in adapter",
-  });
-
-  capabilities.push({
-    id: "framework.knowledge-search",
-    state: support.frameworkKnowledgeSearch ? "implemented" : "unavailable",
-    summary: "Framework knowledge search surface",
-    evidence: support.frameworkKnowledgeSearch
-      ? "released CLI command allowlisted"
-      : "no released CLI command on POC allowlist",
-  });
-
-  capabilities.push({
-    id: "framework.validation",
-    state: support.frameworkValidation ? "implemented" : "unavailable",
-    summary: "Framework validation surface",
-    evidence: support.frameworkValidation
-      ? "released CLI command allowlisted"
-      : "no released CLI command on POC allowlist",
-  });
-
-  capabilities.push({
-    id: "framework.orchestration",
-    state: support.frameworkOrchestration ? "implemented" : "unavailable",
-    summary: "Framework orchestration surface",
-    evidence: support.frameworkOrchestration
-      ? "released CLI command allowlisted"
-      : "no released CLI command on POC allowlist",
-  });
-
-  capabilities.push({
-    id: "operator.mutations",
-    state: support.operatorMutations ? "implemented" : "out-of-scope",
-    summary: "Mutating operator commands (write/deploy/credential)",
-    evidence: support.operatorMutations
-      ? "explicitly allowlisted after threat review"
-      : "deliberately excluded from initial POC allowlist",
-  });
+  capabilities.push(
+    {
+      id: "cli.structured-output",
+      state: support.structuredOutput ? "implemented" : "planned",
+      summary: "Machine JSON envelope hath0r.cli.response/1 on CLI probes",
+      evidence: support.structuredOutput
+        ? "runner argv includes --output json; normalizer validates envelope"
+        : "structured JSON not yet wired in adapter",
+    },
+    {
+      id: "framework.knowledge-search",
+      state: support.frameworkKnowledgeSearch ? "implemented" : "unavailable",
+      summary: "Framework knowledge search surface",
+      evidence: support.frameworkKnowledgeSearch
+        ? "released CLI command allowlisted"
+        : "no released CLI command on POC allowlist",
+    },
+    {
+      id: "framework.validation",
+      state: support.frameworkValidation ? "implemented" : "unavailable",
+      summary: "Framework validation surface",
+      evidence: support.frameworkValidation
+        ? "released CLI command allowlisted"
+        : "no released CLI command on POC allowlist",
+    },
+    {
+      id: "framework.orchestration",
+      state: support.frameworkOrchestration ? "implemented" : "unavailable",
+      summary: "Framework orchestration surface",
+      evidence: support.frameworkOrchestration
+        ? "released CLI command allowlisted"
+        : "no released CLI command on POC allowlist",
+    },
+    {
+      id: "operator.mutations",
+      state: support.operatorMutations ? "implemented" : "out-of-scope",
+      summary: "Mutating operator commands (write/deploy/credential)",
+      evidence: support.operatorMutations
+        ? "explicitly allowlisted after threat review"
+        : "deliberately excluded from initial POC allowlist",
+    },
+  );
 
   return {
     schema: POC_CAPABILITIES_SCHEMA,
