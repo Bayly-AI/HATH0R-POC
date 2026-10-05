@@ -260,7 +260,7 @@ export function StatusOverviewPage({
       doctorProbe?.state ?? "unavailable",
       kbProbe?.state ?? "unavailable",
     ]);
-  }, [statusEnv, capsEnv, healthEnv, versionProbe, doctorProbe, kbProbe]);
+  }, [phase, statusEnv, capsEnv, healthEnv, versionProbe, doctorProbe, kbProbe]);
 
   const capabilities = useMemo<CapabilityEntry[]>(() => {
     return capsEnv?.data?.capabilities ?? [];
@@ -314,10 +314,10 @@ export function StatusOverviewPage({
       {phase === "ready" && (
         <>
           <section className="panel" aria-labelledby="overview-heading">
-            <h2 id="overview-heading">Overall</h2>
+            <h2 id="overview-heading">Application</h2>
             <dl className="kv">
               <div>
-                <dt>Overall state</dt>
+                <dt>Overall</dt>
                 <dd>
                   <StateBadge state={overallState} />
                 </dd>
