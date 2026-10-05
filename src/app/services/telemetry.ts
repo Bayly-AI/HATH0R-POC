@@ -67,8 +67,8 @@ export interface GoldenSignalsSummary {
 }
 
 const SECRET_PATTERNS = [
-  /\b(api[_-]?key|token|password|secret|bearer|access[_-]?key|private[_-]?key)\s*[:=]\s*['"]?[^\s'"]+/gi,
-  /\bBearer\s+[A-Za-z0-9._~+/-]+=*/gi,
+  /\b(?:api[_-]?key|token|password|secret|bearer)\s*[:=]\s*['"]?[^\s'"]+/gi,
+  /\bBearer\s+[-A-Za-z0-9._~+/]+=*/gi,
   /\bAKIA[0-9A-Z]{16}\b/g,
   /\bghp_[A-Za-z0-9]{20,}\b/g,
   /\bgho_[A-Za-z0-9]{20,}\b/g,
