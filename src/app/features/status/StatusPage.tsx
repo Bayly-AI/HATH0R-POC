@@ -314,7 +314,7 @@ export function StatusOverviewPage({
       {phase === "ready" && (
         <>
           <section className="panel" aria-labelledby="overview-heading">
-            <h2 id="overview-heading">Application</h2>
+            <h2 id="overview-heading">Overall</h2>
             <dl className="kv">
               <div>
                 <dt>Overall state</dt>
