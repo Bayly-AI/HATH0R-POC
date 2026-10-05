@@ -5,6 +5,7 @@
 import type { ApiEnvelope, ApiState, ApiSource } from "../../shared/contracts/api-envelope.js";
 import type { CapabilityDocument } from "../../shared/contracts/capability.js";
 import { parseApiEnvelope } from "../../shared/schemas/api-envelope.js";
+import { telemetryCollector } from "./telemetry.js";
 
 export type { ApiEnvelope, ApiState, ApiSource };
 
@@ -32,8 +33,6 @@ export interface StatusPayload {
   };
 }
 
-import { telemetryCollector } from "./telemetry.js";
-
 export type CapabilitiesPayload = CapabilityDocument & { cliPresent?: boolean };
 
 async function getJson(path: string, init?: RequestInit): Promise<unknown> {
@@ -44,7 +43,7 @@ async function getJson(path: string, init?: RequestInit): Promise<unknown> {
       ...init,
       headers: {
         Accept: "application/json",
-        ...(init?.headers ?? {}),
+        ...init?.headers,
       },
     });
     status = res.status;
@@ -115,6 +114,8 @@ export type ProductsPayload =
       mediaType: "text/plain";
       text: string;
     };
+
+export type StructuredProductsPayload = Extract<ProductsPayload, { mediaType: "application/json" }>;
 
 export async function fetchProducts(
   signal?: AbortSignal,

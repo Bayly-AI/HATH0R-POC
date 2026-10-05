@@ -1,5 +1,4 @@
-import { NavLink, Route, Routes } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import { TelemetryErrorBoundary } from "./components/TelemetryErrorBoundary";
 import { AboutPage } from "./routes/AboutPage";
 import { DiagnosticsPage } from "./routes/DiagnosticsPage";

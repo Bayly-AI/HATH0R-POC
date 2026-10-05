@@ -26,27 +26,26 @@ const GLYPHS: Record<BadgeState, string> = {
   "out-of-scope": "—",
 };
 
-export function StateBadge({
-  state,
-  label,
-}: {
-  state: BadgeState;
+export interface StateBadgeProps {
+  readonly state: BadgeState;
   /** Optional override for the visible text label. */
-  label?: string;
-}) {
+  readonly label?: string;
+}
+
+export function StateBadge({ state, label }: StateBadgeProps) {
   const text = label ?? LABELS[state] ?? state;
   const glyph = GLYPHS[state] ?? "·";
   return (
-    <span
+    <output
+      role="status"
       className={`state-badge state-badge--${state}`}
       data-state={state}
-      role="status"
       aria-label={`State: ${text}`}
     >
       <span className="state-badge__glyph" aria-hidden="true">
         {glyph}
       </span>
       <span className="state-badge__label">{text}</span>
-    </span>
+    </output>
   );
 }
