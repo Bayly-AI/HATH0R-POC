@@ -39,11 +39,149 @@ function worstState(states: ApiState[]): ApiState {
   return "ok";
 }
 
+function installedLabel(state?: ApiState): string {
+  if (state === "ok") return "Yes";
+  if (state === "unavailable") return "No";
+  return "Unknown";
+}
+
+function booleanLabel(v?: boolean): string {
+  if (v === undefined) return "unknown";
+  return v ? "Yes" : "No";
+}
+
 export interface StatusPageProps {
   /** Injectable fetchers for tests. */
   loadStatus?: typeof fetchStatus;
   loadCapabilities?: typeof fetchCapabilities;
   loadHealth?: typeof fetchHealth;
+}
+
+interface CliPanelProps {
+  readonly versionProbe?: StatusPayload["probes"]["version"];
+  readonly cliVersion?: string;
+}
+
+function CliPanel({ versionProbe, cliVersion }: CliPanelProps) {
+  return (
+    <section className="panel" aria-labelledby="cli-section-heading">
+      <div className="panel__title-row">
+        <h2 id="cli-section-heading">CLI</h2>
+        <StateBadge state={versionProbe?.state ?? "unavailable"} />
+      </div>
+      <dl className="kv">
+        <div>
+          <dt>Installed</dt>
+          <dd>{installedLabel(versionProbe?.state)}</dd>
+        </div>
+        <div>
+          <dt>Version</dt>
+          <dd>
+            <code>{cliVersion ?? "unavailable"}</code>
+          </dd>
+        </div>
+      </dl>
+      {versionProbe?.state !== "ok" && <RemediationList items={versionProbe?.diagnostics ?? []} />}
+    </section>
+  );
+}
+
+interface DoctorPanelProps {
+  readonly doctorProbe?: StatusPayload["probes"]["doctor"];
+  readonly towerId?: string;
+  readonly groupId?: string;
+}
+
+function DoctorPanel({ doctorProbe, towerId, groupId }: DoctorPanelProps) {
+  return (
+    <section className="panel" aria-labelledby="doctor-section-heading">
+      <div className="panel__title-row">
+        <h2 id="doctor-section-heading">Doctor</h2>
+        <StateBadge state={doctorProbe?.state ?? "unavailable"} />
+      </div>
+      <dl className="kv">
+        <div>
+          <dt>Suite health</dt>
+          <dd>
+            <StateBadge state={doctorProbe?.state ?? "unavailable"} />
+          </dd>
+        </div>
+        <div>
+          <dt>Control tower</dt>
+          <dd>
+            <code>{towerId ?? "unknown"}</code>
+          </dd>
+        </div>
+        <div>
+          <dt>Group</dt>
+          <dd>
+            <code>{groupId ?? "unknown"}</code>
+          </dd>
+        </div>
+      </dl>
+      {doctorProbe && doctorProbe.state !== "ok" && (
+        <RemediationList items={doctorProbe.diagnostics} />
+      )}
+    </section>
+  );
+}
+
+interface KbPanelProps {
+  readonly kbProbe?: StatusPayload["probes"]["kb.path"];
+  readonly kbConfigured?: boolean;
+  readonly kbAvailable?: boolean;
+}
+
+function KbPanel({ kbProbe, kbConfigured, kbAvailable }: KbPanelProps) {
+  return (
+    <section className="panel" aria-labelledby="kb-section-heading">
+      <div className="panel__title-row">
+        <h2 id="kb-section-heading">Knowledgebase</h2>
+        <StateBadge state={kbProbe?.state ?? "unavailable"} />
+      </div>
+      <dl className="kv">
+        <div>
+          <dt>Configured</dt>
+          <dd>{booleanLabel(kbConfigured)}</dd>
+        </div>
+        <div>
+          <dt>Available</dt>
+          <dd>{booleanLabel(kbAvailable)}</dd>
+        </div>
+      </dl>
+      {kbProbe && kbProbe.state !== "ok" && <RemediationList items={kbProbe.diagnostics} />}
+    </section>
+  );
+}
+
+interface RemediationListProps {
+  readonly items: Array<{ code: string; message: string; remediation?: string }>;
+}
+
+function RemediationList({ items }: RemediationListProps) {
+  if (items.length === 0) return null;
+  return (
+    <ul className="remediation-list">
+      {items.map((d, i) => (
+        <li key={`${d.code}-${i}`}>
+          <strong>
+            <code>{d.code}</code>
+          </strong>
+          : {d.message}
+          {d.remediation && <p className="remediation">{d.remediation}</p>}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function extractTowerId(doctorData: unknown): string | undefined {
+  const direct = readString(doctorData, "control_tower_product_id");
+  if (direct) return direct;
+  if (isRecord(doctorData) && isRecord(doctorData.control_tower)) {
+    return readString(doctorData.control_tower, "product_id");
+  }
+  return undefined;
 }
 
 export function StatusOverviewPage({
@@ -100,185 +238,108 @@ export function StatusOverviewPage({
   const doctorProbe = probes?.doctor;
   const kbProbe = probes?.["kb.path"];
 
-  const cliVersion =
-    versionProbe?.meta.cliVersion ?? readString(versionProbe?.data, "version") ?? undefined;
-
   const doctorData = doctorProbe?.data;
-  const towerId =
-    isRecord(doctorData) && isRecord(doctorData.control_tower)
-      ? readString(doctorData.control_tower, "product_id")
-      : undefined;
+  const towerId = extractTowerId(doctorData);
   const groupId = readString(doctorData, "group_id");
 
-  const kbConfigured = readBool(kbProbe?.data, "configured");
-  const kbAvailable = readBool(kbProbe?.data, "available");
+  const kbData = kbProbe?.data;
+  const kbConfigured = readBool(kbData, "configured");
+  const kbAvailable = readBool(kbData, "available");
 
-  const overall = useMemo(() => {
-    if (phase === "loading") return "loading" as const;
-    if (phase === "error") return "error" as const;
-    const states: ApiState[] = [];
-    if (statusEnv?.state) states.push(statusEnv.state);
-    if (statusEnv?.data?.overall) states.push(statusEnv.data.overall);
-    if (versionProbe?.state) states.push(versionProbe.state);
-    if (doctorProbe?.state) states.push(doctorProbe.state);
-    if (kbProbe?.state) states.push(kbProbe.state);
-    return states.length ? worstState(states) : (statusEnv?.state ?? "error");
-  }, [phase, statusEnv, versionProbe, doctorProbe, kbProbe]);
+  const cliVersion = readString(versionProbe?.data, "version");
 
-  /** Envelope-level only; per-probe diagnostics render under each section. */
-  const diagnostics = statusEnv?.diagnostics ?? [];
+  const overallState: ApiState | "loading" = useMemo(() => {
+    if (phase === "loading") return "loading";
+    if (!statusEnv || !capsEnv || !healthEnv) return "unavailable";
+    const healthState: ApiState = healthEnv.data?.status === "ok" ? "ok" : "degraded";
+    return worstState([
+      statusEnv.state,
+      capsEnv.state,
+      healthState,
+      versionProbe?.state ?? "unavailable",
+      doctorProbe?.state ?? "unavailable",
+      kbProbe?.state ?? "unavailable",
+    ]);
+  }, [phase, statusEnv, capsEnv, healthEnv, versionProbe, doctorProbe, kbProbe]);
 
-  const capabilities: CapabilityEntry[] = capsEnv?.data?.capabilities ?? [];
+  const capabilities = useMemo<CapabilityEntry[]>(() => {
+    return capsEnv?.data?.capabilities ?? [];
+  }, [capsEnv]);
+
+  const diagnostics = useMemo(() => {
+    const out: Array<{ code: string; message: string; remediation?: string }> = [];
+    if (statusEnv) out.push(...statusEnv.diagnostics);
+    if (capsEnv) out.push(...capsEnv.diagnostics);
+    return out;
+  }, [statusEnv, capsEnv]);
 
   return (
-    <div className="status-page">
-      {fixtureSource ? <FixtureBanner /> : null}
+    <div className="page status-page">
+      {fixtureSource && <FixtureBanner />}
 
-      <header className="status-page__header" aria-labelledby="status-heading">
-        <h1 id="status-heading">Status</h1>
-        <p className="status-page__lede">
-          Live overview of the HATHOR Integration Console adapter and OpenSource CLI probes.
+      <header className="page-header" aria-labelledby="status-overview-heading">
+        <h1 id="status-overview-heading">Status</h1>
+        <p className="muted">
+          Read-only system state via <code>hath0r</code> CLI probes.
         </p>
-        <div className="status-page__overall" aria-live="polite">
-          <span className="muted">Overall</span>{" "}
-          {phase === "loading" ? (
-            <StateBadge state="loading" />
-          ) : (
-            <StateBadge state={overall === "loading" ? "error" : overall} />
-          )}
-        </div>
-        <div className="status-page__actions">
+        <div className="page-header__row">
+          <StateBadge state={overallState} />
           <button
             type="button"
             className="btn"
             onClick={() => void reload()}
             disabled={phase === "loading"}
           >
-            {phase === "loading" ? "Refreshing…" : "Retry"}
+            {phase === "loading" ? "Loading…" : "Retry"}
           </button>
         </div>
       </header>
 
-      {phase === "loading" ? (
+      {phase === "loading" && (
         <section className="panel" aria-busy="true" aria-label="Loading status">
-          <p data-testid="status-loading">Loading status probes…</p>
+          <p data-testid="status-loading">Probing HATH0R components…</p>
         </section>
-      ) : null}
+      )}
 
-      {phase === "error" ? (
+      {phase === "error" && (
         <section className="panel panel--error" aria-labelledby="status-error-heading">
           <h2 id="status-error-heading">Unable to load status</h2>
           <p>{loadError ?? "Unknown error"}</p>
           <p className="remediation">
-            Confirm the adapter is running on loopback and try Retry. Endpoint:{" "}
-            <code>GET /api/hathor/status</code>
+            Ensure the local Express adapter is running on <code>http://localhost:3001</code>.
           </p>
         </section>
-      ) : null}
+      )}
 
-      {phase === "ready" && statusEnv ? (
+      {phase === "ready" && (
         <>
-          <section className="panel" aria-labelledby="app-section-heading">
-            <h2 id="app-section-heading">Application</h2>
+          <section className="panel" aria-labelledby="overview-heading">
+            <h2 id="overview-heading">Application</h2>
             <dl className="kv">
               <div>
-                <dt>Console version</dt>
+                <dt>Overall</dt>
+                <dd>
+                  <StateBadge state={overallState} />
+                </dd>
+              </div>
+              <div>
+                <dt>UI version</dt>
                 <dd>
                   <code>{APP_VERSION}</code>
                 </dd>
               </div>
               <div>
-                <dt>Adapter service</dt>
+                <dt>Generated</dt>
                 <dd>
-                  <code>{healthEnv?.data?.service ?? "hathor-poc-adapter"}</code>
-                </dd>
-              </div>
-              <div>
-                <dt>Response source</dt>
-                <dd>
-                  <code>{statusEnv.source}</code>
+                  <time dateTime={statusEnv?.generatedAt}>{statusEnv?.generatedAt ?? "—"}</time>
                 </dd>
               </div>
             </dl>
           </section>
 
-          <section className="panel" aria-labelledby="cli-section-heading">
-            <div className="panel__title-row">
-              <h2 id="cli-section-heading">CLI</h2>
-              <StateBadge state={versionProbe?.state ?? "unavailable"} />
-            </div>
-            <dl className="kv">
-              <div>
-                <dt>Installed</dt>
-                <dd>
-                  {versionProbe?.state === "ok"
-                    ? "Yes"
-                    : versionProbe?.state === "unavailable"
-                      ? "No"
-                      : "Unknown"}
-                </dd>
-              </div>
-              <div>
-                <dt>Version</dt>
-                <dd>
-                  <code>{cliVersion ?? "unavailable"}</code>
-                </dd>
-              </div>
-            </dl>
-            {versionProbe?.state !== "ok" ? (
-              <RemediationList items={versionProbe?.diagnostics ?? []} />
-            ) : null}
-          </section>
-
-          <section className="panel" aria-labelledby="doctor-section-heading">
-            <div className="panel__title-row">
-              <h2 id="doctor-section-heading">Doctor</h2>
-              <StateBadge state={doctorProbe?.state ?? "unavailable"} />
-            </div>
-            <dl className="kv">
-              <div>
-                <dt>Suite health</dt>
-                <dd>
-                  <StateBadge state={doctorProbe?.state ?? "unavailable"} />
-                </dd>
-              </div>
-              <div>
-                <dt>Control tower</dt>
-                <dd>
-                  <code>{towerId ?? "unknown"}</code>
-                </dd>
-              </div>
-              <div>
-                <dt>Group</dt>
-                <dd>
-                  <code>{groupId ?? "unknown"}</code>
-                </dd>
-              </div>
-            </dl>
-            {doctorProbe && doctorProbe.state !== "ok" ? (
-              <RemediationList items={doctorProbe.diagnostics} />
-            ) : null}
-          </section>
-
-          <section className="panel" aria-labelledby="kb-section-heading">
-            <div className="panel__title-row">
-              <h2 id="kb-section-heading">Knowledgebase</h2>
-              <StateBadge state={kbProbe?.state ?? "unavailable"} />
-            </div>
-            <dl className="kv">
-              <div>
-                <dt>Configured</dt>
-                <dd>{kbConfigured === undefined ? "unknown" : kbConfigured ? "Yes" : "No"}</dd>
-              </div>
-              <div>
-                <dt>Available</dt>
-                <dd>{kbAvailable === undefined ? "unknown" : kbAvailable ? "Yes" : "No"}</dd>
-              </div>
-            </dl>
-            {kbProbe && kbProbe.state !== "ok" ? (
-              <RemediationList items={kbProbe.diagnostics} />
-            ) : null}
-          </section>
+          <CliPanel versionProbe={versionProbe} cliVersion={cliVersion} />
+          <DoctorPanel doctorProbe={doctorProbe} towerId={towerId} groupId={groupId} />
+          <KbPanel kbProbe={kbProbe} kbConfigured={kbConfigured} kbAvailable={kbAvailable} />
 
           <section className="panel" aria-labelledby="caps-section-heading">
             <h2 id="caps-section-heading">Capabilities</h2>
@@ -293,46 +354,25 @@ export function StatusOverviewPage({
                       <StateBadge state={c.state} />
                     </div>
                     <p className="cap-list__summary">{c.summary}</p>
-                    {c.state === "planned" ? (
+                    {c.state === "planned" && (
                       <p className="cap-list__docs">
                         See Framework docs in <code>hath0r/docs</code> for the planned contract.
                       </p>
-                    ) : null}
+                    )}
                   </li>
                 ))}
               </ul>
             )}
           </section>
 
-          {diagnostics.length > 0 ? (
+          {diagnostics.length > 0 && (
             <section className="panel" aria-labelledby="diag-section-heading">
               <h2 id="diag-section-heading">Diagnostics</h2>
               <RemediationList items={diagnostics} />
             </section>
-          ) : null}
+          )}
         </>
-      ) : null}
+      )}
     </div>
-  );
-}
-
-function RemediationList({
-  items,
-}: {
-  items: Array<{ code: string; message: string; remediation?: string }>;
-}) {
-  if (items.length === 0) return null;
-  return (
-    <ul className="remediation-list">
-      {items.map((d, i) => (
-        <li key={`${d.code}-${i}`}>
-          <strong>
-            <code>{d.code}</code>
-          </strong>
-          : {d.message}
-          {d.remediation ? <p className="remediation">{d.remediation}</p> : null}
-        </li>
-      ))}
-    </ul>
   );
 }

@@ -121,11 +121,8 @@ export function DiagnosticsFeaturePage({ loadStatus = fetchStatus }: Diagnostics
           the adapter before display.
         </p>
         <div className="page-header__row">
-          {envelope ? (
-            <StateBadge state={envelope.state} />
-          ) : phase === "loading" ? (
-            <StateBadge state="loading" />
-          ) : null}
+          {envelope && <StateBadge state={envelope.state} />}
+          {!envelope && phase === "loading" && <StateBadge state="loading" />}
           <button
             type="button"
             className="btn"

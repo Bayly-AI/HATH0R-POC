@@ -2,11 +2,13 @@
  * Browser client for POC adapter APIs (relative /api paths).
  */
 
-import type { ApiEnvelope, ApiState, ApiSource } from "../../shared/contracts/api-envelope.js";
+import type { ApiEnvelope, ApiState } from "../../shared/contracts/api-envelope.js";
 import type { CapabilityDocument } from "../../shared/contracts/capability.js";
 import { parseApiEnvelope } from "../../shared/schemas/api-envelope.js";
+import { telemetryCollector } from "./telemetry.js";
 
-export type { ApiEnvelope, ApiState, ApiSource };
+export type { ApiEnvelope, ApiState };
+export type { ApiSource } from "../../shared/contracts/api-envelope.js";
 
 export interface StatusProbeView {
   operation: string;
@@ -35,17 +37,40 @@ export interface StatusPayload {
 export type CapabilitiesPayload = CapabilityDocument & { cliPresent?: boolean };
 
 async function getJson(path: string, init?: RequestInit): Promise<unknown> {
-  const res = await fetch(path, {
-    ...init,
-    headers: {
-      Accept: "application/json",
-      ...(init?.headers ?? {}),
-    },
-  });
-  if (!res.ok) {
-    throw new Error(`HTTP ${res.status} for ${path}`);
+  const start = performance.now();
+  let status = 0;
+  try {
+    const res = await fetch(path, {
+      ...init,
+      headers: {
+        Accept: "application/json",
+        ...init?.headers,
+      },
+    });
+    status = res.status;
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status} for ${path}`);
+    }
+    const data = (await res.json()) as unknown;
+    telemetryCollector.recordApiCall({
+      path,
+      method: init?.method || "GET",
+      durationMs: performance.now() - start,
+      status,
+      success: true,
+    });
+    return data;
+  } catch (err) {
+    telemetryCollector.recordApiCall({
+      path,
+      method: init?.method || "GET",
+      durationMs: performance.now() - start,
+      status: status || 0,
+      success: false,
+      error: err instanceof Error ? err.message : String(err),
+    });
+    throw err;
   }
-  return (await res.json()) as unknown;
 }
 
 export async function fetchStatus(signal?: AbortSignal): Promise<ApiEnvelope<StatusPayload>> {
@@ -90,6 +115,8 @@ export type ProductsPayload =
       mediaType: "text/plain";
       text: string;
     };
+
+export type StructuredProductsPayload = Extract<ProductsPayload, { mediaType: "application/json" }>;
 
 export async function fetchProducts(
   signal?: AbortSignal,

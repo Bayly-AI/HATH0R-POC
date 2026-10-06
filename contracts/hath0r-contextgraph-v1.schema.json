@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Bayly-AI/HATH0R-Agentic-Framework/development/contracts/hath0r-contextgraph-v1.schema.json",
+  "title": "Hath0rContextGraphSnapshot",
+  "description": "Schema definition for dynamic runtime ContextGraph tracking sessions, subagent topologies, and task context.",
+  "type": "object",
+  "required": ["schema_version", "session_id", "nodes", "edges"],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["hath0r.contextgraph/1", "1.0.0"],
+      "description": "Schema version identifier for ContextGraph payloads."
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Unique session or conversation identifier."
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "ISO 8601 timestamp of snapshot."
+    },
+    "active_subagent_id": {
+      "type": "string",
+      "description": "Currently executing subagent node ID."
+    },
+    "nodes": {
+      "type": "array",
+      "description": "Runtime entity nodes in ContextGraph.",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "label"],
+        "additionalProperties": true,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique runtime node identifier."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "agent",
+              "subagent",
+              "task",
+              "tool_invocation",
+              "jev_guard",
+              "context_slice",
+              "artifact"
+            ],
+            "description": "Runtime node classification."
+          },
+          "label": {
+            "type": "string",
+            "description": "Display label for node."
+          },
+          "state": {
+            "type": "string",
+            "enum": ["pending", "running", "completed", "failed", "cancelled"],
+            "description": "Execution state of runtime entity."
+          },
+          "properties": {
+            "type": "object",
+            "description": "Runtime attributes, parameters, or metrics."
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "description": "Directed runtime relationship edges.",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "relation"],
+        "additionalProperties": true,
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "Source node ID."
+          },
+          "target": {
+            "type": "string",
+            "description": "Target node ID."
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "spawned_by",
+              "delegated_to",
+              "executed_tool",
+              "guarded_by",
+              "produced_artifact",
+              "consumed_context"
+            ],
+            "description": "Dynamic runtime relationship type."
+          },
+          "metadata": {
+            "type": "object",
+            "description": "Execution metadata or timestamp."
+          }
+        }
+      }
+    }
+  }
+}

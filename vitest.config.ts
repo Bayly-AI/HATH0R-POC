@@ -8,5 +8,9 @@ export default defineConfig({
     globals: true,
     setupFiles: ["./test/setup.ts"],
     include: ["test/unit/**/*.{test,spec}.{ts,tsx}", "test/integration/**/*.{test,spec}.{ts,tsx}"],
+    coverage: {
+      reporter: ["text", "lcov", "json"],
+      reportsDirectory: "./coverage",
+    },
   },
 });
