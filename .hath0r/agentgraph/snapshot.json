@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-poc",
-  "timestamp": "2026-10-11T12:12:44.126712+00:00",
+  "timestamp": "2026-10-11T18:30:32.213763+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
