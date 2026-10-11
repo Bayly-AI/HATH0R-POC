@@ -7,3 +7,5 @@ coverage/
 playwright-report/
 test-results/
 .DS_Store
+.hath0r/events.jsonl
+.hath0r/finops/
