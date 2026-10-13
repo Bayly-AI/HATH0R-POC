@@ -9,3 +9,6 @@ test-results/
 .DS_Store
 .hath0r/events.jsonl
 .hath0r/finops/
+.hath0r/*.json
+.hath0r/cccd/
+.hath0r/telemetry/
