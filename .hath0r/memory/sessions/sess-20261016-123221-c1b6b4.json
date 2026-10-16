@@ -1,0 +1,51 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261016-123221-c1b6b4",
+  "prior_session_id": null,
+  "parent_session_id": null,
+  "task_id": null,
+  "role": null,
+  "repo_name": "hath0r-poc",
+  "status": "active",
+  "started_at": "2026-10-16T12:32:21.485426+00:00",
+  "updated_at": "2026-10-16T15:24:57.075396+00:00",
+  "ended_at": null,
+  "read_count": 5,
+  "write_count": 5,
+  "last_read_at": "2026-10-16T15:24:57.075396+00:00",
+  "last_write_at": "2026-10-16T15:24:56.456462+00:00",
+  "active_focus": "Repository orientation verified for hath0r-poc",
+  "prior_summary": "ounded fact:repo-hath0r-poc-orientat; Compounded fact:repo-hath0r-poc-orientat; Compounded fact:repo-hath0r-poc-orientat",
+  "recalled_nodes": [
+    {
+      "id": "fact:repo-hath0r-poc-orientation",
+      "type": "fact",
+      "label": "hath0r-poc Repository Memory Orientation",
+      "snippet": "hath0r-poc: <p align=\"center\"> <img src=\"lib/assets/images/hathor-logo-1.png\" alt=\"HATHOR "
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-16T15:24:56.456462+00:00",
+      "kind": "compound",
+      "summary": "Compounded fact:repo-hath0r-poc-orientation: hath0r-poc Repository Memory Orientation",
+      "tags": [
+        "orientation",
+        "repository",
+        "hath0r-poc",
+        "cr-memory-compound-001",
+        "fact",
+        "compounded"
+      ],
+      "node_id": "fact:repo-hath0r-poc-orientation"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "fact:repo-hath0r-poc-orientation"
+  ],
+  "capsule_bytes": 1766,
+  "revision": 6,
+  "base_graph_hash": "sha256:93fa964fa44a6d37ed44a9acf329177a00a273bdb85c5df54cd327421327e359",
+  "content_hash": "sha256:c6e3dbd02f273f3af39b15dbcb63727528bd929fdf2f500f1fc474b8eee7b086"
+}
