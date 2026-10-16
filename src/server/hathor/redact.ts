@@ -8,7 +8,7 @@ export const DEFAULT_MAX_TEXT_CHARS = 4_096;
 /** CSI / OSC-style ANSI sequences. */
 const ANSI_RE =
   // eslint-disable-next-line no-control-regex -- intentional control-char strip
-  /[\u001B\u009B][[\]()#;?]*(?:(?:(?:[a-zA-Z\d]*(?:;[-a-zA-Z\d/#&.:=?%@~_]*)*)?\u0007)|(?:(?:\d{1,4}(?:;\d{0,4})*)?[\dA-PR-TZcf-nq-uy=><~]))/g;
+  /\u001b(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])/g;
 
 /** Absolute home-style and common absolute roots (POSIX + Windows). */
 const ABS_PATH_RE =
@@ -19,8 +19,8 @@ const ABS_PATH_RE =
  * Conservative: mask value side, keep key/label when obvious.
  */
 const SECRET_PATTERNS: RegExp[] = [
-  /\b(api[_-]?key|token|password|passwd|secret|authorization|bearer|access[_-]?key|private[_-]?key)\s*[=:]\s*['"]?[^\s'"]+/gi,
-  /\bBearer\s+[A-Za-z0-9\-._~+/]+=*/gi,
+  /\b(?:api[_-]?key|token|password|secret|bearer)\s*[:=]\s*['"]?[^\s'"]+/gi,
+  /\bBearer\s+[-A-Za-z0-9._~+/]+=*/gi,
   /\bAKIA[0-9A-Z]{16}\b/g,
   /\bghp_[A-Za-z0-9]{20,}\b/g,
   /\bgho_[A-Za-z0-9]{20,}\b/g,

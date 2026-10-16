@@ -244,6 +244,7 @@ describe("App routes for P9 pages", () => {
         </Routes>
       </MemoryRouter>,
     );
-    await screen.findByRole("heading", { name: "Products" });
+    const heading = await screen.findByRole("heading", { name: "Products" });
+    expect(heading).toBeInTheDocument();
   });
 });

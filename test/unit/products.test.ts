@@ -54,7 +54,7 @@ describe("collectProducts", () => {
     expect(out.state).toBe("ok");
     expect(out.data?.mediaType).toBe("application/json");
     if (out.data?.mediaType === "application/json") {
-      expect(out.data.products.length).toBe(3);
+      expect(out.data.products).toHaveLength(3);
     }
     expect(productsExitClass(out)).toBe("success");
   });

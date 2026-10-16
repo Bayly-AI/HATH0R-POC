@@ -12,12 +12,8 @@ import {
   type PocState,
 } from "./normalize.js";
 import type { HathorOperation } from "./operations.js";
-import {
-  HathorSpawnError,
-  runHathorOperation,
-  type RunnerOptions,
-  type RunnerResult,
-} from "./runner.js";
+export { HathorSpawnError } from "./runner.js";
+import { runHathorOperation, type RunnerOptions, type RunnerResult } from "./runner.js";
 
 export const STATUS_OPERATIONS = ["version", "doctor", "kb.path"] as const;
 export type StatusOperation = (typeof STATUS_OPERATIONS)[number];
@@ -149,5 +145,3 @@ export function flattenStatusDiagnostics(data: StatusData): ApiDiagnostic[] {
   }
   return out;
 }
-
-export { HathorSpawnError };

@@ -1,8 +1,6 @@
 # PR Quality Gates — SonarCloud hard stop (canonical thresholds only)
-# Ticket: PR quality gates — SonarCloud hard stop
-# Policy: SonarCloud Quality Gate is the ONLY threshold source. Do NOT add
-# local coverage/rating minimums in sonar-project.properties that diverge
-# from the org SonarCloud Quality Gate. Failed gate = hard stop (merge blocked).
+# Policy: SonarCloud Quality Gate is the ONLY threshold source.
+# Failed gate = hard stop (merge blocked).
 name: SonarCloud Quality Gate
 
 "on":
@@ -26,7 +24,6 @@ jobs:
     name: SonarCloud Quality Gate
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    # Fail closed when token missing on PRs so gate is never silently skipped
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,7 +38,6 @@ jobs:
           if [ -z "${SONAR_TOKEN:-}" ]; then
             echo "::error::SONAR_TOKEN secret is not configured on this repository."
             echo "Add a SonarCloud token (secret SONAR_TOKEN) and optional vars.SONAR_ORGANIZATION."
-            echo "See docs/governance/playbooks/sonarcloud-quality-gate-playbook.md"
             exit 1
           fi
           echo "SONAR_TOKEN present (value not logged)."
@@ -57,7 +53,6 @@ jobs:
             ORG="bayly-ai"
             echo "::warning::vars.SONAR_ORGANIZATION unset; defaulting to '$ORG'. Override via repo/org Actions variable."
           fi
-          # Default projectKey matches common SonarCloud GitHub binding: <org>_<repo>
           REPO_NAME="${GITHUB_REPOSITORY##*/}"
           KEY="${ORG}_${REPO_NAME}"
           if [ -f sonar-project.properties ]; then
@@ -70,17 +65,60 @@ jobs:
           echo "project_key=$KEY" >> "$GITHUB_OUTPUT"
           echo "Using organization=$ORG projectKey=$KEY"
 
-      - name: SonarCloud scan
-        uses: SonarSource/sonarqube-scan-action@v4.2.1
+      - name: Verify SonarCloud Quality Gate
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: https://sonarcloud.io
-        with:
-          args: >
-            -Dsonar.organization=${{ steps.meta.outputs.organization }}
-            -Dsonar.projectKey=${{ steps.meta.outputs.project_key }}
-            -Dsonar.qualitygate.wait=true
-            -Dsonar.qualitygate.timeout=300
+          ORG: ${{ steps.meta.outputs.organization }}
+          KEY: ${{ steps.meta.outputs.project_key }}
+          PR_NUM: ${{ github.event.pull_request.number }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          python3 - <<'EOF'
+          import os, sys, time, json, urllib.request, urllib.parse, base64
+
+          token = os.environ.get("SONAR_TOKEN", "").strip()
+          key = os.environ.get("KEY", "").strip()
+          pr_num = os.environ.get("PR_NUM", "").strip()
+          branch = os.environ.get("BRANCH", "").strip()
+
+          auth = "Basic " + base64.b64encode(f"{token}:".encode()).decode()
+
+          params = {}
+          if pr_num:
+              params["pullRequest"] = pr_num
+          else:
+              params["branch"] = branch
+          params["projectKey"] = key
+
+          url = "https://sonarcloud.io/api/qualitygates/project_status?" + urllib.parse.urlencode(params)
+          print(f"Checking SonarCloud Quality Gate for '{key}'...")
+
+          max_wait = 300
+          start = time.time()
+          while time.time() - start < max_wait:
+              try:
+                  req = urllib.request.Request(url, headers={"Authorization": auth})
+                  with urllib.request.urlopen(req) as resp:
+                      data = json.loads(resp.read().decode())
+                      status = data.get("projectStatus", {}).get("status")
+                      if status in ("OK", "ERROR"):
+                          print(f"Quality Gate Result: {status}")
+                          if status == "OK":
+                              print("SonarCloud Quality Gate Passed!")
+                              sys.exit(0)
+                          else:
+                              print("SonarCloud Quality Gate FAILED!")
+                              for cond in data.get("projectStatus", {}).get("conditions", []):
+                                  if cond.get("status") != "OK":
+                                      print(f"  Condition failed: {cond.get('metricKey')} (actual: {cond.get('actualValue')}, error threshold: {cond.get('errorThreshold')})")
+                              sys.exit(1)
+              except Exception as e:
+                  print(f"Waiting for SonarCloud analysis... ({e})")
+              time.sleep(10)
+
+          print("Timeout waiting for SonarCloud Quality Gate.")
+          sys.exit(1)
+          EOF
 
       - name: Quality Gate hard-stop summary
         if: always()

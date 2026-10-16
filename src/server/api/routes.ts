@@ -44,9 +44,7 @@ type Locals = {
 
 function ctxOf(res: Response): RequestContext {
   const locals = res.locals as Locals;
-  if (!locals.requestContext) {
-    locals.requestContext = createRequestContext({ method: "GET", path: "", originalUrl: "" });
-  }
+  locals.requestContext ??= createRequestContext({ method: "GET", path: "", originalUrl: "" });
   return locals.requestContext;
 }
 

@@ -49,7 +49,7 @@ describe("GET /api/hathor/products", () => {
       group_id: string;
     };
     expect(data.mediaType).toBe("application/json");
-    expect(data.products.length).toBe(3);
+    expect(data.products).toHaveLength(3);
     expect(data.group_id).toBe("hath0r-opensource");
 
     const audit = (res.body as { audit?: Record<string, unknown> }).audit;

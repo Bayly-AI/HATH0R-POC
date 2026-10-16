@@ -44,7 +44,7 @@ Control tower epic: HATH0R-CLI #58–#63 / PR #111
 
 Use **only** `.hath0r/` for framework-created / modified / saved project metadata (including this repo’s KB stub).
 
-Do **not** use `.ai/`, `.aegis/`, or `.infraOS/`.
+Do **not** use `.ai/`, `.customerSystem/`, or `.infraOS/`.
 
 ## Knowledgebase (CRITICAL — cr-kb-tower-001)
 
@@ -116,7 +116,7 @@ Before initializing (or re-initializing) any repository with Hath0r, agents MUST
 
 Do not skip the playbook/runbook gate. Layout scaffolding without a documented ops path is incomplete initialization.
 
-Operator CLI: `hath0r` (pin 0.2.0). Hidden root: **only** `.hath0r/` (never `.ai/`, `.aegis/`, `.infraOS/`).
+Operator CLI: `hath0r` (pin 0.2.0). Hidden root: **only** `.hath0r/` (never `.ai/`, `.customerSystem/`, `.infraOS/`).
 Runbook: [`docs/runbook.md`](docs/runbook.md)
 
 
@@ -143,3 +143,51 @@ See HATH0R-CLI `docs/governance/mcp-doc-publish.md`.
 - Canonical source of truth: `VERSION` in repo root.
 - PRs must declare version impact (`major`, `minor`, `patch`, or `none`).
 - See `docs/governance/semantic-versioning.md` and `docs/governance/playbooks/release-runbook.md`.
+
+## Hyper Context Pointers
+- **Test Subsystem**: `test/AGENTS.md`
+
+
+## Hyper Context Pointers
+- **Contracts Subsystem**: `contracts/AGENTS.md`
+
+
+## Hyper Context Pointers
+- **Docs Subsystem**: `docs/AGENTS.md`
+
+
+## Hyper Context Pointers
+- **Cfg Subsystem**: `cfg/AGENTS.md`
+
+
+## Hyper Context Pointers
+- **Lib Subsystem**: `lib/AGENTS.md`
+
+
+## Hyper Context Pointers
+- **Src Subsystem**: `src/AGENTS.md`
+
+
+## Hyper Context Pointers
+- **POC Source Subsystem**: `src/AGENTS.md`
+
+
+## Hyper Context Pointers
+- **POC Test Subsystem**: `test/AGENTS.md`
+
+
+## Hyper Context Pointers
+- **Configuration Subsystem**: `cfg/AGENTS.md`
+
+
+## Hyper Context Pointers
+- **Documentation Subsystem**: `docs/AGENTS.md`
+
+
+## AgentGraph Substrate
+
+This repository is governed by the Hath0r AgentGraph substrate. Dynamic rule retrieval, role RBAC, and policy graphs are stored under `.hath0r/agentgraph/`.
+- Query status: `hath0r agentgraph status`
+- Query rules: `hath0r agentgraph query "<topic>"`
+- Route role: `hath0r agentgraph route --role <role>`
+- Validate rules: `hath0r agentgraph validate`

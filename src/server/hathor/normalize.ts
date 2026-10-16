@@ -5,7 +5,7 @@
 
 import { z } from "zod";
 import type { HathorOperation } from "./operations.js";
-import { HathorSpawnError, type RunnerResult } from "./runner.js";
+import type { RunnerResult } from "./runner.js";
 import { redactText, redactValue } from "./redact.js";
 
 export type PocState = "ok" | "degraded" | "unavailable" | "error";
@@ -174,7 +174,7 @@ function fromCliJson(
   };
 }
 
-const VERSION_RE = /(?:version[:\s]+|v)?(\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?)/i;
+const VERSION_RE = /(?:version\s*[:=]\s*|[vV])?(\d+\.\d+\.\d+(?:-[a-z0-9_]+)?)/;
 
 function normalizeVersionText(operation: HathorOperation, result: RunnerResult): NormalizedResult {
   const text = redactText(result.stdout || result.stderr || "");
@@ -198,7 +198,7 @@ function normalizeVersionText(operation: HathorOperation, result: RunnerResult):
       meta: baseMeta(result),
     };
   }
-  const match = text.match(VERSION_RE);
+  const match = VERSION_RE.exec(text);
   const version = match?.[1] ?? text.trim().slice(0, 64);
   return {
     operation,
@@ -405,12 +405,7 @@ export function normalizeSpawnFailure(
   err: unknown,
   durationMs = 0,
 ): NormalizedResult {
-  const message =
-    err instanceof HathorSpawnError
-      ? err.message
-      : err instanceof Error
-        ? err.message
-        : String(err);
+  const message = err instanceof Error ? err.message : String(err);
   return {
     operation,
     state: "unavailable",

@@ -150,7 +150,7 @@ Fix both files in one issue-backed change and re-run doctor.
 
 ## 8. Legacy hidden directory found
 
-Only `.hath0r/` is valid Framework metadata. `.ai/`, `.aegis/`, and
+Only `.hath0r/` is valid Framework metadata. `.ai/`, `.customerSystem/`, and
 `.infraOS/` are forbidden in this OpenSource product.
 
 Do not preserve a compatibility writer. Inventory the content, decide whether

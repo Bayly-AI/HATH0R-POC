@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "canonical-memory-space",
+  "updated_at": "2026-10-16T15:48:38.810900+00:00",
+  "nodes": [
+    {
+      "id": "rule:cr-cli-entry-001",
+      "type": "rule",
+      "label": "Start with CLI Rule",
+      "content": "Always start with hath0r operator CLI before inventing ad-hoc actions.",
+      "importance": 1.0,
+      "tags": [
+        "rule",
+        "governance",
+        "cli"
+      ],
+      "is_current": true,
+      "created_at": "2026-10-16T11:47:29.900960+00:00",
+      "updated_at": "2026-10-16T11:47:29.900960+00:00"
+    },
+    {
+      "id": "rule:cr-bai-001",
+      "type": "rule",
+      "label": "Promotion Path Policy",
+      "content": "Promotion order: local -> development -> testing -> staging -> master.",
+      "importance": 1.0,
+      "tags": [
+        "rule",
+        "governance",
+        "ci"
+      ],
+      "is_current": true,
+      "created_at": "2026-10-16T11:47:29.900960+00:00",
+      "updated_at": "2026-10-16T11:47:29.900960+00:00"
+    },
+    {
+      "id": "rule:cr-memory-compound-001",
+      "type": "rule",
+      "label": "Mandatory MemoryGraph Compounding Rule",
+      "content": "Every project repo must maintain .hath0r/memory/graph.json and every task must compound knowledge prior to announcing complete.",
+      "importance": 1.0,
+      "tags": [
+        "rule",
+        "governance",
+        "memorygraph",
+        "cr-memory-compound-001"
+      ],
+      "is_current": true,
+      "created_at": "2026-10-16T11:47:29.900960+00:00",
+      "updated_at": "2026-10-16T11:47:29.900960+00:00"
+    },
+    {
+      "id": "concept:tri-graph",
+      "type": "concept",
+      "label": "Tri-Graph Substrate",
+      "content": "Three-layer cognitive graph architecture: KnowledgeGraph, ContextGraph, MemoryGraph.",
+      "importance": 0.9,
+      "tags": [
+        "architecture",
+        "substrate",
+        "tri-graph"
+      ],
+      "is_current": true,
+      "created_at": "2026-10-16T11:47:29.900960+00:00",
+      "updated_at": "2026-10-16T11:47:29.900960+00:00"
+    },
+    {
+      "id": "fact:repo-hath0r-poc-orientation",
+      "type": "fact",
+      "label": "hath0r-poc Repository Memory Orientation",
+      "content": "hath0r-poc: <p align=\"center\"> <img src=\"lib/assets/images/hathor-logo-1.png\" alt=\"HATHOR logo\" width=\"280\" /> </p>",
+      "importance": 0.85,
+      "tags": [
+        "orientation",
+        "repository",
+        "hath0r-poc",
+        "cr-memory-compound-001",
+        "fact",
+        "compounded"
+      ],
+      "valid_from": "2026-10-16T15:24:56.429837+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-16T11:47:29.900923+00:00",
+      "updated_at": "2026-10-16T15:24:56.429837+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "episode:clean-repo-hath0r-poc",
+      "type": "episode",
+      "label": "Clean Repo Lifecycle (hath0r-poc)",
+      "content": "Executed 13-step clean-repo hygiene and knowledge sync for hath0r-poc.",
+      "importance": 0.75,
+      "tags": [
+        "clean-repo",
+        "hygiene",
+        "hath0r-poc",
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-16T15:48:38.765636+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-16T15:48:38.765636+00:00",
+      "updated_at": "2026-10-16T15:48:38.765636+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "insight:hath0r-poc",
+      "type": "insight",
+      "label": "Synthesized Insight on hath0r-poc",
+      "content": "Consolidated from 2 memory nodes tagged 'hath0r-poc'. Recurring themes: hathor, logo, clean, repo. Latest context: Executed 13-step clean-repo hygiene and knowledge sync for hath0r-poc.",
+      "importance": 0.95,
+      "tags": [
+        "hath0r-poc",
+        "insight",
+        "reflection",
+        "compounded"
+      ],
+      "valid_from": "2026-10-16T15:48:38.797115+00:00",
+      "is_current": true,
+      "created_at": "2026-10-16T15:48:38.797115+00:00",
+      "updated_at": "2026-10-16T15:48:38.797115+00:00",
+      "metadata": {
+        "constituent_count": 2,
+        "source_tag": "hath0r-poc"
+      }
+    },
+    {
+      "id": "session:sess-20261016-123221-c1b6b4",
+      "type": "session",
+      "label": "Micro Session sess-20261016-123221-c1b6b4",
+      "content": "Micro Session sess-20261016-123221-c1b6b4 [completed] | Focus: Repository orientation verified for hath0r-poc | Reads: 6, Writes: 7 | Entries: Compounded episode:clean-repo-hath0r-poc: Clean Repo Lifecycle (hath0r-poc); Clean Repo Lifecycle completed for hath0r-poc.",
+      "importance": 0.75,
+      "tags": [
+        "session",
+        "micro-session",
+        "completed"
+      ],
+      "valid_from": "2026-10-16T12:32:21.485426+00:00",
+      "valid_to": "2026-10-16T15:48:38.806487+00:00",
+      "is_current": true,
+      "created_at": "2026-10-16T12:32:21.485426+00:00",
+      "updated_at": "2026-10-16T15:48:38.806487+00:00",
+      "metadata": {
+        "session_id": "sess-20261016-123221-c1b6b4",
+        "prior_session_id": null,
+        "parent_session_id": null,
+        "read_count": 6,
+        "write_count": 7,
+        "status": "completed",
+        "byte_size": 2019
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "rule:cr-cli-entry-001",
+      "target": "concept:tri-graph",
+      "relation": "ENFORCES",
+      "weight": 1.0,
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-memory-compound-001",
+      "target": "concept:tri-graph",
+      "relation": "ENFORCES",
+      "weight": 1.0,
+      "is_current": true
+    },
+    {
+      "source": "fact:repo-hath0r-poc-orientation",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "weight": 1.0,
+      "valid_from": "2026-10-16T11:47:29.900923+00:00",
+      "is_current": true
+    },
+    {
+      "source": "fact:repo-hath0r-poc-orientation",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "RELATES_TO",
+      "weight": 1.0,
+      "valid_from": "2026-10-16T11:47:29.900923+00:00",
+      "is_current": true
+    },
+    {
+      "source": "session:sess-20261016-123221-c1b6b4",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "weight": 0.8,
+      "valid_from": "2026-10-16T12:32:21.486939+00:00",
+      "is_current": true
+    },
+    {
+      "source": "fact:repo-hath0r-poc-orientation",
+      "target": "session:sess-20261016-123221-c1b6b4",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-16T12:32:21.490978+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:clean-repo-hath0r-poc",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-16T15:48:38.765636+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:clean-repo-hath0r-poc",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-16T15:48:38.765636+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:clean-repo-hath0r-poc",
+      "target": "session:sess-20261016-123221-c1b6b4",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-16T15:48:38.788028+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:hath0r-poc",
+      "target": "fact:repo-hath0r-poc-orientation",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-16T15:48:38.797115+00:00",
+      "is_current": true
+    },
+    {
+      "source": "insight:hath0r-poc",
+      "target": "episode:clean-repo-hath0r-poc",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-16T15:48:38.797115+00:00",
+      "is_current": true
+    }
+  ],
+  "revision": 19,
+  "content_hash": "sha256:4c76e455c76b81bd6e7c8dd71f06dd4b028da1981fe32029e5d3a7f1f1cd53f3"
+}
