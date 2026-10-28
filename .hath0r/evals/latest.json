@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261028-134939-a21830",
-  "task_id": "pr-104",
-  "issue_number": 103,
+  "eval_id": "eval-20261028-135341-d226c7",
+  "task_id": "pr-104-merged",
+  "issue_number": null,
   "repo_name": "hath0r-poc",
-  "branch": "feature/103-automatic-task-evals",
-  "evaluated_at": "2026-10-28T13:49:39.678466+00:00",
-  "duration_ms": 833.68,
+  "branch": "development",
+  "evaluated_at": "2026-10-28T13:53:41.136078+00:00",
+  "duration_ms": 356.94,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 5,
+          "compounded_nodes_count": 9,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -64,13 +64,13 @@
       "estimated_usd": 0.0,
       "max_usd": 0.25,
       "session_id": "sess-20261028-133359-a56210",
-      "session_reads": 2,
-      "session_writes": 3,
-      "session_bytes": 1786,
+      "session_reads": 3,
+      "session_writes": 9,
+      "session_bytes": 1826,
       "within_capsule_budget": true,
-      "latency_ms": 443.22,
-      "taguchi_quality_loss": 0.0025,
-      "snr_db": 13.09
+      "latency_ms": 133.56,
+      "taguchi_quality_loss": 0.0002,
+      "snr_db": 23.51
     },
     "adversarial": {
       "score": 1.0,
@@ -85,10 +85,10 @@
     "goal_alignment": {
       "score": 1.0,
       "passed": true,
-      "task_id": "pr-104",
-      "issue_number": 103,
+      "task_id": "pr-104-merged",
+      "issue_number": null,
       "active_focus": "feat(evals): configure automatic task evaluations (CR-TASK-EVAL-001)",
-      "compounded_nodes_count": 5,
+      "compounded_nodes_count": 9,
       "consensus_score": 1.0
     }
   },
@@ -96,7 +96,7 @@
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "bf1a83f496fe4799a2ca4fa354b7eea5"
+    "mlflow_run_id": "d86c6b042bca4ffd8f2e6037b7b6eeed"
   },
-  "content_hash": "sha256:7870179b2c6923e985e37d3eff1782b2f953938c8a19d1ac59ef86b9c9a51177"
+  "content_hash": "sha256:d2093c058012a0d7311815952a4193ebecc72d3e0c31900c5d10f7fb6d2d94bd"
 }
