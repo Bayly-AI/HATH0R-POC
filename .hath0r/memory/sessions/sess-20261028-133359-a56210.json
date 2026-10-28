@@ -3,53 +3,53 @@
   "session_id": "sess-20261028-133359-a56210",
   "prior_session_id": "sess-20261016-123221-c1b6b4",
   "parent_session_id": "sess-20261016-123221-c1b6b4",
-  "revision": 15,
-  "content_hash": "sha256:7fe48746229e827e2bc7fc6e0aded1e9bf7286ce109691fe47578168e29cb7c9",
-  "base_graph_hash": "sha256:4cf58b02ec471a5217a862e92770c9917ee1e68d04ae222352dcd38ea8601955",
+  "revision": 19,
+  "content_hash": "sha256:afe04583010a8f526d3ed36c2c0681b06e4c18b4ad8a3209ed390ea7f6d8cca2",
+  "base_graph_hash": "sha256:4e4efe5b9ddd4c63dc0040f1d922f90f151c9f4849909115288ba91640539655",
   "task_id": null,
   "role": null,
   "repo_name": "hath0r-poc",
   "status": "completed",
   "started_at": "2026-10-28T13:33:59.352712+00:00",
-  "updated_at": "2026-10-28T14:21:14.515781+00:00",
-  "ended_at": "2026-10-28T13:53:35.251265+00:00",
-  "read_count": 4,
-  "write_count": 12,
-  "last_read_at": "2026-10-28T14:21:14.004465+00:00",
-  "last_write_at": "2026-10-28T14:21:14.515781+00:00",
+  "updated_at": "2026-10-28T15:19:57.960751+00:00",
+  "ended_at": "2026-10-28T15:19:56.808274+00:00",
+  "read_count": 5,
+  "write_count": 15,
+  "last_read_at": "2026-10-28T15:19:56.739974+00:00",
+  "last_write_at": "2026-10-28T15:19:57.960751+00:00",
   "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-poc",
-  "prior_summary": "ounded episode:pr-104: PR #104 Merge; Compounded eval:pr-104-merged: Task Eval; Compounded rule:cr-task-eval-001: Automa",
+  "prior_summary": "ounded eval:eval-baseline-hath0r-poc; Compounded episode:clean-repo-hath0r-poc; Clean Repo Lifecycle completed for hath0",
   "recalled_nodes": [
     {
-      "id": "episode:issue-103-task-evals",
-      "type": "episode",
-      "label": "Configured Automatic Task Evaluations (CR-TASK-EVAL-001) in ",
-      "snippet": "Added declarative cfg/evals/task-eval.json binding hath0r-poc to TaskEvaluatorBot, .hath0r"
+      "id": "insight:hath0r-poc",
+      "type": "insight",
+      "label": "Synthesized Insight on hath0r-poc",
+      "snippet": "Consolidated from 2 memory nodes tagged 'hath0r-poc'. Recurring themes: hathor, logo, clea"
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-28T14:21:14.515781+00:00",
+      "timestamp": "2026-10-28T15:19:57.960751+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:eval-baseline-hath0r-poc: Task Evaluation eval-baseline-hath0r-poc (R=1.00, PASS)",
+      "summary": "Compounded eval:clean-repo-hath0r-poc: Task Evaluation clean-repo-hath0r-poc (R=1.00, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "eval-baseline-hath0r-poc",
+        "clean-repo-hath0r-poc",
         "passed",
         "compounded"
       ],
-      "node_id": "eval:eval-baseline-hath0r-poc"
+      "node_id": "eval:clean-repo-hath0r-poc"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "eval:issue-103",
-    "eval:pr-104",
     "episode:pr-104",
     "eval:pr-104-merged",
     "rule:cr-task-eval-001",
-    "eval:eval-baseline-hath0r-poc"
+    "eval:eval-baseline-hath0r-poc",
+    "episode:clean-repo-hath0r-poc",
+    "eval:clean-repo-hath0r-poc"
   ],
-  "capsule_bytes": 1968
+  "capsule_bytes": 1949
 }
