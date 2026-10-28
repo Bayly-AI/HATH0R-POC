@@ -3,22 +3,22 @@
   "session_id": "sess-20261028-133359-a56210",
   "prior_session_id": "sess-20261016-123221-c1b6b4",
   "parent_session_id": "sess-20261016-123221-c1b6b4",
-  "revision": 21,
-  "content_hash": "sha256:8612fe5714b4572f406c0784ee8e42b2f447c8f7f46f372e6c71c031ea7c31b3",
-  "base_graph_hash": "sha256:7f2350cba1c25367a179730073f5508d56e21bfea1c40060ad33b842ca53cebe",
+  "revision": 24,
+  "content_hash": "sha256:f148a72221057075def0e36bcab56c1c326472b4f65b076c7ca1fa87f4a16ac5",
+  "base_graph_hash": "sha256:a5f892d764fe6116a0f9e8c32c5c321d7d61b40e7a15155535fe1af0d34088d1",
   "task_id": null,
   "role": null,
   "repo_name": "hath0r-poc",
   "status": "completed",
   "started_at": "2026-10-28T13:33:59.352712+00:00",
-  "updated_at": "2026-10-28T17:36:29.590725+00:00",
+  "updated_at": "2026-10-28T17:45:30.339495+00:00",
   "ended_at": "2026-10-28T15:19:56.808274+00:00",
-  "read_count": 6,
-  "write_count": 16,
-  "last_read_at": "2026-10-28T17:36:29.567345+00:00",
-  "last_write_at": "2026-10-28T17:36:29.590725+00:00",
+  "read_count": 7,
+  "write_count": 18,
+  "last_read_at": "2026-10-28T17:45:29.858289+00:00",
+  "last_write_at": "2026-10-28T17:45:30.339495+00:00",
   "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-poc",
-  "prior_summary": "ounded episode:clean-repo-hath0r-poc; Clean Repo Lifecycle completed for hath0; Compounded eval:clean-repo-hath0r-poc: T",
+  "prior_summary": "ounded eval:clean-repo-hath0r-poc: T; Compounded rule:cr-task-eval-001: Automa; Compounded rule:cr-task-eval-001: Automa",
   "recalled_nodes": [
     {
       "id": "eval:clean-repo-hath0r-poc",
@@ -29,18 +29,17 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-28T17:36:29.590725+00:00",
+      "timestamp": "2026-10-28T17:45:30.339495+00:00",
       "kind": "compound",
-      "summary": "Compounded rule:cr-task-eval-001: Automatic Task Evaluation & Scorecard Summary Gate (CR-TASK-EVAL-001)",
+      "summary": "Compounded eval:eval-baseline-hath0r-poc: Task Evaluation eval-baseline-hath0r-poc (R=1.00, PASS)",
       "tags": [
-        "rule",
-        "governance",
-        "evals",
+        "eval",
         "cr-task-eval-001",
-        "scorecard",
+        "eval-baseline-hath0r-poc",
+        "passed",
         "compounded"
       ],
-      "node_id": "rule:cr-task-eval-001"
+      "node_id": "eval:eval-baseline-hath0r-poc"
     }
   ],
   "next_steps": [],
@@ -52,5 +51,5 @@
     "episode:clean-repo-hath0r-poc",
     "eval:clean-repo-hath0r-poc"
   ],
-  "capsule_bytes": 1989
+  "capsule_bytes": 1985
 }
