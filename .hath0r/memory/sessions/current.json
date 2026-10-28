@@ -1,21 +1,24 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261016-123221-c1b6b4",
-  "prior_session_id": null,
-  "parent_session_id": null,
+  "session_id": "sess-20261028-133359-a56210",
+  "prior_session_id": "sess-20261016-123221-c1b6b4",
+  "parent_session_id": "sess-20261016-123221-c1b6b4",
+  "revision": 5,
+  "content_hash": "sha256:78f691daccc15b3bd4edfac92ab1bbd40b4b1a3657d939406e27726a95769327",
+  "base_graph_hash": "sha256:8e9216b1ab48015bae43288de797d4c6f7ed91b52d03a61e72bbbf0ef8b54c4e",
   "task_id": null,
   "role": null,
   "repo_name": "hath0r-poc",
-  "status": "completed",
-  "started_at": "2026-10-16T12:32:21.485426+00:00",
-  "updated_at": "2026-10-16T15:48:38.806487+00:00",
-  "ended_at": "2026-10-16T15:48:38.806487+00:00",
-  "read_count": 6,
-  "write_count": 7,
-  "last_read_at": "2026-10-16T15:48:38.743214+00:00",
-  "last_write_at": "2026-10-16T15:48:38.806487+00:00",
-  "active_focus": "Repository orientation verified for hath0r-poc",
-  "prior_summary": "ounded fact:repo-hath0r-poc-orientat; Compounded fact:repo-hath0r-poc-orientat; Compounded fact:repo-hath0r-poc-orientat",
+  "status": "active",
+  "started_at": "2026-10-28T13:33:59.352712+00:00",
+  "updated_at": "2026-10-28T13:49:41.295285+00:00",
+  "ended_at": null,
+  "read_count": 2,
+  "write_count": 4,
+  "last_read_at": "2026-10-28T13:36:02.547574+00:00",
+  "last_write_at": "2026-10-28T13:49:41.295285+00:00",
+  "active_focus": "feat(evals): configure automatic task evaluations (CR-TASK-EVAL-001)",
+  "prior_summary": "ted session focus: feat(evals): conf; Compounded episode:issue-103-task-evals:; Compounded eval:issue-103: Task Evaluati",
   "recalled_nodes": [
     {
       "id": "fact:repo-hath0r-poc-orientation",
@@ -26,35 +29,24 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-16T15:48:38.781803+00:00",
+      "timestamp": "2026-10-28T13:49:41.295285+00:00",
       "kind": "compound",
-      "summary": "Compounded episode:clean-repo-hath0r-poc: Clean Repo Lifecycle (hath0r-poc)",
+      "summary": "Compounded eval:pr-104: Task Evaluation pr-104 (R=1.00, PASS)",
       "tags": [
-        "clean-repo",
-        "hygiene",
-        "hath0r-poc",
-        "episode",
+        "eval",
+        "cr-task-eval-001",
+        "pr-104",
+        "passed",
         "compounded"
       ],
-      "node_id": "episode:clean-repo-hath0r-poc"
-    },
-    {
-      "timestamp": "2026-10-16T15:48:38.806487+00:00",
-      "kind": "milestone",
-      "summary": "Clean Repo Lifecycle completed for hath0r-poc.",
-      "tags": [
-        "session-end"
-      ],
-      "node_id": null
+      "node_id": "eval:pr-104"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "fact:repo-hath0r-poc-orientation",
-    "episode:clean-repo-hath0r-poc"
+    "episode:issue-103-task-evals",
+    "eval:issue-103",
+    "eval:pr-104"
   ],
-  "capsule_bytes": 2019,
-  "revision": 9,
-  "base_graph_hash": "sha256:b27deaaef25e05ccd6049166bd406a90bf5e33755f51bbce8b0ea62655d9805c",
-  "content_hash": "sha256:224d6cdd21fee8c19941c5cffe2673e4573f8428d1a9ac0b97261989b5f9e364"
+  "capsule_bytes": 1793
 }
