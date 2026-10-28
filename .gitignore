@@ -30,3 +30,6 @@ test-results/
 !.hath0r/state/context/**
 
 !.hath0r/mcp.json
+
+!.hath0r/evals/
+!.hath0r/evals/**

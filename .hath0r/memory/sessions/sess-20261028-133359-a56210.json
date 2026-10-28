@@ -1,0 +1,51 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261028-133359-a56210",
+  "prior_session_id": "sess-20261016-123221-c1b6b4",
+  "parent_session_id": "sess-20261016-123221-c1b6b4",
+  "revision": 4,
+  "content_hash": "sha256:c3115abdd853693a54d955af751254ebab3def9823613ccee58c1977bacd09a0",
+  "base_graph_hash": "sha256:8e9216b1ab48015bae43288de797d4c6f7ed91b52d03a61e72bbbf0ef8b54c4e",
+  "task_id": null,
+  "role": null,
+  "repo_name": "hath0r-poc",
+  "status": "active",
+  "started_at": "2026-10-28T13:33:59.352712+00:00",
+  "updated_at": "2026-10-28T13:36:12.010433+00:00",
+  "ended_at": null,
+  "read_count": 2,
+  "write_count": 3,
+  "last_read_at": "2026-10-28T13:36:02.547574+00:00",
+  "last_write_at": "2026-10-28T13:36:12.010433+00:00",
+  "active_focus": "feat(evals): configure automatic task evaluations (CR-TASK-EVAL-001)",
+  "prior_summary": " Lifecycle completed for hath0r-poc.; Started session focus: feat(evals): conf; Compounded episode:issue-103-task-evals:",
+  "recalled_nodes": [
+    {
+      "id": "fact:repo-hath0r-poc-orientation",
+      "type": "fact",
+      "label": "hath0r-poc Repository Memory Orientation",
+      "snippet": "hath0r-poc: <p align=\"center\"> <img src=\"lib/assets/images/hathor-logo-1.png\" alt=\"HATHOR "
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-28T13:36:12.010433+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:issue-103: Task Evaluation issue-103 (R=1.00, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "issue-103",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:issue-103"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "episode:issue-103-task-evals",
+    "eval:issue-103"
+  ],
+  "capsule_bytes": 1786
+}
