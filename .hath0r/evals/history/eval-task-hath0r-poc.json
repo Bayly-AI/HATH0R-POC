@@ -1,0 +1,135 @@
+{
+  "schema_version": "hath0r.evals.scorecard/v1",
+  "rule_id": "CR-TASK-EVAL-001",
+  "eval_id": "eval-20261029-132750-30916a",
+  "task_id": "task-hath0r-poc",
+  "issue_number": null,
+  "repo_name": "hath0r-poc",
+  "branch": "development",
+  "evaluated_at": "2026-10-29T13:27:50.852870+00:00",
+  "duration_ms": 206.63,
+  "passed_gate": true,
+  "r_task": 1.0,
+  "min_reward_threshold": 0.8,
+  "weights": {
+    "deterministic": 0.4,
+    "trajectory": 0.2,
+    "adversarial": 0.25,
+    "goal_alignment": 0.15
+  },
+  "tier_scores": {
+    "deterministic": 1.0,
+    "trajectory": 1.0,
+    "adversarial": 1.0,
+    "goal_alignment": 1.0
+  },
+  "tiers": {
+    "deterministic": {
+      "score": 1.0,
+      "passed": true,
+      "passed_checks": 4,
+      "total_checks": 4,
+      "checks": {
+        "version_valid": {
+          "passed": true,
+          "version": "0.2.9",
+          "error": null
+        },
+        "agentgraph_valid": {
+          "passed": true,
+          "cycles": 0,
+          "contradictions": 0
+        },
+        "memory_compounded": {
+          "passed": true,
+          "compounded_nodes_count": 13,
+          "session_read_verified": true,
+          "session_write_verified": true,
+          "hashes_verified": true,
+          "graphs_not_ignored": true,
+          "error": null
+        },
+        "test_suite": {
+          "passed": true,
+          "skipped": true,
+          "message": "Test execution skipped via flag or dry-run."
+        }
+      }
+    },
+    "trajectory": {
+      "score": 1.0,
+      "passed": true,
+      "tokens_used": 0,
+      "max_tokens": 50000,
+      "estimated_usd": 0.0,
+      "max_usd": 0.25,
+      "session_id": "sess-20261029-132748-b82f9b",
+      "session_reads": 1,
+      "session_writes": 1,
+      "session_bytes": 1914,
+      "within_capsule_budget": true,
+      "latency_ms": 80.76,
+      "taguchi_quality_loss": 0.0001,
+      "snr_db": 27.88
+    },
+    "adversarial": {
+      "score": 1.0,
+      "passed": true,
+      "adversarial_flaws_count": 0,
+      "adversarial_flaws": [],
+      "tech_debts_count": 0,
+      "auto_created_issues": [],
+      "change_categories": {},
+      "changed_files_count": 0
+    },
+    "goal_alignment": {
+      "score": 1.0,
+      "passed": true,
+      "task_id": "task-hath0r-poc",
+      "issue_number": null,
+      "active_focus": "Active working session in hath0r-poc",
+      "compounded_nodes_count": 13,
+      "consensus_score": 1.0
+    }
+  },
+  "evidence_trust_report": {
+    "schema": "hath0r.security.evidence_trust_report/1",
+    "tiers": {
+      "VERIFIED_EXECUTION": [
+        ".hath0r/evals/latest.json"
+      ],
+      "STATIC_AST_ANALYSIS": [
+        ".agents/skills/clean-repos/SKILL.md",
+        ".hath0r/agentgraph/snapshot.json",
+        ".hath0r/memory/graph.json",
+        ".hath0r/memory/hashes.json",
+        ".hath0r/memory/sessions/current.json",
+        ".hath0r/memory/sessions/latest.json",
+        "AGENTS.md",
+        "CHANGELOG.md",
+        "package.json",
+        ".hath0r/memory/sessions/sess-20261029-132748-b82f9b.json",
+        "CLAUDE.md",
+        "THREATMODEL.md"
+      ],
+      "UNVERIFIED_FILE_PRESENCE": [
+        "VERSION",
+        ".agents/skills/orient/",
+        ".hath0r/agentgraph/snapshot.ttl",
+        ".hath0r/security/"
+      ]
+    },
+    "counts": {
+      "VERIFIED_EXECUTION": 1,
+      "STATIC_AST_ANALYSIS": 12,
+      "UNVERIFIED_FILE_PRESENCE": 4
+    }
+  },
+  "blocking_reasons": [],
+  "observability_sync": {
+    "mode": "live_synced",
+    "phoenix_logged": true,
+    "mlflow_run_id": "5ede8a5c18d1459a85c8515267fca08c"
+  },
+  "content_hash": "sha256:072c4d47e77266a1c58c1c8b89afd6d8819a5bb73b7a573a33d3ff124da172b1"
+}

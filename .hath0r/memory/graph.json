@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-28T18:13:45.692621+00:00",
+  "updated_at": "2026-10-29T13:27:59.295465+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -192,7 +192,7 @@
       "updated_at": "2026-10-28T13:36:11.973162+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:0c5b7d56ffa780ef4c0db6cd8db66b537638cd2a211eb2b92d8941c7b5f9a562"
+          ".hath0r/evals/latest.json": "sha256:4fbb92a46dace0975ddd4665509e79aea27d5172a1bb76cfac3cf780b7fd3896"
         }
       }
     },
@@ -216,7 +216,7 @@
       "updated_at": "2026-10-28T13:53:36.874089+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:0c5b7d56ffa780ef4c0db6cd8db66b537638cd2a211eb2b92d8941c7b5f9a562"
+          ".hath0r/evals/latest.json": "sha256:4fbb92a46dace0975ddd4665509e79aea27d5172a1bb76cfac3cf780b7fd3896"
         }
       }
     },
@@ -301,7 +301,7 @@
       "updated_at": "2026-10-28T13:53:41.959490+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:0c5b7d56ffa780ef4c0db6cd8db66b537638cd2a211eb2b92d8941c7b5f9a562"
+          ".hath0r/evals/latest.json": "sha256:4fbb92a46dace0975ddd4665509e79aea27d5172a1bb76cfac3cf780b7fd3896"
         }
       }
     },
@@ -346,7 +346,7 @@
       "updated_at": "2026-10-28T17:45:30.325980+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:0c5b7d56ffa780ef4c0db6cd8db66b537638cd2a211eb2b92d8941c7b5f9a562"
+          ".hath0r/evals/latest.json": "sha256:4fbb92a46dace0975ddd4665509e79aea27d5172a1bb76cfac3cf780b7fd3896"
         }
       }
     },
@@ -370,7 +370,7 @@
       "updated_at": "2026-10-28T18:13:45.326311+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:0c5b7d56ffa780ef4c0db6cd8db66b537638cd2a211eb2b92d8941c7b5f9a562"
+          ".hath0r/evals/latest.json": "sha256:4fbb92a46dace0975ddd4665509e79aea27d5172a1bb76cfac3cf780b7fd3896"
         }
       }
     },
@@ -398,6 +398,56 @@
         "write_count": 20,
         "status": "completed",
         "byte_size": 1949
+      }
+    },
+    {
+      "id": "eval:task-hath0r-poc",
+      "type": "eval",
+      "label": "Task Evaluation task-hath0r-poc (R=1.00, PASS)",
+      "content": "4-Tier Task Evaluation for task-hath0r-poc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
+      "importance": 0.85,
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "task-hath0r-poc",
+        "passed",
+        "compounded"
+      ],
+      "valid_from": "2026-10-29T13:27:58.442064+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-29T13:27:58.442064+00:00",
+      "updated_at": "2026-10-29T13:27:58.442064+00:00",
+      "metadata": {
+        "source_files": {
+          ".hath0r/evals/latest.json": "sha256:4fbb92a46dace0975ddd4665509e79aea27d5172a1bb76cfac3cf780b7fd3896"
+        }
+      }
+    },
+    {
+      "id": "session:sess-20261029-132748-b82f9b",
+      "type": "session",
+      "label": "Micro Session sess-20261029-132748-b82f9b",
+      "content": "Micro Session sess-20261029-132748-b82f9b [active] | Focus: Active working session in hath0r-poc | Reads: 1, Writes: 2 | Entries: Compounded eval:task-hath0r-poc: Task Evaluation task-hath0r-poc (R=1.00, PASS)",
+      "importance": 0.75,
+      "tags": [
+        "session",
+        "micro-session",
+        "active"
+      ],
+      "valid_from": "2026-10-29T13:27:48.350732+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-29T13:27:48.350732+00:00",
+      "updated_at": "2026-10-29T13:27:58.459464+00:00",
+      "metadata": {
+        "session_id": "sess-20261029-132748-b82f9b",
+        "prior_session_id": "sess-20261028-133359-a56210",
+        "parent_session_id": "sess-20261028-133359-a56210",
+        "read_count": 1,
+        "write_count": 2,
+        "status": "active",
+        "byte_size": 1780
       }
     }
   ],
@@ -767,8 +817,56 @@
       "weight": 1.0,
       "valid_from": "2026-10-28T15:19:57.963139+00:00",
       "is_current": true
+    },
+    {
+      "source": "session:sess-20261028-133359-a56210",
+      "target": "session:sess-20261029-132748-b82f9b",
+      "relation": "PRECEDES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T13:27:48.354646+00:00",
+      "is_current": true
+    },
+    {
+      "source": "session:sess-20261029-132748-b82f9b",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "weight": 0.8,
+      "valid_from": "2026-10-29T13:27:48.354646+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:task-hath0r-poc",
+      "target": "concept:tri-graph",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T13:27:58.442064+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:task-hath0r-poc",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T13:27:58.442064+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:task-hath0r-poc",
+      "target": "session:sess-20261029-132748-b82f9b",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T13:27:58.442064+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:task-hath0r-poc",
+      "target": "session:sess-20261029-132748-b82f9b",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T13:27:58.462612+00:00",
+      "is_current": true
     }
   ],
-  "revision": 90,
-  "content_hash": "sha256:00842d42cf6c4bc2bc338f5a74b9a3735052fac75b2f071b80e0cdb31f3d0bda"
+  "revision": 97,
+  "content_hash": "sha256:902a570b9cb9a2a1dc69eca46cf80d89625b69725c0f153567e8b19a71e5e600"
 }
