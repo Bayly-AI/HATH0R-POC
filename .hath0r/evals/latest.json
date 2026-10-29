@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261029-135854-031afa",
-  "task_id": "eval-baseline-hath0r-poc",
+  "eval_id": "eval-20261029-141736-a98834",
+  "task_id": "clean-repo-hath0r-poc",
   "issue_number": null,
   "repo_name": "hath0r-poc",
   "branch": "development",
-  "evaluated_at": "2026-10-29T13:58:54.617020+00:00",
-  "duration_ms": 211.77,
+  "evaluated_at": "2026-10-29T14:17:36.036105+00:00",
+  "duration_ms": 396.42,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -64,13 +64,13 @@
       "estimated_usd": 0.0,
       "max_usd": 0.25,
       "session_id": "sess-20261029-132748-b82f9b",
-      "session_reads": 3,
-      "session_writes": 5,
-      "session_bytes": 1897,
+      "session_reads": 4,
+      "session_writes": 8,
+      "session_bytes": 1760,
       "within_capsule_budget": true,
-      "latency_ms": 79.02,
-      "taguchi_quality_loss": 0.0001,
-      "snr_db": 28.07
+      "latency_ms": 171.38,
+      "taguchi_quality_loss": 0.0004,
+      "snr_db": 21.34
     },
     "adversarial": {
       "score": 1.0,
@@ -85,7 +85,7 @@
     "goal_alignment": {
       "score": 1.0,
       "passed": true,
-      "task_id": "eval-baseline-hath0r-poc",
+      "task_id": "clean-repo-hath0r-poc",
       "issue_number": null,
       "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-poc",
       "compounded_nodes_count": 14,
@@ -99,22 +99,19 @@
         ".hath0r/evals/latest.json"
       ],
       "STATIC_AST_ANALYSIS": [
-        ".hath0r/evals/post-task-hook.sh",
         ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/evals/history/eval-eval-baseline-hath0r-poc.json",
-        ".hath0r/evals/latest.json",
         ".hath0r/memory/graph.json",
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
         ".hath0r/memory/sessions/sess-20261029-132748-b82f9b.json",
-        "cfg/evals/task-eval.json"
+        "CLAUDE.md"
       ],
       "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 10,
+      "STATIC_AST_ANALYSIS": 7,
       "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
@@ -122,5 +119,5 @@
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:f68b0f3bee9f7cbff61fe7d132914635a6620445ac83d5355607e40b2a71e044"
+  "content_hash": "sha256:ebf30e3368f3052807bae3ad2f5cb629cefd21efd13590955187f79e969e6dcd"
 }
