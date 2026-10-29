@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261029-141736-a98834",
-  "task_id": "clean-repo-hath0r-poc",
+  "eval_id": "eval-20261029-143141-a8fd1b",
+  "task_id": "release-v0.2.9",
   "issue_number": null,
   "repo_name": "hath0r-poc",
   "branch": "development",
-  "evaluated_at": "2026-10-29T14:17:36.036105+00:00",
-  "duration_ms": 396.42,
+  "evaluated_at": "2026-10-29T14:31:41.747806+00:00",
+  "duration_ms": 215.14,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -65,12 +65,12 @@
       "max_usd": 0.25,
       "session_id": "sess-20261029-132748-b82f9b",
       "session_reads": 4,
-      "session_writes": 8,
-      "session_bytes": 1760,
+      "session_writes": 9,
+      "session_bytes": 1956,
       "within_capsule_budget": true,
-      "latency_ms": 171.38,
-      "taguchi_quality_loss": 0.0004,
-      "snr_db": 21.34
+      "latency_ms": 69.29,
+      "taguchi_quality_loss": 0.0001,
+      "snr_db": 29.21
     },
     "adversarial": {
       "score": 1.0,
@@ -85,7 +85,7 @@
     "goal_alignment": {
       "score": 1.0,
       "passed": true,
-      "task_id": "clean-repo-hath0r-poc",
+      "task_id": "release-v0.2.9",
       "issue_number": null,
       "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-poc",
       "compounded_nodes_count": 14,
@@ -98,26 +98,20 @@
       "VERIFIED_EXECUTION": [
         ".hath0r/evals/latest.json"
       ],
-      "STATIC_AST_ANALYSIS": [
-        ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/memory/graph.json",
-        ".hath0r/memory/hashes.json",
-        ".hath0r/memory/sessions/current.json",
-        ".hath0r/memory/sessions/latest.json",
-        ".hath0r/memory/sessions/sess-20261029-132748-b82f9b.json",
-        "CLAUDE.md"
-      ],
+      "STATIC_AST_ANALYSIS": [],
       "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 7,
+      "STATIC_AST_ANALYSIS": 0,
       "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
-    "mode": "pending"
+    "mode": "live_synced",
+    "phoenix_logged": true,
+    "mlflow_run_id": "23271bae810a47028db793c5cec2776d"
   },
-  "content_hash": "sha256:ebf30e3368f3052807bae3ad2f5cb629cefd21efd13590955187f79e969e6dcd"
+  "content_hash": "sha256:029a7c41d4bab7576bb4791da7fb218e2d21fd7efd81a42aaba5641425929792"
 }
