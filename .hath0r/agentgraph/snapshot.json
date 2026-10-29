@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-poc",
-  "timestamp": "2026-10-29T13:27:58.660402+00:00",
+  "timestamp": "2026-10-29T13:58:55.277928+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -1424,7 +1424,7 @@
       "content": "4-Tier Task Evaluation for issue-103 on branch feature/103-automatic-task-evals: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:0c5b7d56ffa780ef4c0db6cd8db66b537638cd2a211eb2b92d8941c7b5f9a562"
+          ".hath0r/evals/latest.json": "sha256:1f422d80df1caeed317a57d374b29099b63839adc3e462a535ed344016dfc52a"
         },
         "source": "local_memory",
         "tags": [
@@ -1446,7 +1446,7 @@
       "content": "4-Tier Task Evaluation for pr-104 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:0c5b7d56ffa780ef4c0db6cd8db66b537638cd2a211eb2b92d8941c7b5f9a562"
+          ".hath0r/evals/latest.json": "sha256:1f422d80df1caeed317a57d374b29099b63839adc3e462a535ed344016dfc52a"
         },
         "source": "local_memory",
         "tags": [
@@ -1526,7 +1526,7 @@
       "content": "4-Tier Task Evaluation for pr-104-merged on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:0c5b7d56ffa780ef4c0db6cd8db66b537638cd2a211eb2b92d8941c7b5f9a562"
+          ".hath0r/evals/latest.json": "sha256:1f422d80df1caeed317a57d374b29099b63839adc3e462a535ed344016dfc52a"
         },
         "source": "local_memory",
         "tags": [
@@ -1568,7 +1568,7 @@
       "content": "4-Tier Task Evaluation for eval-baseline-hath0r-poc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:0c5b7d56ffa780ef4c0db6cd8db66b537638cd2a211eb2b92d8941c7b5f9a562"
+          ".hath0r/evals/latest.json": "sha256:1f422d80df1caeed317a57d374b29099b63839adc3e462a535ed344016dfc52a"
         },
         "source": "local_memory",
         "tags": [
@@ -1590,7 +1590,7 @@
       "content": "4-Tier Task Evaluation for clean-repo-hath0r-poc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:0c5b7d56ffa780ef4c0db6cd8db66b537638cd2a211eb2b92d8941c7b5f9a562"
+          ".hath0r/evals/latest.json": "sha256:1f422d80df1caeed317a57d374b29099b63839adc3e462a535ed344016dfc52a"
         },
         "source": "local_memory",
         "tags": [
@@ -1636,7 +1636,7 @@
       "content": "4-Tier Task Evaluation for task-hath0r-poc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:4fbb92a46dace0975ddd4665509e79aea27d5172a1bb76cfac3cf780b7fd3896"
+          ".hath0r/evals/latest.json": "sha256:1f422d80df1caeed317a57d374b29099b63839adc3e462a535ed344016dfc52a"
         },
         "source": "local_memory",
         "tags": [
@@ -1655,15 +1655,15 @@
       "plane": "memory",
       "type": "session",
       "label": "Micro Session sess-20261029-132748-b82f9b",
-      "content": "Micro Session sess-20261029-132748-b82f9b [active] | Focus: Active working session in hath0r-poc | Reads: 1, Writes: 2 | Entries: Compounded eval:task-hath0r-poc: Task Evaluation task-hath0r-poc (R=1.00, PASS)",
+      "content": "Micro Session sess-20261029-132748-b82f9b [active] | Focus: Provisioning CR-TASK-EVAL-001 for hath0r-poc | Reads: 3, Writes: 6 | Entries: Compounded eval:eval-baseline-hath0r-poc: Task Evaluation eval-baseline-hath0r-poc (R=1.00, PASS)",
       "properties": {
         "session_id": "sess-20261029-132748-b82f9b",
         "prior_session_id": "sess-20261028-133359-a56210",
         "parent_session_id": "sess-20261028-133359-a56210",
-        "read_count": 1,
-        "write_count": 2,
+        "read_count": 3,
+        "write_count": 6,
         "status": "active",
-        "byte_size": 1780,
+        "byte_size": 1893,
         "source": "local_memory",
         "tags": [
           "session",
@@ -2024,6 +2024,24 @@
     },
     {
       "source": "memory:eval:task-hath0r-poc",
+      "target": "memory:session:sess-20261029-132748-b82f9b",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-task-eval-001",
+      "target": "memory:session:sess-20261029-132748-b82f9b",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:eval-baseline-hath0r-poc",
+      "target": "memory:session:sess-20261029-132748-b82f9b",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:eval-baseline-hath0r-poc",
       "target": "memory:session:sess-20261029-132748-b82f9b",
       "relation": "DERIVES_FROM",
       "is_current": true

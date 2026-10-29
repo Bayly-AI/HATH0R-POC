@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261028-174530-d754f7",
+  "eval_id": "eval-20261029-135854-031afa",
   "task_id": "eval-baseline-hath0r-poc",
   "issue_number": null,
   "repo_name": "hath0r-poc",
   "branch": "development",
-  "evaluated_at": "2026-10-28T17:45:30.123753+00:00",
-  "duration_ms": 231.23,
+  "evaluated_at": "2026-10-29T13:58:54.617020+00:00",
+  "duration_ms": 211.77,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -32,7 +32,7 @@
       "checks": {
         "version_valid": {
           "passed": true,
-          "version": "0.2.8",
+          "version": "0.2.9",
           "error": null
         },
         "agentgraph_valid": {
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 13,
+          "compounded_nodes_count": 14,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -63,14 +63,14 @@
       "max_tokens": 50000,
       "estimated_usd": 0.0,
       "max_usd": 0.25,
-      "session_id": "sess-20261028-133359-a56210",
-      "session_reads": 7,
-      "session_writes": 17,
-      "session_bytes": 1989,
+      "session_id": "sess-20261029-132748-b82f9b",
+      "session_reads": 3,
+      "session_writes": 5,
+      "session_bytes": 1897,
       "within_capsule_budget": true,
-      "latency_ms": 73.4,
+      "latency_ms": 79.02,
       "taguchi_quality_loss": 0.0001,
-      "snr_db": 28.71
+      "snr_db": 28.07
     },
     "adversarial": {
       "score": 1.0,
@@ -88,13 +88,39 @@
       "task_id": "eval-baseline-hath0r-poc",
       "issue_number": null,
       "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-poc",
-      "compounded_nodes_count": 13,
+      "compounded_nodes_count": 14,
       "consensus_score": 1.0
+    }
+  },
+  "evidence_trust_report": {
+    "schema": "hath0r.security.evidence_trust_report/1",
+    "tiers": {
+      "VERIFIED_EXECUTION": [
+        ".hath0r/evals/latest.json"
+      ],
+      "STATIC_AST_ANALYSIS": [
+        ".hath0r/evals/post-task-hook.sh",
+        ".hath0r/agentgraph/snapshot.json",
+        ".hath0r/evals/history/eval-eval-baseline-hath0r-poc.json",
+        ".hath0r/evals/latest.json",
+        ".hath0r/memory/graph.json",
+        ".hath0r/memory/hashes.json",
+        ".hath0r/memory/sessions/current.json",
+        ".hath0r/memory/sessions/latest.json",
+        ".hath0r/memory/sessions/sess-20261029-132748-b82f9b.json",
+        "cfg/evals/task-eval.json"
+      ],
+      "UNVERIFIED_FILE_PRESENCE": []
+    },
+    "counts": {
+      "VERIFIED_EXECUTION": 1,
+      "STATIC_AST_ANALYSIS": 10,
+      "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:480055a26a2271871c9909a246c4b2d50491defa6823e18358b77b7ec31c871d"
+  "content_hash": "sha256:f68b0f3bee9f7cbff61fe7d132914635a6620445ac83d5355607e40b2a71e044"
 }

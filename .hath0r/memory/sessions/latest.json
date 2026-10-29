@@ -3,48 +3,50 @@
   "session_id": "sess-20261029-132748-b82f9b",
   "prior_session_id": "sess-20261028-133359-a56210",
   "parent_session_id": "sess-20261028-133359-a56210",
-  "revision": 3,
-  "content_hash": "sha256:90de99ed9b3206157cf92866c0d22efa47c46d739372dc83464fc2629e0b0864",
-  "base_graph_hash": "sha256:00842d42cf6c4bc2bc338f5a74b9a3735052fac75b2f071b80e0cdb31f3d0bda",
+  "revision": 9,
+  "content_hash": "sha256:99ad5bd412094beac6b65da2fd9f64336393b23c915c70bb45107e261d00c84a",
+  "base_graph_hash": "sha256:92dc11c91eaf73bc75ec8551523cdb29a3d6ea2019ea0e9f61878e2a1759b841",
   "task_id": "rule-sync-and-workflow-upgrade",
   "role": null,
   "repo_name": "hath0r-poc",
   "status": "active",
   "started_at": "2026-10-29T13:27:48.350732+00:00",
-  "updated_at": "2026-10-29T13:27:58.459464+00:00",
+  "updated_at": "2026-10-29T13:58:54.867195+00:00",
   "ended_at": null,
-  "read_count": 1,
-  "write_count": 2,
-  "last_read_at": "2026-10-29T13:27:48.350732+00:00",
-  "last_write_at": "2026-10-29T13:27:58.459464+00:00",
-  "active_focus": "Active working session in hath0r-poc",
-  "prior_summary": "al:clean-repo-hath0r-poc: Task Evaluation clean-repo-hath0r-poc (R=1.00, PASS); Eliminated conflicting rules in AGENTS.m",
+  "read_count": 3,
+  "write_count": 6,
+  "last_read_at": "2026-10-29T13:58:54.309977+00:00",
+  "last_write_at": "2026-10-29T13:58:54.867195+00:00",
+  "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-poc",
+  "prior_summary": "ounded rule:cr-task-eval-001: Automa; Compounded eval:eval-baseline-hath0r-poc; Compounded rule:cr-task-eval-001: Automa",
   "recalled_nodes": [
     {
-      "id": "rule:cr-task-eval-001",
-      "type": "rule",
-      "label": "Automatic Task Evaluation & Scorecard Summary Gate (CR-TASK-",
-      "snippet": "Every task must execute and pass the 4-tier hybrid evaluation pipeline (R_task >= 0.80), p"
+      "id": "eval:eval-baseline-hath0r-poc",
+      "type": "eval",
+      "label": "Task Evaluation eval-baseline-hath0r-poc (R=1.00, PASS)",
+      "snippet": "4-Tier Task Evaluation for eval-baseline-hath0r-poc on branch development: R_task=1.0000 ("
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-29T13:27:58.459464+00:00",
+      "timestamp": "2026-10-29T13:58:54.867195+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:task-hath0r-poc: Task Evaluation task-hath0r-poc (R=1.00, PASS)",
+      "summary": "Compounded eval:eval-baseline-hath0r-poc: Task Evaluation eval-baseline-hath0r-poc (R=1.00, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "task-hath0r-poc",
+        "eval-baseline-hath0r-poc",
         "passed",
         "compounded"
       ],
-      "node_id": "eval:task-hath0r-poc"
+      "node_id": "eval:eval-baseline-hath0r-poc"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "eval:task-hath0r-poc"
+    "eval:task-hath0r-poc",
+    "rule:cr-task-eval-001",
+    "eval:eval-baseline-hath0r-poc"
   ],
-  "capsule_bytes": 1780
+  "capsule_bytes": 1893
 }
