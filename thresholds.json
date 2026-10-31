@@ -16,14 +16,42 @@
   },
   "stack": {
     "language": "typescript",
-    "supporting_libraries": ["vitest", "@vitest/coverage-v8", "eslint", "typescript", "prettier"],
-    "source_dirs": ["src"],
-    "test_dirs": ["test", "tests"],
+    "supporting_libraries": [
+      "vitest",
+      "@vitest/coverage-v8",
+      "eslint",
+      "typescript",
+      "prettier"
+    ],
+    "source_dirs": [
+      "src"
+    ],
+    "test_dirs": [
+      "test",
+      "tests"
+    ],
     "commands": {
-      "errors": ["npx", "eslint", "."],
-      "typecheck": ["npm", "run", "typecheck"],
-      "tests": ["npm", "run", "test"],
-      "coverage": ["npx", "vitest", "run", "--coverage"]
+      "errors": [
+        "npx",
+        "eslint",
+        "."
+      ],
+      "typecheck": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "tests": [
+        "npm",
+        "run",
+        "test"
+      ],
+      "coverage": [
+        "npx",
+        "vitest",
+        "run",
+        "--coverage"
+      ]
     }
   }
 }
