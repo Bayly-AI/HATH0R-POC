@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-29T14:31:48.873040+00:00",
+  "updated_at": "2026-10-31T12:31:18.714946+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -192,7 +192,7 @@
       "updated_at": "2026-10-28T13:36:11.973162+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:6ab8306381b00d1158f05ccb7353a09adc9fa2b2113e24dd92f676bbfe562db6"
+          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
         }
       }
     },
@@ -216,7 +216,7 @@
       "updated_at": "2026-10-28T13:53:36.874089+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:6ab8306381b00d1158f05ccb7353a09adc9fa2b2113e24dd92f676bbfe562db6"
+          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
         }
       }
     },
@@ -301,7 +301,7 @@
       "updated_at": "2026-10-28T13:53:41.959490+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:6ab8306381b00d1158f05ccb7353a09adc9fa2b2113e24dd92f676bbfe562db6"
+          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
         }
       }
     },
@@ -346,7 +346,7 @@
       "updated_at": "2026-10-29T13:58:54.842756+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:6ab8306381b00d1158f05ccb7353a09adc9fa2b2113e24dd92f676bbfe562db6"
+          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
         }
       }
     },
@@ -370,7 +370,7 @@
       "updated_at": "2026-10-29T14:17:36.418530+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:6ab8306381b00d1158f05ccb7353a09adc9fa2b2113e24dd92f676bbfe562db6"
+          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
         }
       }
     },
@@ -420,7 +420,7 @@
       "updated_at": "2026-10-29T13:27:58.442064+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:6ab8306381b00d1158f05ccb7353a09adc9fa2b2113e24dd92f676bbfe562db6"
+          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
         }
       }
     },
@@ -444,7 +444,7 @@
       "updated_at": "2026-10-29T14:31:48.846194+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:6162bb0dba39ba814d8bc1a9256a211e4c1fab0a14c3722c833a002973ab576a"
+          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
         }
       }
     },
@@ -472,6 +472,73 @@
         "write_count": 10,
         "status": "completed",
         "byte_size": 1956
+      }
+    },
+    {
+      "id": "episode:issue-105-cr-cli-entry-001-workflow-standard-otel",
+      "type": "episode",
+      "label": "Issue #105: CR-CLI-ENTRY-001, CR-FEATURE-WORKFLOW-STANDARD-001 & Phoenix OTel in HATH0R-POC",
+      "content": "Updated AGENTS.md, CLAUDE.md, and cfg/observability/otel.json in hath0r-poc so hath0r arch verify --fleet passes 5/5 across all repositories.",
+      "importance": 0.8,
+      "tags": [
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T12:31:13.549202+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T12:31:13.549202+00:00",
+      "updated_at": "2026-10-31T12:31:13.549202+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "eval:issue-105",
+      "type": "eval",
+      "label": "Task Evaluation issue-105 (R=0.95, PASS)",
+      "content": "4-Tier Task Evaluation for issue-105 on branch chore/105-cr-cli-entry-001-workflow-standard-otel: R_task=0.9505 (det=0.96, traj=0.94, adv=0.96, goal=0.93). Gate=PASSED.",
+      "importance": 0.85,
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "issue-105",
+        "passed",
+        "compounded"
+      ],
+      "valid_from": "2026-10-31T12:31:17.739303+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-31T12:31:17.739303+00:00",
+      "updated_at": "2026-10-31T12:31:17.739303+00:00",
+      "metadata": {
+        "source_files": {
+          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
+        }
+      }
+    },
+    {
+      "id": "session:sess-20261031-122955-293bd3",
+      "type": "session",
+      "label": "Micro Session sess-20261031-122955-293bd3",
+      "content": "Micro Session sess-20261031-122955-293bd3 [completed] | Focus: Active working session in hath0r-poc | Reads: 2, Writes: 4 | Entries: Compounded eval:issue-105: Task Evaluation issue-105 (R=0.95, PASS)",
+      "importance": 0.75,
+      "tags": [
+        "session",
+        "micro-session",
+        "completed"
+      ],
+      "valid_from": "2026-10-31T12:29:55.361629+00:00",
+      "valid_to": "2026-10-31T12:31:14.546744+00:00",
+      "is_current": true,
+      "created_at": "2026-10-31T12:29:55.361629+00:00",
+      "updated_at": "2026-10-31T12:31:17.759697+00:00",
+      "metadata": {
+        "session_id": "sess-20261031-122955-293bd3",
+        "prior_session_id": "sess-20261029-132748-b82f9b",
+        "parent_session_id": "sess-20261029-132748-b82f9b",
+        "read_count": 2,
+        "write_count": 4,
+        "status": "completed",
+        "byte_size": 2026
       }
     }
   ],
@@ -969,8 +1036,72 @@
       "weight": 1.0,
       "valid_from": "2026-10-29T14:31:48.871197+00:00",
       "is_current": true
+    },
+    {
+      "source": "session:sess-20261029-132748-b82f9b",
+      "target": "session:sess-20261031-122955-293bd3",
+      "relation": "PRECEDES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T12:29:55.367709+00:00",
+      "is_current": true
+    },
+    {
+      "source": "session:sess-20261031-122955-293bd3",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "weight": 0.8,
+      "valid_from": "2026-10-31T12:29:55.367709+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:issue-105-cr-cli-entry-001-workflow-standard-otel",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T12:31:13.549202+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:issue-105-cr-cli-entry-001-workflow-standard-otel",
+      "target": "session:sess-20261031-122955-293bd3",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T12:31:13.571560+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:issue-105",
+      "target": "concept:tri-graph",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T12:31:17.739303+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:issue-105",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T12:31:17.739303+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:issue-105",
+      "target": "session:sess-20261031-122955-293bd3",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T12:31:17.739303+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:issue-105",
+      "target": "session:sess-20261031-122955-293bd3",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T12:31:17.761784+00:00",
+      "is_current": true
     }
   ],
-  "revision": 127,
-  "content_hash": "sha256:ea4bc4ad27fbb0d13f2b015356f30908ae74f34a9f3ee857824358d801638f92"
+  "revision": 139,
+  "content_hash": "sha256:c0125516b5186ad918e62954276e1b32f1d921394d96360d4705284d321836b5"
 }

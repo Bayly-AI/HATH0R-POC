@@ -5,8 +5,8 @@
     "name": "poc-otel-defaults",
     "control_tower": "Bayly-AI/HATH0R-CLI",
     "product": "HATH0R-Agentic-POC",
-    "updated": "2026-09-24",
-    "issue": 43
+    "updated": "2026-10-31",
+    "issue": 105
   },
   "resource": {
     "service_name": "hath0r-poc-ui",
@@ -18,8 +18,15 @@
       "protocol": "http/protobuf",
       "endpoint_env": "OTEL_EXPORTER_OTLP_ENDPOINT",
       "headers_env": "OTEL_EXPORTER_OTLP_HEADERS",
-      "default_endpoint": "http://localhost:4318"
+      "default_endpoint": "http://localhost:38000/phoenix",
+      "container_endpoint": "http://Hath0r-phoenix:6006/v1/traces"
     }
+  },
+  "network_services": {
+    "phoenix": "http://localhost:38000/phoenix",
+    "mlflow": "http://localhost:38000/mlflow/",
+    "cruise_control": "http://localhost:38000/cruise/radar",
+    "mcp": "http://localhost:38000/mcp/"
   },
   "traces": {
     "sampler": "parentbased_traceidratio",

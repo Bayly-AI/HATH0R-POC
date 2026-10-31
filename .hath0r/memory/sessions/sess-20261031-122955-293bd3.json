@@ -1,0 +1,51 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261031-122955-293bd3",
+  "prior_session_id": "sess-20261029-132748-b82f9b",
+  "parent_session_id": "sess-20261029-132748-b82f9b",
+  "revision": 6,
+  "content_hash": "sha256:bdc48e5ff06a929771887cd9e85740918c7e80efcfecda93bf3cb2c9fb1b49b3",
+  "base_graph_hash": "sha256:4afd3a3c712ca238842fde779e4ec392d72c7593df3e2e93e7ab400191192a35",
+  "task_id": "Issue #105: codify CR-CLI-ENTRY-001 & CR-FEATURE-WORKFLOW-STANDARD-001 in AGENTS.md/CLAUDE.md and align cfg/observability/otel.json with Hath0r-phoenix/MLFLOW/Cruise-Control so hath0r arch verify --fleet passes 5/5",
+  "role": null,
+  "repo_name": "hath0r-poc",
+  "status": "completed",
+  "started_at": "2026-10-31T12:29:55.361629+00:00",
+  "updated_at": "2026-10-31T12:31:17.759697+00:00",
+  "ended_at": "2026-10-31T12:31:14.546744+00:00",
+  "read_count": 2,
+  "write_count": 4,
+  "last_read_at": "2026-10-31T12:29:56.090104+00:00",
+  "last_write_at": "2026-10-31T12:31:17.759697+00:00",
+  "active_focus": "Active working session in hath0r-poc",
+  "prior_summary": "Codified CR-CLI-ENTRY-001 & CR-FEATURE-W; Compounded episode:issue-105-cr-cli-entr; Completed Issue #105",
+  "recalled_nodes": [
+    {
+      "id": "episode:issue-103-task-evals",
+      "type": "episode",
+      "label": "Configured Automatic Task Evaluations (CR-TASK-EVAL-001) in ",
+      "snippet": "Added declarative cfg/evals/task-eval.json binding hath0r-poc to TaskEvaluatorBot, .hath0r"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-10-31T12:31:17.759697+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:issue-105: Task Evaluation issue-105 (R=0.95, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "issue-105",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:issue-105"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "episode:issue-105-cr-cli-entry-001-workflow-standard-otel",
+    "eval:issue-105"
+  ],
+  "capsule_bytes": 2026
+}

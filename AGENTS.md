@@ -1,19 +1,17 @@
 # AGENTS.md — HATHOR POC
 
 > Role: **Integration test bed for the HATHOR system** · member of **OpenSource Project** (`hath0r-opensource`)  
-> Updated: 2026-10-29
+> Updated: 2026-10-31
 
-## CR-CLI-ENTRY-001: Start with the CLI (CRITICAL — Org-Wide · CANONICAL)
-
-1. **Start with the CLI (CRITICAL ENTRY GATE)**: When receiving ANY request or starting any task, agents **MUST ALWAYS START WITH THE OPERATOR CLI (`hath0r`)** rather than inventing ad-hoc scripts. Check `hath0r --help` and the matching `hath0r <group> --help` first.
-2. **Missing Capability Offer**: If the required connection, MCP, workflow, bot, or factory does not exist in `hath0r`, offer to register the missing capability, using the original request as the acceptance test.
-3. **Docs before code**: Require procedure/playbook/runbook before scaffolding implementation.
-
-## CR-CLI-ENTRY-001: Start with the CLI (CRITICAL — Org-Wide · CANONICAL)
+## CR-CLI-ENTRY-001 & CR-FEATURE-WORKFLOW-STANDARD-001: Start with the CLI & Workflow-First Standard (CRITICAL — Org-Wide · CANONICAL)
 
 1. **Start with the CLI (CRITICAL ENTRY GATE)**: When receiving ANY request or starting any task, agents **MUST ALWAYS START WITH THE OPERATOR CLI (`hath0r`)** rather than inventing ad-hoc scripts. Check `hath0r --help` and the matching `hath0r <group> --help` first.
-2. **Missing Capability Offer**: If the required connection, MCP, workflow, bot, or factory does not exist in `hath0r`, offer to register the missing capability, using the original request as the acceptance test.
-3. **Docs before code**: Require procedure/playbook/runbook before scaffolding implementation.
+2. **Canonical Feature Definition (`CR-FEATURE-WORKFLOW-STANDARD-001`)**:
+   - **Every Feature is a Service run by at least one Bot (`>= 1` Bot)**: No feature, command, or capability may exist without at least one owning Bot in `BotRegistry`.
+   - **Level 1 (`HATH0R-MCP`) & Level 2 (`HATH0R-CLI` / Bot Memory) on `AgentGraph`**: Tools, workflows, and canonical knowledge reside on **`HATH0R-MCP` (Level 1)**; CLI execution and Bot Memory reside on **`HATH0R-CLI` / `.hath0r/memory/` (Level 2)** — all utilizing **`AgentGraph`** (`hath0r agentgraph status|query|route|sync|validate`).
+   - **Workflow-First Standard (`Everything We Do Is a Workflow`)**: Every task executes as a declarative workflow; if a required capability or workflow does not exist, offer to create the workflow first (`hath0r workflow offer` / `hath0r workflow scaffold`) using the original request as the acceptance test.
+3. **4-Hour Automated Pre-Task Calibration (`max_age_hours = 4.0`)**: Prior to starting any task, ensure agent calibration is fresh (`<= 4.0` hours via `hath0r cccd status` / `hath0r cccd calibrate`).
+4. **Docs before code**: Require procedure/playbook/runbook before scaffolding implementation.
 
 Canonical: [HATH0R-CLI `docs/governance/cli-first-rules.md`](https://github.com/Bayly-AI/HATH0R-CLI/blob/development/docs/governance/cli-first-rules.md).
 
