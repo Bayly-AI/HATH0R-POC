@@ -161,6 +161,10 @@ hath0r: a owl:Ontology ;
     rdfs:label "local-model-bot" ;
     hath0r:inPlane "context" .
 
+<https://hath0r.dev/ontology/v1#bot:local-quality-gate-bot> a hath0r:Plane ;
+    rdfs:label "local-quality-gate-bot" ;
+    hath0r:inPlane "context" .
+
 <https://hath0r.dev/ontology/v1#bot:mcp-centralization-bot> a hath0r:Plane ;
     rdfs:label "mcp-centralization-bot" ;
     hath0r:inPlane "context" .
@@ -693,6 +697,11 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
+<https://hath0r.dev/ontology/v1#memory:episode:issue-105-cr-cli-entry-001-workflow-standard-otel> a hath0r:Plane ;
+    rdfs:label "Issue #105: CR-CLI-ENTRY-001, CR-FEATURE-WORKFLOW-STANDARD-001 & Phoenix OTel in HATH0R-POC" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
 <https://hath0r.dev/ontology/v1#memory:episode:pr-104> a hath0r:Plane ;
     rdfs:label "PR #104 Merged: CR-TASK-EVAL-001 Automatic Task Evals" ;
     hath0r:inPlane "memory" ;
@@ -710,6 +719,11 @@ hath0r:informs a owl:ObjectProperty .
 
 <https://hath0r.dev/ontology/v1#memory:eval:issue-103> a hath0r:Plane ;
     rdfs:label "Task Evaluation issue-103 (R=1.00, PASS)" ;
+    hath0r:inPlane "memory" ;
+    hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
+
+<https://hath0r.dev/ontology/v1#memory:eval:issue-105> a hath0r:Plane ;
+    rdfs:label "Task Evaluation issue-105 (R=0.95, PASS)" ;
     hath0r:inPlane "memory" ;
     hath0r:informs <https://hath0r.dev/ontology/v1#role:developer> .
 
@@ -975,7 +989,7 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "context" .
 
 <https://hath0r.dev/ontology/v1#service:evals> a hath0r:Plane ;
-    rdfs:label "Continuous 4-Tier Task Evaluation & Red-Team Service" ;
+    rdfs:label "Continuous 4-Tier Task Evaluation, Local Q-Gates & Red-Team Service" ;
     hath0r:inPlane "context" .
 
 <https://hath0r.dev/ontology/v1#service:factory> a hath0r:Plane ;
@@ -1083,7 +1097,7 @@ hath0r:informs a owl:ObjectProperty .
     hath0r:inPlane "context" .
 
 <https://hath0r.dev/ontology/v1#service:quality> a hath0r:Plane ;
-    rdfs:label "SonarCloud & Quality Gate Service" ;
+    rdfs:label "SonarCloud & Local Quality Gate Service" ;
     hath0r:inPlane "context" .
 
 <https://hath0r.dev/ontology/v1#service:radar> a hath0r:Plane ;
