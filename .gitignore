@@ -17,6 +17,10 @@ test-results/
 
 __pycache__/
 
+
+
+__pycache__/
+
 # Canonical Hath0r Graph Folders (NEVER ignore — CR-MEMORY-COMPOUND-001 & CR-AGENTGRAPH-001)
 !.hath0r/
 !.hath0r/mcp.json
@@ -35,9 +39,3 @@ __pycache__/
 !.hath0r/state/cache/**
 !.hath0r/state/context/
 !.hath0r/state/context/**
-
-!.hath0r/mcp.json
-
-!.hath0r/evals/
-!.hath0r/evals/**
-__pycache__/
