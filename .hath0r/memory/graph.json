@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-31T12:31:18.714946+00:00",
+  "updated_at": "2026-10-31T12:54:06.405963+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -495,7 +495,7 @@
       "id": "eval:issue-105",
       "type": "eval",
       "label": "Task Evaluation issue-105 (R=0.95, PASS)",
-      "content": "4-Tier Task Evaluation for issue-105 on branch chore/105-cr-cli-entry-001-workflow-standard-otel: R_task=0.9505 (det=0.96, traj=0.94, adv=0.96, goal=0.93). Gate=PASSED.",
+      "content": "4-Tier Task Evaluation for issue-105 on branch chore/105-cr-cli-entry-001-workflow-standard-otel: R_task=0.9514 (det=0.99, traj=0.89, adv=0.95, goal=0.93). Gate=PASSED.",
       "importance": 0.85,
       "tags": [
         "eval",
@@ -504,14 +504,14 @@
         "passed",
         "compounded"
       ],
-      "valid_from": "2026-10-31T12:31:17.739303+00:00",
+      "valid_from": "2026-10-31T12:54:06.373084+00:00",
       "valid_to": null,
       "is_current": true,
       "created_at": "2026-10-31T12:31:17.739303+00:00",
-      "updated_at": "2026-10-31T12:31:17.739303+00:00",
+      "updated_at": "2026-10-31T12:54:06.373084+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
+          ".hath0r/evals/latest.json": "sha256:b49b0deea557bbe6e821f4c9c1c1c56ecefde957c434c3f40fbd3be31b127aae"
         }
       }
     },
@@ -519,7 +519,7 @@
       "id": "session:sess-20261031-122955-293bd3",
       "type": "session",
       "label": "Micro Session sess-20261031-122955-293bd3",
-      "content": "Micro Session sess-20261031-122955-293bd3 [completed] | Focus: Active working session in hath0r-poc | Reads: 2, Writes: 4 | Entries: Compounded eval:issue-105: Task Evaluation issue-105 (R=0.95, PASS)",
+      "content": "Micro Session sess-20261031-122955-293bd3 [completed] | Focus: Active working session in hath0r-poc | Reads: 2, Writes: 5 | Entries: Compounded eval:issue-105: Task Evaluation issue-105 (R=0.95, PASS)",
       "importance": 0.75,
       "tags": [
         "session",
@@ -530,15 +530,15 @@
       "valid_to": "2026-10-31T12:31:14.546744+00:00",
       "is_current": true,
       "created_at": "2026-10-31T12:29:55.361629+00:00",
-      "updated_at": "2026-10-31T12:31:17.759697+00:00",
+      "updated_at": "2026-10-31T12:54:06.401449+00:00",
       "metadata": {
         "session_id": "sess-20261031-122955-293bd3",
         "prior_session_id": "sess-20261029-132748-b82f9b",
         "parent_session_id": "sess-20261029-132748-b82f9b",
         "read_count": 2,
-        "write_count": 4,
+        "write_count": 5,
         "status": "completed",
-        "byte_size": 2026
+        "byte_size": 2042
       }
     }
   ],
@@ -1102,6 +1102,6 @@
       "is_current": true
     }
   ],
-  "revision": 139,
-  "content_hash": "sha256:c0125516b5186ad918e62954276e1b32f1d921394d96360d4705284d321836b5"
+  "revision": 142,
+  "content_hash": "sha256:9162e738bfaf819826e8c493e8994066fbe4105c8ba3b6902cc0f2bb239d4cad"
 }

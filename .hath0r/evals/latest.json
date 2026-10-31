@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261031-123117-8dca0e",
+  "eval_id": "eval-20261031-125403-bd54bf",
   "task_id": "issue-105",
   "issue_number": 105,
   "repo_name": "hath0r-poc",
   "branch": "chore/105-cr-cli-entry-001-workflow-standard-otel",
-  "evaluated_at": "2026-10-31T12:31:17.060052+00:00",
-  "duration_ms": 323.44,
+  "evaluated_at": "2026-10-31T12:54:03.503156+00:00",
+  "duration_ms": 2379.72,
   "passed_gate": true,
-  "r_task": 0.9505,
+  "r_task": 0.9514,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -18,14 +18,14 @@
     "goal_alignment": 0.15
   },
   "tier_scores": {
-    "deterministic": 0.9601,
-    "trajectory": 0.9409,
-    "adversarial": 0.956,
+    "deterministic": 0.9881,
+    "trajectory": 0.8944,
+    "adversarial": 0.952,
     "goal_alignment": 0.9287
   },
   "tiers": {
     "deterministic": {
-      "score": 0.9601,
+      "score": 0.9881,
       "passed": true,
       "passed_checks": 5,
       "total_checks": 5,
@@ -33,8 +33,8 @@
         "version_valid": 1.0,
         "agentgraph_valid": 1.0,
         "memory_compounded": 0.98,
-        "test_suite": 0.88,
-        "calibration_4h": 0.9895
+        "test_suite": 0.9848,
+        "calibration_4h": 0.98
       },
       "checks": {
         "version_valid": {
@@ -51,7 +51,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 16,
+          "compounded_nodes_count": 17,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -60,59 +60,87 @@
         },
         "test_suite": {
           "passed": true,
-          "skipped": true,
-          "message": "Test execution skipped via flag or dry-run (-0.12 confidence deduction)."
+          "commands_run": 2,
+          "duration_s": 2.042,
+          "results": [
+            {
+              "command": [
+                "python",
+                "-m",
+                "pytest",
+                "-q"
+              ],
+              "ok": true,
+              "exit_code": 0,
+              "stdout_tail": "..                                                                       [100%]\n2 passed in 1.20s\n",
+              "stderr_tail": ""
+            },
+            {
+              "command": [
+                "python",
+                "-m",
+                "ruff",
+                "check",
+                "src"
+              ],
+              "ok": true,
+              "exit_code": 0,
+              "stdout_tail": "All checks passed!\n",
+              "stderr_tail": "warning: No Python files found under the given path(s)\n"
+            }
+          ]
         },
         "calibration_4h": {
           "passed": true,
           "is_fresh": true,
-          "age_hours": 0.02,
+          "age_hours": 0.4,
           "max_age_hours": 4.0
         }
       }
     },
     "trajectory": {
-      "score": 0.9409,
+      "score": 0.8944,
       "passed": true,
-      "tokens_used": 147,
+      "tokens_used": 144,
       "max_tokens": 50000,
-      "estimated_usd": 0.000441,
+      "estimated_usd": 0.000432,
       "max_usd": 0.25,
       "session_id": "sess-20261031-122955-293bd3",
       "session_reads": 2,
-      "session_writes": 3,
-      "session_bytes": 1842,
-      "capsule_fill_ratio": 0.8994,
+      "session_writes": 4,
+      "session_bytes": 2026,
+      "capsule_fill_ratio": 0.9893,
       "within_capsule_budget": true,
-      "latency_ms": 81.19,
-      "taguchi_quality_loss": 0.0002,
-      "taguchi_score": 0.9795,
-      "snr_db": 26.02
+      "latency_ms": 2130.15,
+      "taguchi_quality_loss": 0.0681,
+      "taguchi_score": 0.8097,
+      "snr_db": -0.55
     },
     "adversarial": {
-      "score": 0.956,
+      "score": 0.952,
       "passed": true,
       "adversarial_flaws_count": 0,
       "adversarial_flaws": [],
       "tech_debts_count": 0,
       "auto_created_issues": [],
       "minor_findings": [],
-      "added_lines_count": 35,
+      "added_lines_count": 63,
       "change_categories": {
         "ui": [],
         "script": [],
         "text": [
+          ".agents/skills/clean-repos/SKILL.md",
+          ".agents/skills/orient/SKILL.md",
           "AGENTS.md",
           "CHANGELOG.md",
           "CLAUDE.md",
-          "cfg/observability/otel.json",
-          "package.json"
+          "THREATMODEL.md"
         ],
         "other": [
-          "VERSION"
+          "tests/e2e/__pycache__/"
         ]
       },
-      "changed_files_count": 6
+      "changed_files_count": 7
     },
     "goal_alignment": {
       "score": 0.9287,
@@ -122,7 +150,7 @@
       "active_focus": "Active working session in hath0r-poc",
       "goal_keywords_count": 5,
       "goal_overlap_score": 0.98,
-      "compounded_nodes_count": 16,
+      "compounded_nodes_count": 17,
       "consensus_score": 0.826
     }
   },
@@ -133,34 +161,29 @@
         ".hath0r/evals/latest.json"
       ],
       "STATIC_AST_ANALYSIS": [
-        ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/memory/graph.json",
+        ".agents/skills/clean-repos/SKILL.md",
+        ".agents/skills/orient/SKILL.md",
         ".hath0r/memory/hashes.json",
-        ".hath0r/memory/sessions/current.json",
-        ".hath0r/memory/sessions/latest.json",
         "AGENTS.md",
         "CHANGELOG.md",
         "CLAUDE.md",
-        "cfg/observability/otel.json",
-        "package.json",
-        ".hath0r/memory/sessions/sess-20261031-122955-293bd3.json"
+        "THREATMODEL.md"
       ],
       "UNVERIFIED_FILE_PRESENCE": [
-        ".hath0r/agentgraph/snapshot.ttl",
-        "VERSION"
+        "tests/e2e/__pycache__/"
       ]
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 11,
-      "UNVERIFIED_FILE_PRESENCE": 2
+      "STATIC_AST_ANALYSIS": 7,
+      "UNVERIFIED_FILE_PRESENCE": 1
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
     "mode": "live_synced",
     "phoenix_logged": true,
-    "mlflow_run_id": "1303fac541394315a190e40cfc58763e"
+    "mlflow_run_id": "71e7fdb6b5fa40dbb019942015e6b063"
   },
-  "content_hash": "sha256:be491174750784252d30fb364585c83f8948b160816753ba4777580056009bba"
+  "content_hash": "sha256:7cce02bb7f1fc71fae32c068fe08e794855a9dbb06eb3a9ae278e6ff06f0c172"
 }
