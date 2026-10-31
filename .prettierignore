@@ -11,3 +11,6 @@ cfg
 .github
 lib
 LICENSE
+
+.pytest_cache/
+__pycache__/

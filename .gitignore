@@ -33,3 +33,4 @@ test-results/
 
 !.hath0r/evals/
 !.hath0r/evals/**
+__pycache__/
