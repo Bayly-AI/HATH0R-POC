@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-31T12:54:06.405963+00:00",
+  "updated_at": "2026-10-31T13:38:52.467210+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -192,7 +192,7 @@
       "updated_at": "2026-10-28T13:36:11.973162+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
+          ".hath0r/evals/latest.json": "sha256:b49b0deea557bbe6e821f4c9c1c1c56ecefde957c434c3f40fbd3be31b127aae"
         }
       }
     },
@@ -216,7 +216,7 @@
       "updated_at": "2026-10-28T13:53:36.874089+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
+          ".hath0r/evals/latest.json": "sha256:b49b0deea557bbe6e821f4c9c1c1c56ecefde957c434c3f40fbd3be31b127aae"
         }
       }
     },
@@ -301,7 +301,7 @@
       "updated_at": "2026-10-28T13:53:41.959490+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
+          ".hath0r/evals/latest.json": "sha256:b49b0deea557bbe6e821f4c9c1c1c56ecefde957c434c3f40fbd3be31b127aae"
         }
       }
     },
@@ -346,7 +346,7 @@
       "updated_at": "2026-10-29T13:58:54.842756+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
+          ".hath0r/evals/latest.json": "sha256:b49b0deea557bbe6e821f4c9c1c1c56ecefde957c434c3f40fbd3be31b127aae"
         }
       }
     },
@@ -370,7 +370,7 @@
       "updated_at": "2026-10-29T14:17:36.418530+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
+          ".hath0r/evals/latest.json": "sha256:b49b0deea557bbe6e821f4c9c1c1c56ecefde957c434c3f40fbd3be31b127aae"
         }
       }
     },
@@ -420,7 +420,7 @@
       "updated_at": "2026-10-29T13:27:58.442064+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
+          ".hath0r/evals/latest.json": "sha256:b49b0deea557bbe6e821f4c9c1c1c56ecefde957c434c3f40fbd3be31b127aae"
         }
       }
     },
@@ -444,7 +444,7 @@
       "updated_at": "2026-10-29T14:31:48.846194+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:db5679027b21cca4310c64a3918cec98fc80470b68b5a2eee15550aec736a31a"
+          ".hath0r/evals/latest.json": "sha256:b49b0deea557bbe6e821f4c9c1c1c56ecefde957c434c3f40fbd3be31b127aae"
         }
       }
     },
@@ -1102,6 +1102,6 @@
       "is_current": true
     }
   ],
-  "revision": 142,
+  "revision": 143,
   "content_hash": "sha256:9162e738bfaf819826e8c493e8994066fbe4105c8ba3b6902cc0f2bb239d4cad"
 }
