@@ -3,20 +3,20 @@
   "session_id": "sess-20261031-161727-fe5fab",
   "prior_session_id": "sess-20261031-122955-293bd3",
   "parent_session_id": "sess-20261031-122955-293bd3",
-  "revision": 11,
-  "content_hash": "sha256:673c700e230e0e74fa52460b1c696028cd1353f15b6bee816ead672873df29ff",
-  "base_graph_hash": "sha256:fe562f97ca1cebf7b5b4abe855bbc5bf98ad8f8e2907e6c50acdf64c20d5b734",
+  "revision": 22,
+  "content_hash": "sha256:c1c8ae58f591107c9bdbe05465e24b6d731593779c75865bdca5e1aeb8b6d8a6",
+  "base_graph_hash": "sha256:4149829793b77e173af262280d21f3910f52c384080a96acea814fd44c58cd6f",
   "task_id": null,
   "role": null,
   "repo_name": "hath0r-poc",
   "status": "completed",
   "started_at": "2026-10-31T16:17:27.119025+00:00",
-  "updated_at": "2026-11-01T17:27:20.970777+00:00",
+  "updated_at": "2026-11-01T18:18:26.387312+00:00",
   "ended_at": "2026-10-31T16:17:27.188614+00:00",
-  "read_count": 4,
-  "write_count": 8,
-  "last_read_at": "2026-11-01T15:43:57.364017+00:00",
-  "last_write_at": "2026-11-01T17:27:20.970777+00:00",
+  "read_count": 8,
+  "write_count": 15,
+  "last_read_at": "2026-11-01T17:53:10.482606+00:00",
+  "last_write_at": "2026-11-01T18:18:26.387312+00:00",
   "active_focus": "Repository orientation verified for HATH0R-POC",
   "prior_summary": "ounded fact:repo-hath0r-poc-orientat; Compounded rule:cr-task-eval-001: Automa; Compounded eval:eval-baseline-hath0r-poc",
   "recalled_nodes": [
@@ -29,7 +29,7 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-11-01T17:27:20.970777+00:00",
+      "timestamp": "2026-11-01T18:18:26.387312+00:00",
       "kind": "compound",
       "summary": "Compounded eval:task-HATH0R-POC: Task Evaluation task-HATH0R-POC (R=0.94, PASS)",
       "tags": [
@@ -51,5 +51,5 @@
     "eval:eval-baseline-hath0r-poc",
     "eval:task-HATH0R-POC"
   ],
-  "capsule_bytes": 1969
+  "capsule_bytes": 1970
 }
