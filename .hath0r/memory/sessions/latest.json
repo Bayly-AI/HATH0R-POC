@@ -3,22 +3,22 @@
   "session_id": "sess-20261031-161727-fe5fab",
   "prior_session_id": "sess-20261031-122955-293bd3",
   "parent_session_id": "sess-20261031-122955-293bd3",
-  "revision": 10,
-  "content_hash": "sha256:90db3386de4a455630193b0dffdaf23a0b98ccb55caf95df7cd750531f7b2080",
+  "revision": 11,
+  "content_hash": "sha256:673c700e230e0e74fa52460b1c696028cd1353f15b6bee816ead672873df29ff",
   "base_graph_hash": "sha256:fe562f97ca1cebf7b5b4abe855bbc5bf98ad8f8e2907e6c50acdf64c20d5b734",
   "task_id": null,
   "role": null,
   "repo_name": "hath0r-poc",
   "status": "completed",
   "started_at": "2026-10-31T16:17:27.119025+00:00",
-  "updated_at": "2026-11-01T15:43:57.364017+00:00",
+  "updated_at": "2026-11-01T17:27:20.970777+00:00",
   "ended_at": "2026-10-31T16:17:27.188614+00:00",
   "read_count": 4,
-  "write_count": 7,
+  "write_count": 8,
   "last_read_at": "2026-11-01T15:43:57.364017+00:00",
-  "last_write_at": "2026-11-01T15:43:57.257816+00:00",
+  "last_write_at": "2026-11-01T17:27:20.970777+00:00",
   "active_focus": "Repository orientation verified for HATH0R-POC",
-  "prior_summary": "ounded eval:clean-repo-hath0r-poc: T; Compounded fact:repo-hath0r-poc-orientat; Compounded rule:cr-task-eval-001: Automa",
+  "prior_summary": "ounded fact:repo-hath0r-poc-orientat; Compounded rule:cr-task-eval-001: Automa; Compounded eval:eval-baseline-hath0r-poc",
   "recalled_nodes": [
     {
       "id": "fact:repo-hath0r-poc-orientation",
@@ -29,17 +29,17 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-11-01T15:43:57.257816+00:00",
+      "timestamp": "2026-11-01T17:27:20.970777+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:eval-baseline-hath0r-poc: Task Evaluation eval-baseline-hath0r-poc (R=0.86, FAIL)",
+      "summary": "Compounded eval:task-HATH0R-POC: Task Evaluation task-HATH0R-POC (R=0.94, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "eval-baseline-hath0r-poc",
-        "failed",
+        "task-hath0r-poc",
+        "passed",
         "compounded"
       ],
-      "node_id": "eval:eval-baseline-hath0r-poc"
+      "node_id": "eval:task-HATH0R-POC"
     }
   ],
   "next_steps": [],
@@ -48,7 +48,8 @@
     "eval:clean-repo-hath0r-poc",
     "fact:repo-hath0r-poc-orientation",
     "rule:cr-task-eval-001",
-    "eval:eval-baseline-hath0r-poc"
+    "eval:eval-baseline-hath0r-poc",
+    "eval:task-HATH0R-POC"
   ],
-  "capsule_bytes": 1977
+  "capsule_bytes": 1969
 }
