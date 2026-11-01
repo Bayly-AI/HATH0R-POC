@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261029-135854-031afa",
+  "eval_id": "eval-20261101-154357-d90fba",
   "task_id": "eval-baseline-hath0r-poc",
   "issue_number": null,
-  "repo_name": "hath0r-poc",
+  "repo_name": "HATH0R-POC",
   "branch": "development",
-  "evaluated_at": "2026-10-29T13:58:54.617020+00:00",
-  "duration_ms": 211.77,
-  "passed_gate": true,
-  "r_task": 1.0,
+  "evaluated_at": "2026-11-01T15:43:57.099497+00:00",
+  "duration_ms": 94.0,
+  "passed_gate": false,
+  "r_task": 0.8643,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -18,78 +18,300 @@
     "goal_alignment": 0.15
   },
   "tier_scores": {
-    "deterministic": 1.0,
-    "trajectory": 1.0,
-    "adversarial": 1.0,
-    "goal_alignment": 1.0
+    "deterministic": 0.7484,
+    "trajectory": 0.9321,
+    "adversarial": 0.957,
+    "goal_alignment": 0.9287
   },
   "tiers": {
     "deterministic": {
-      "score": 1.0,
-      "passed": true,
-      "passed_checks": 4,
-      "total_checks": 4,
+      "score": 0.7484,
+      "passed": false,
+      "passed_checks": 5,
+      "total_checks": 6,
+      "sub_scores": {
+        "version_valid": 1.0,
+        "agentgraph_valid": 1.0,
+        "memory_compounded": 0.0,
+        "test_suite": 0.88,
+        "calibration_4h": 0.82,
+        "local_quality_gates": 0.9798
+      },
       "checks": {
         "version_valid": {
           "passed": true,
-          "version": "0.2.9",
+          "version": "0.3.0",
+          "changelog_aligned": true,
           "error": null
         },
         "agentgraph_valid": {
           "passed": true,
           "cycles": 0,
-          "contradictions": 0
+          "contradictions": 0,
+          "claude_md_synced": true
         },
         "memory_compounded": {
-          "passed": true,
-          "compounded_nodes_count": 14,
+          "passed": false,
+          "compounded_nodes_count": 18,
           "session_read_verified": true,
           "session_write_verified": true,
-          "hashes_verified": true,
+          "hashes_verified": false,
           "graphs_not_ignored": true,
-          "error": null
+          "error": "CR-MEMORY-COMPOUND-001: Memory file hash verification failed (mismatched=1, missing=0, stale_source_files=0). Run 'hath0r memory hash --sync' or re-compound stale knowledge nodes."
         },
         "test_suite": {
           "passed": true,
           "skipped": true,
-          "message": "Test execution skipped via flag or dry-run."
+          "message": "Test execution skipped via flag or dry-run (-0.12 confidence deduction)."
+        },
+        "calibration_4h": {
+          "passed": true,
+          "is_fresh": false,
+          "age_hours": null,
+          "max_age_hours": 4.0
+        },
+        "local_quality_gates": {
+          "passed": true,
+          "technology": "node-ts",
+          "thresholds_file": "C:\\Users\\RaymondBayly\\Documents\\HATH0R-POC\\thresholds.json",
+          "qgate_score": 0.9798,
+          "failing_gates": [],
+          "gates": {
+            "errors": {
+              "gate": "errors",
+              "passed": true,
+              "actual_errors": 0,
+              "max_errors": 0,
+              "comparator": "<=",
+              "score": 1.0,
+              "findings": []
+            },
+            "coverage": {
+              "gate": "coverage",
+              "passed": true,
+              "actual_coverage_pct": 94.45,
+              "min_coverage_pct": 80.0,
+              "comparator": ">=",
+              "source": "test_suite_symbol_verification",
+              "score": 0.9595
+            },
+            "complexity": {
+              "gate": "complexity",
+              "passed": true,
+              "max_observed_complexity": 14,
+              "avg_complexity": 2.57,
+              "max_complexity": 15,
+              "comparator": "<=",
+              "functions_scanned": 87,
+              "offending_functions": [],
+              "score": 0.9729
+            },
+            "duplication": {
+              "gate": "duplication",
+              "passed": true,
+              "duplicated_lines_pct": 0.3,
+              "max_duplicated_lines_pct": 3.0,
+              "comparator": "<=",
+              "duplicated_lines": 10,
+              "total_analyzed_lines": 3301,
+              "duplicated_blocks": [
+                {
+                  "first": "src\\app\\features\\diagnostics\\DiagnosticsPage.tsx:53",
+                  "duplicate": "src\\app\\features\\products\\ProductsPage.tsx:33"
+                }
+              ],
+              "score": 0.987
+            }
+          },
+          "report": {
+            "success": true,
+            "passed": true,
+            "rule_id": "CR-LOCAL-QGATES-001",
+            "repo_name": "HATH0R-POC",
+            "technology": "node-ts",
+            "thresholds_file": "C:\\Users\\RaymondBayly\\Documents\\HATH0R-POC\\thresholds.json",
+            "thresholds_file_exists": true,
+            "thresholds": {
+              "max_errors": 0,
+              "min_coverage_pct": 80.0,
+              "max_complexity": 15,
+              "max_duplicated_lines_pct": 3.0,
+              "new_reliability_rating": 1,
+              "new_security_rating": 1,
+              "new_maintainability_rating": 1,
+              "min_security_hotspots_reviewed_pct": 100.0
+            },
+            "files_analyzed": 33,
+            "qgate_score": 0.9798,
+            "failing_gates": [],
+            "gates": {
+              "errors": {
+                "gate": "errors",
+                "passed": true,
+                "actual_errors": 0,
+                "max_errors": 0,
+                "comparator": "<=",
+                "score": 1.0,
+                "findings": []
+              },
+              "coverage": {
+                "gate": "coverage",
+                "passed": true,
+                "actual_coverage_pct": 94.45,
+                "min_coverage_pct": 80.0,
+                "comparator": ">=",
+                "source": "test_suite_symbol_verification",
+                "score": 0.9595
+              },
+              "complexity": {
+                "gate": "complexity",
+                "passed": true,
+                "max_observed_complexity": 14,
+                "avg_complexity": 2.57,
+                "max_complexity": 15,
+                "comparator": "<=",
+                "functions_scanned": 87,
+                "offending_functions": [],
+                "score": 0.9729
+              },
+              "duplication": {
+                "gate": "duplication",
+                "passed": true,
+                "duplicated_lines_pct": 0.3,
+                "max_duplicated_lines_pct": 3.0,
+                "comparator": "<=",
+                "duplicated_lines": 10,
+                "total_analyzed_lines": 3301,
+                "duplicated_blocks": [
+                  {
+                    "first": "src\\app\\features\\diagnostics\\DiagnosticsPage.tsx:53",
+                    "duplicate": "src\\app\\features\\products\\ProductsPage.tsx:33"
+                  }
+                ],
+                "score": 0.987
+              }
+            }
+          }
         }
       }
     },
     "trajectory": {
-      "score": 1.0,
+      "score": 0.9321,
       "passed": true,
-      "tokens_used": 0,
+      "tokens_used": 647,
       "max_tokens": 50000,
-      "estimated_usd": 0.0,
+      "estimated_usd": 0.001941,
       "max_usd": 0.25,
-      "session_id": "sess-20261029-132748-b82f9b",
+      "session_id": "sess-20261031-161727-fe5fab",
       "session_reads": 3,
-      "session_writes": 5,
-      "session_bytes": 1897,
+      "session_writes": 6,
+      "session_bytes": 1942,
+      "capsule_fill_ratio": 0.9482,
       "within_capsule_budget": true,
-      "latency_ms": 79.02,
-      "taguchi_quality_loss": 0.0001,
-      "snr_db": 28.07
+      "latency_ms": 78.0,
+      "taguchi_quality_loss": 0.0002,
+      "taguchi_score": 0.9795,
+      "snr_db": 26.02
     },
     "adversarial": {
-      "score": 1.0,
+      "score": 0.957,
       "passed": true,
       "adversarial_flaws_count": 0,
       "adversarial_flaws": [],
       "tech_debts_count": 0,
       "auto_created_issues": [],
-      "change_categories": {},
+      "minor_findings": [
+        "Cognitive complexity hotspot observed (avg 2.57, max 14, -0.0200)",
+        "Repeated code blocks detected (0.30%, -0.0030)"
+      ],
+      "added_lines_count": 0,
+      "change_categories": {
+        "ui": [],
+        "script": [],
+        "text": [],
+        "other": []
+      },
       "changed_files_count": 0
     },
     "goal_alignment": {
-      "score": 1.0,
+      "score": 0.9287,
       "passed": true,
       "task_id": "eval-baseline-hath0r-poc",
       "issue_number": null,
-      "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-poc",
-      "compounded_nodes_count": 14,
-      "consensus_score": 1.0
+      "active_focus": "Provisioning CR-TASK-EVAL-001 for HATH0R-POC",
+      "goal_keywords_count": 5,
+      "goal_overlap_score": 0.98,
+      "compounded_nodes_count": 18,
+      "consensus_score": 0.826
+    }
+  },
+  "local_quality_gates": {
+    "success": true,
+    "passed": true,
+    "rule_id": "CR-LOCAL-QGATES-001",
+    "repo_name": "HATH0R-POC",
+    "technology": "node-ts",
+    "thresholds_file": "C:\\Users\\RaymondBayly\\Documents\\HATH0R-POC\\thresholds.json",
+    "thresholds_file_exists": true,
+    "thresholds": {
+      "max_errors": 0,
+      "min_coverage_pct": 80.0,
+      "max_complexity": 15,
+      "max_duplicated_lines_pct": 3.0,
+      "new_reliability_rating": 1,
+      "new_security_rating": 1,
+      "new_maintainability_rating": 1,
+      "min_security_hotspots_reviewed_pct": 100.0
+    },
+    "files_analyzed": 33,
+    "qgate_score": 0.9798,
+    "failing_gates": [],
+    "gates": {
+      "errors": {
+        "gate": "errors",
+        "passed": true,
+        "actual_errors": 0,
+        "max_errors": 0,
+        "comparator": "<=",
+        "score": 1.0,
+        "findings": []
+      },
+      "coverage": {
+        "gate": "coverage",
+        "passed": true,
+        "actual_coverage_pct": 94.45,
+        "min_coverage_pct": 80.0,
+        "comparator": ">=",
+        "source": "test_suite_symbol_verification",
+        "score": 0.9595
+      },
+      "complexity": {
+        "gate": "complexity",
+        "passed": true,
+        "max_observed_complexity": 14,
+        "avg_complexity": 2.57,
+        "max_complexity": 15,
+        "comparator": "<=",
+        "functions_scanned": 87,
+        "offending_functions": [],
+        "score": 0.9729
+      },
+      "duplication": {
+        "gate": "duplication",
+        "passed": true,
+        "duplicated_lines_pct": 0.3,
+        "max_duplicated_lines_pct": 3.0,
+        "comparator": "<=",
+        "duplicated_lines": 10,
+        "total_analyzed_lines": 3301,
+        "duplicated_blocks": [
+          {
+            "first": "src\\app\\features\\diagnostics\\DiagnosticsPage.tsx:53",
+            "duplicate": "src\\app\\features\\products\\ProductsPage.tsx:33"
+          }
+        ],
+        "score": 0.987
+      }
     }
   },
   "evidence_trust_report": {
@@ -98,29 +320,20 @@
       "VERIFIED_EXECUTION": [
         ".hath0r/evals/latest.json"
       ],
-      "STATIC_AST_ANALYSIS": [
-        ".hath0r/evals/post-task-hook.sh",
-        ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/evals/history/eval-eval-baseline-hath0r-poc.json",
-        ".hath0r/evals/latest.json",
-        ".hath0r/memory/graph.json",
-        ".hath0r/memory/hashes.json",
-        ".hath0r/memory/sessions/current.json",
-        ".hath0r/memory/sessions/latest.json",
-        ".hath0r/memory/sessions/sess-20261029-132748-b82f9b.json",
-        "cfg/evals/task-eval.json"
-      ],
+      "STATIC_AST_ANALYSIS": [],
       "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 10,
+      "STATIC_AST_ANALYSIS": 0,
       "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
-  "blocking_reasons": [],
+  "blocking_reasons": [
+    "Tier 1 deterministic gate failed: memory_compounded"
+  ],
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:f68b0f3bee9f7cbff61fe7d132914635a6620445ac83d5355607e40b2a71e044"
+  "content_hash": "sha256:b481952a56497d87502fc4e17ff2fac3976ad44772a50aba0af66b4af0c0e7b2"
 }
