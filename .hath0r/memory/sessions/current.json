@@ -44,12 +44,12 @@
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "episode:clean-repo-hath0r-poc",
     "eval:clean-repo-hath0r-poc",
     "fact:repo-hath0r-poc-orientation",
     "rule:cr-task-eval-001",
     "eval:eval-baseline-hath0r-poc",
-    "eval:task-HATH0R-POC"
+    "eval:task-HATH0R-POC",
+    "episode:conflict-resolution-development-sync"
   ],
   "capsule_bytes": 2006
 }

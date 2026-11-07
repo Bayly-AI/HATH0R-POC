@@ -562,7 +562,7 @@
       "id": "eval:task-HATH0R-POC",
       "type": "eval",
       "label": "Task Evaluation task-HATH0R-POC (R=0.94, PASS)",
-      "content": "4-Tier Task Evaluation for task-HATH0R-POC on branch development: R_task=0.9387 (det=0.94, traj=0.92, adv=0.95, goal=0.93). Gate=PASSED.",
+      "content": "4-Tier Task Evaluation for task-HATH0R-POC on branch development: R_task=0.9430 (det=0.94, traj=0.93, adv=0.96, goal=0.93). Gate=PASSED.",
       "importance": 0.85,
       "tags": [
         "eval",
@@ -571,16 +571,33 @@
         "passed",
         "compounded"
       ],
-      "valid_from": "2026-11-01T17:27:20.896134+00:00",
+      "valid_from": "2026-11-01T18:24:28.409790+00:00",
       "valid_to": null,
       "is_current": true,
       "created_at": "2026-11-01T17:27:20.896134+00:00",
-      "updated_at": "2026-11-01T17:27:20.896134+00:00",
+      "updated_at": "2026-11-01T18:24:28.409790+00:00",
       "metadata": {
         "source_files": {
           ".hath0r/evals/latest.json": "sha256:58f88817b978c5a2ee842ca00b35a4a134e41582f1d920746b94b09de7c0c8bf"
         }
       }
+    },
+    {
+      "id": "episode:conflict-resolution-development-sync",
+      "type": "episode",
+      "label": "Conflict Resolution & Development Sync",
+      "content": "Resolved conflicts, synced AgentGraph and MemoryGraph state, and pushed all changes to development.",
+      "importance": 0.8,
+      "tags": [
+        "episode",
+        "compounded"
+      ],
+      "valid_from": "2026-11-01T18:24:26.302589+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-11-01T18:24:26.302589+00:00",
+      "updated_at": "2026-11-01T18:24:26.302589+00:00",
+      "metadata": {}
     },
     {
       "id": "session:sess-20261031-161727-fe5fab",
@@ -1286,6 +1303,22 @@
       "relation": "DERIVES_FROM",
       "weight": 1.0,
       "valid_from": "2026-11-01T17:27:20.974285+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:conflict-resolution-development-sync",
+      "target": "concept:tri-graph",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-11-01T18:24:26.302589+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:conflict-resolution-development-sync",
+      "target": "session:sess-20261031-161727-fe5fab",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-11-01T18:24:26.369752+00:00",
       "is_current": true
     }
   ],

@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261101-172719-a93771",
+  "eval_id": "eval-20261101-182427-696ad1",
   "task_id": "task-HATH0R-POC",
   "issue_number": null,
   "repo_name": "HATH0R-POC",
   "branch": "development",
-  "evaluated_at": "2026-11-01T17:27:19.065280+00:00",
-  "duration_ms": 1829.0,
+  "evaluated_at": "2026-11-01T18:24:27.791408+00:00",
+  "duration_ms": 609.0,
   "passed_gate": true,
-  "r_task": 0.9387,
+  "r_task": 0.943,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -19,8 +19,8 @@
   },
   "tier_scores": {
     "deterministic": 0.9444,
-    "trajectory": 0.9171,
-    "adversarial": 0.953,
+    "trajectory": 0.9332,
+    "adversarial": 0.957,
     "goal_alignment": 0.9287
   },
   "tiers": {
@@ -52,7 +52,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 18,
+          "compounded_nodes_count": 20,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -196,25 +196,25 @@
       }
     },
     "trajectory": {
-      "score": 0.9171,
+      "score": 0.9332,
       "passed": true,
-      "tokens_used": 21,
+      "tokens_used": 92,
       "max_tokens": 50000,
-      "estimated_usd": 6.3e-05,
+      "estimated_usd": 0.000276,
       "max_usd": 0.25,
       "session_id": "sess-20261031-161727-fe5fab",
-      "session_reads": 4,
-      "session_writes": 7,
-      "session_bytes": 1977,
-      "capsule_fill_ratio": 0.9653,
+      "session_reads": 9,
+      "session_writes": 17,
+      "session_bytes": 1955,
+      "capsule_fill_ratio": 0.9546,
       "within_capsule_budget": true,
-      "latency_ms": 1422.0,
-      "taguchi_quality_loss": 0.0303,
-      "taguchi_score": 0.9042,
-      "snr_db": 2.96
+      "latency_ms": 203.0,
+      "taguchi_quality_loss": 0.0006,
+      "taguchi_score": 0.9785,
+      "snr_db": 19.87
     },
     "adversarial": {
-      "score": 0.953,
+      "score": 0.957,
       "passed": true,
       "adversarial_flaws_count": 0,
       "adversarial_flaws": [],
@@ -224,16 +224,14 @@
         "Cognitive complexity hotspot observed (avg 2.57, max 14, -0.0200)",
         "Repeated code blocks detected (0.30%, -0.0030)"
       ],
-      "added_lines_count": 18,
+      "added_lines_count": 0,
       "change_categories": {
         "ui": [],
         "script": [],
-        "text": [
-          "cfg/mcp.servers.json"
-        ],
+        "text": [],
         "other": []
       },
-      "changed_files_count": 1
+      "changed_files_count": 0
     },
     "goal_alignment": {
       "score": 0.9287,
@@ -243,7 +241,7 @@
       "active_focus": "Repository orientation verified for HATH0R-POC",
       "goal_keywords_count": 4,
       "goal_overlap_score": 0.98,
-      "compounded_nodes_count": 18,
+      "compounded_nodes_count": 20,
       "consensus_score": 0.826
     }
   },
@@ -322,12 +320,18 @@
       "VERIFIED_EXECUTION": [
         ".hath0r/evals/latest.json"
       ],
-      "STATIC_AST_ANALYSIS": [],
+      "STATIC_AST_ANALYSIS": [
+        ".hath0r/memory/graph.json",
+        ".hath0r/memory/hashes.json",
+        ".hath0r/memory/sessions/current.json",
+        ".hath0r/memory/sessions/latest.json",
+        ".hath0r/memory/sessions/sess-20261031-161727-fe5fab.json"
+      ],
       "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 0,
+      "STATIC_AST_ANALYSIS": 5,
       "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
@@ -335,5 +339,5 @@
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:23a5e14f84707ec17294d07ed95543de94247dbeefba05cc0f4737f3c4a26610"
+  "content_hash": "sha256:6b86c84296b55470831c8b39f4394ae24fac1b7a2186def49b8404577984efd4"
 }
