@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261031-161727-213d9b",
+  "eval_id": "eval-20261107-182419-e80786",
   "task_id": "clean-repo-hath0r-poc",
   "issue_number": null,
   "repo_name": "hath0r-poc",
   "branch": "development",
-  "evaluated_at": "2026-10-31T16:17:27.793600+00:00",
-  "duration_ms": 462.04,
+  "evaluated_at": "2026-11-07T18:24:19.724387+00:00",
+  "duration_ms": 634.27,
   "passed_gate": true,
-  "r_task": 0.9443,
+  "r_task": 0.9417,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -18,14 +18,14 @@
     "goal_alignment": 0.15
   },
   "tier_scores": {
-    "deterministic": 0.9512,
+    "deterministic": 0.9422,
     "trajectory": 0.9312,
-    "adversarial": 0.953,
+    "adversarial": 0.957,
     "goal_alignment": 0.9287
   },
   "tiers": {
     "deterministic": {
-      "score": 0.9512,
+      "score": 0.9422,
       "passed": true,
       "passed_checks": 6,
       "total_checks": 6,
@@ -34,7 +34,7 @@
         "agentgraph_valid": 1.0,
         "memory_compounded": 0.98,
         "test_suite": 0.88,
-        "calibration_4h": 0.8952,
+        "calibration_4h": 0.82,
         "local_quality_gates": 0.9678
       },
       "checks": {
@@ -52,7 +52,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 18,
+          "compounded_nodes_count": 20,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -66,8 +66,8 @@
         },
         "calibration_4h": {
           "passed": true,
-          "is_fresh": true,
-          "age_hours": 3.79,
+          "is_fresh": false,
+          "age_hours": 144.73,
           "max_age_hours": 4.0
         },
         "local_quality_gates": {
@@ -202,19 +202,19 @@
       "max_tokens": 50000,
       "estimated_usd": 0.000423,
       "max_usd": 0.25,
-      "session_id": "sess-20261031-161727-fe5fab",
+      "session_id": "sess-20261107-182418-270b62",
       "session_reads": 2,
       "session_writes": 3,
       "session_bytes": 1981,
       "capsule_fill_ratio": 0.9673,
       "within_capsule_budget": true,
-      "latency_ms": 221.83,
+      "latency_ms": 222.29,
       "taguchi_quality_loss": 0.0007,
       "taguchi_score": 0.9782,
-      "snr_db": 19.1
+      "snr_db": 19.08
     },
     "adversarial": {
-      "score": 0.953,
+      "score": 0.957,
       "passed": true,
       "adversarial_flaws_count": 0,
       "adversarial_flaws": [],
@@ -224,16 +224,14 @@
         "Cognitive complexity hotspot observed (avg 2.57, max 14, -0.0200)",
         "Repeated code blocks detected (0.30%, -0.0030)"
       ],
-      "added_lines_count": 4,
+      "added_lines_count": 0,
       "change_categories": {
         "ui": [],
         "script": [],
         "text": [],
-        "other": [
-          ".gitignore"
-        ]
+        "other": []
       },
-      "changed_files_count": 1
+      "changed_files_count": 0
     },
     "goal_alignment": {
       "score": 0.9287,
@@ -243,7 +241,7 @@
       "active_focus": "clean-repo-hath0r-poc",
       "goal_keywords_count": 4,
       "goal_overlap_score": 0.98,
-      "compounded_nodes_count": 18,
+      "compounded_nodes_count": 20,
       "consensus_score": 0.826
     }
   },
@@ -328,21 +326,19 @@
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
-        ".hath0r/memory/sessions/sess-20261031-161727-fe5fab.json"
+        ".hath0r/memory/sessions/sess-20261107-182418-270b62.json"
       ],
-      "UNVERIFIED_FILE_PRESENCE": [
-        ".gitignore"
-      ]
+      "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
       "STATIC_AST_ANALYSIS": 6,
-      "UNVERIFIED_FILE_PRESENCE": 1
+      "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:fe91af601dbda24dc782efb30633346afcffe837c098f4e373fe66734995cbb7"
+  "content_hash": "sha256:091372447da1242a7eb6ab16b9b8fa0f1dd7d000ffc8d468acfcc3f3bbcebeb9"
 }

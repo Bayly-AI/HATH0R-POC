@@ -1,0 +1,60 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261107-182418-270b62",
+  "prior_session_id": "sess-20261031-161727-fe5fab",
+  "parent_session_id": "sess-20261031-161727-fe5fab",
+  "revision": 5,
+  "content_hash": "sha256:6b2fc4f399e1f298953ee2707b456ec341e2f9d11fa3c787389ec5a0e8244c61",
+  "base_graph_hash": "sha256:fa9be978496e8f7f3100ef1a9201839adc12a53797be79896da28900aee1c881",
+  "task_id": null,
+  "role": null,
+  "repo_name": "hath0r-poc",
+  "status": "completed",
+  "started_at": "2026-11-07T18:24:18.772252+00:00",
+  "updated_at": "2026-11-07T18:24:20.394791+00:00",
+  "ended_at": "2026-11-07T18:24:18.850286+00:00",
+  "read_count": 2,
+  "write_count": 4,
+  "last_read_at": "2026-11-07T18:24:18.796628+00:00",
+  "last_write_at": "2026-11-07T18:24:20.394791+00:00",
+  "active_focus": "clean-repo-hath0r-poc",
+  "prior_summary": "l-baseline-hath0r-poc (R=0.94, PASS); Started session focus: clean-repo-hath0r; Compounded episode:clean-repo-hath0r-poc",
+  "recalled_nodes": [
+    {
+      "id": "insight:hath0r-poc",
+      "type": "insight",
+      "label": "Synthesized Insight on hath0r-poc",
+      "snippet": "Consolidated from 2 memory nodes tagged 'hath0r-poc'. Recurring themes: hathor, logo, clea"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-11-07T18:24:18.850286+00:00",
+      "kind": "milestone",
+      "summary": "Clean Repo Lifecycle completed for hath0r-poc.",
+      "tags": [
+        "session-end"
+      ],
+      "node_id": null
+    },
+    {
+      "timestamp": "2026-11-07T18:24:20.394791+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:clean-repo-hath0r-poc: Task Evaluation clean-repo-hath0r-poc (R=0.94, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "clean-repo-hath0r-poc",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:clean-repo-hath0r-poc"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "episode:clean-repo-hath0r-poc",
+    "eval:clean-repo-hath0r-poc"
+  ],
+  "capsule_bytes": 2041
+}

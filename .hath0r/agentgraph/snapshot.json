@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-hath0r-poc",
-  "timestamp": "2026-11-02T16:43:17.162211+00:00",
+  "timestamp": "2026-11-07T18:24:20.602993+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -1437,7 +1437,7 @@
       "content": "4-Tier Task Evaluation for issue-103 on branch feature/103-automatic-task-evals: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bfd39fee67748c3d6bf6db4fcb9522d498ff377b238b982a3868eefc66ff83af"
+          ".hath0r/evals/latest.json": "sha256:58f88817b978c5a2ee842ca00b35a4a134e41582f1d920746b94b09de7c0c8bf"
         },
         "source": "local_memory",
         "tags": [
@@ -1459,7 +1459,7 @@
       "content": "4-Tier Task Evaluation for pr-104 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bfd39fee67748c3d6bf6db4fcb9522d498ff377b238b982a3868eefc66ff83af"
+          ".hath0r/evals/latest.json": "sha256:58f88817b978c5a2ee842ca00b35a4a134e41582f1d920746b94b09de7c0c8bf"
         },
         "source": "local_memory",
         "tags": [
@@ -1539,7 +1539,7 @@
       "content": "4-Tier Task Evaluation for pr-104-merged on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bfd39fee67748c3d6bf6db4fcb9522d498ff377b238b982a3868eefc66ff83af"
+          ".hath0r/evals/latest.json": "sha256:58f88817b978c5a2ee842ca00b35a4a134e41582f1d920746b94b09de7c0c8bf"
         },
         "source": "local_memory",
         "tags": [
@@ -1600,10 +1600,10 @@
       "plane": "memory",
       "type": "eval",
       "label": "Task Evaluation clean-repo-hath0r-poc (R=0.94, PASS)",
-      "content": "4-Tier Task Evaluation for clean-repo-hath0r-poc on branch development: R_task=0.9443 (det=0.95, traj=0.93, adv=0.95, goal=0.93). Gate=PASSED.",
+      "content": "4-Tier Task Evaluation for clean-repo-hath0r-poc on branch development: R_task=0.9417 (det=0.94, traj=0.93, adv=0.96, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bfd39fee67748c3d6bf6db4fcb9522d498ff377b238b982a3868eefc66ff83af"
+          ".hath0r/evals/latest.json": "sha256:7c32029e0643b13f49cf3d337fb400c6a0d5f987dc41bc2536280c1f78c6aab5"
         },
         "source": "local_memory",
         "tags": [
@@ -1649,7 +1649,7 @@
       "content": "4-Tier Task Evaluation for task-hath0r-poc on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bfd39fee67748c3d6bf6db4fcb9522d498ff377b238b982a3868eefc66ff83af"
+          ".hath0r/evals/latest.json": "sha256:58f88817b978c5a2ee842ca00b35a4a134e41582f1d920746b94b09de7c0c8bf"
         },
         "source": "local_memory",
         "tags": [
@@ -1671,7 +1671,7 @@
       "content": "4-Tier Task Evaluation for release-v0.2.9 on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bfd39fee67748c3d6bf6db4fcb9522d498ff377b238b982a3868eefc66ff83af"
+          ".hath0r/evals/latest.json": "sha256:58f88817b978c5a2ee842ca00b35a4a134e41582f1d920746b94b09de7c0c8bf"
         },
         "source": "local_memory",
         "tags": [
@@ -1733,7 +1733,7 @@
       "content": "4-Tier Task Evaluation for issue-105 on branch chore/105-cr-cli-entry-001-workflow-standard-otel: R_task=0.9514 (det=0.99, traj=0.89, adv=0.95, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bfd39fee67748c3d6bf6db4fcb9522d498ff377b238b982a3868eefc66ff83af"
+          ".hath0r/evals/latest.json": "sha256:58f88817b978c5a2ee842ca00b35a4a134e41582f1d920746b94b09de7c0c8bf"
         },
         "source": "local_memory",
         "tags": [
@@ -1795,7 +1795,7 @@
       "content": "4-Tier Task Evaluation for task-HATH0R-POC on branch development: R_task=0.9430 (det=0.94, traj=0.93, adv=0.96, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:bfd39fee67748c3d6bf6db4fcb9522d498ff377b238b982a3868eefc66ff83af"
+          ".hath0r/evals/latest.json": "sha256:58f88817b978c5a2ee842ca00b35a4a134e41582f1d920746b94b09de7c0c8bf"
         },
         "source": "local_memory",
         "tags": [
@@ -1830,15 +1830,39 @@
       "plane": "memory",
       "type": "session",
       "label": "Micro Session sess-20261031-161727-fe5fab",
-      "content": "Micro Session sess-20261031-161727-fe5fab [completed] | Focus: Provisioning CR-TASK-EVAL-001 for hath0r-poc | Reads: 5, Writes: 11 | Entries: Compounded eval:eval-baseline-hath0r-poc: Task Evaluation eval-baseline-hath0r-poc (R=0.94, PASS)",
+      "content": "Micro Session sess-20261031-161727-fe5fab [completed] | Focus: Repository orientation verified for hath0r-poc | Reads: 6, Writes: 11 | Entries: Compounded eval:eval-baseline-hath0r-poc: Task Evaluation eval-baseline-hath0r-poc (R=0.94, PASS)",
       "properties": {
         "session_id": "sess-20261031-161727-fe5fab",
         "prior_session_id": "sess-20261031-122955-293bd3",
         "parent_session_id": "sess-20261031-122955-293bd3",
-        "read_count": 5,
+        "read_count": 6,
         "write_count": 11,
         "status": "completed",
-        "byte_size": 1993,
+        "byte_size": 2006,
+        "source": "local_memory",
+        "tags": [
+          "session",
+          "micro-session",
+          "completed"
+        ],
+        "importance": 0.75
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:session:sess-20261107-182418-270b62",
+      "plane": "memory",
+      "type": "session",
+      "label": "Micro Session sess-20261107-182418-270b62",
+      "content": "Micro Session sess-20261107-182418-270b62 [completed] | Focus: clean-repo-hath0r-poc | Reads: 2, Writes: 4 | Entries: Clean Repo Lifecycle completed for hath0r-poc.; Compounded eval:clean-repo-hath0r-poc: Task Evaluation clean-repo-hath0r-poc (R=0.94, PASS)",
+      "properties": {
+        "session_id": "sess-20261107-182418-270b62",
+        "prior_session_id": "sess-20261031-161727-fe5fab",
+        "parent_session_id": "sess-20261031-161727-fe5fab",
+        "read_count": 2,
+        "write_count": 4,
+        "status": "completed",
+        "byte_size": 2041,
         "source": "local_memory",
         "tags": [
           "session",
@@ -4687,6 +4711,36 @@
       "is_current": true
     },
     {
+      "source": "memory:session:sess-20261031-161727-fe5fab",
+      "target": "memory:session:sess-20261107-182418-270b62",
+      "relation": "PRECEDES",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261107-182418-270b62",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:clean-repo-hath0r-poc",
+      "target": "memory:session:sess-20261107-182418-270b62",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:clean-repo-hath0r-poc",
+      "target": "memory:session:sess-20261107-182418-270b62",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:clean-repo-hath0r-poc",
+      "target": "memory:session:sess-20261107-182418-270b62",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
       "source": "rule:rules",
       "target": "role:developer",
       "relation": "GOVERNS",
@@ -4982,6 +5036,12 @@
     },
     {
       "source": "memory:session:sess-20261031-161727-fe5fab",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261107-182418-270b62",
       "target": "role:developer",
       "relation": "INFORMS",
       "is_current": true

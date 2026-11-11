@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261102-164312-262a51",
-  "task_id": "eval-baseline-hath0r-poc",
+  "eval_id": "eval-20261107-182419-e80786",
+  "task_id": "clean-repo-hath0r-poc",
   "issue_number": null,
   "repo_name": "hath0r-poc",
   "branch": "development",
-  "evaluated_at": "2026-11-02T16:43:12.723663+00:00",
-  "duration_ms": 2930.0,
+  "evaluated_at": "2026-11-07T18:24:19.724387+00:00",
+  "duration_ms": 634.27,
   "passed_gate": true,
-  "r_task": 0.9399,
+  "r_task": 0.9417,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -19,7 +19,7 @@
   },
   "tier_scores": {
     "deterministic": 0.9422,
-    "trajectory": 0.9225,
+    "trajectory": 0.9312,
     "adversarial": 0.957,
     "goal_alignment": 0.9287
   },
@@ -52,7 +52,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 19,
+          "compounded_nodes_count": 20,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -67,7 +67,7 @@
         "calibration_4h": {
           "passed": true,
           "is_fresh": false,
-          "age_hours": 23.05,
+          "age_hours": 144.73,
           "max_age_hours": 4.0
         },
         "local_quality_gates": {
@@ -196,22 +196,22 @@
       }
     },
     "trajectory": {
-      "score": 0.9225,
+      "score": 0.9312,
       "passed": true,
       "tokens_used": 141,
       "max_tokens": 50000,
       "estimated_usd": 0.000423,
       "max_usd": 0.25,
-      "session_id": "sess-20261031-161727-fe5fab",
-      "session_reads": 5,
-      "session_writes": 10,
-      "session_bytes": 1997,
-      "capsule_fill_ratio": 0.9751,
+      "session_id": "sess-20261107-182418-270b62",
+      "session_reads": 2,
+      "session_writes": 3,
+      "session_bytes": 1981,
+      "capsule_fill_ratio": 0.9673,
       "within_capsule_budget": true,
-      "latency_ms": 1025.74,
-      "taguchi_quality_loss": 0.0158,
-      "taguchi_score": 0.9405,
-      "snr_db": 5.8
+      "latency_ms": 222.29,
+      "taguchi_quality_loss": 0.0007,
+      "taguchi_score": 0.9782,
+      "snr_db": 19.08
     },
     "adversarial": {
       "score": 0.957,
@@ -236,12 +236,12 @@
     "goal_alignment": {
       "score": 0.9287,
       "passed": true,
-      "task_id": "eval-baseline-hath0r-poc",
+      "task_id": "clean-repo-hath0r-poc",
       "issue_number": null,
-      "active_focus": "Provisioning CR-TASK-EVAL-001 for hath0r-poc",
-      "goal_keywords_count": 5,
+      "active_focus": "clean-repo-hath0r-poc",
+      "goal_keywords_count": 4,
       "goal_overlap_score": 0.98,
-      "compounded_nodes_count": 19,
+      "compounded_nodes_count": 20,
       "consensus_score": 0.826
     }
   },
@@ -322,18 +322,17 @@
       ],
       "STATIC_AST_ANALYSIS": [
         ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/mcp.json",
         ".hath0r/memory/graph.json",
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
-        ".hath0r/memory/sessions/sess-20261031-161727-fe5fab.json"
+        ".hath0r/memory/sessions/sess-20261107-182418-270b62.json"
       ],
       "UNVERIFIED_FILE_PRESENCE": []
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 7,
+      "STATIC_AST_ANALYSIS": 6,
       "UNVERIFIED_FILE_PRESENCE": 0
     }
   },
@@ -341,5 +340,5 @@
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:b087e0eec488f957b22ddd67dcfb006aa9ee3d842b1c31cd9a84353e058a3d7f"
+  "content_hash": "sha256:091372447da1242a7eb6ab16b9b8fa0f1dd7d000ffc8d468acfcc3f3bbcebeb9"
 }
